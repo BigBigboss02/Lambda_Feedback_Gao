@@ -1,0 +1,309 @@
+Iteration,Response
+1,"
+Task: Correct the following responses. Provide only the corrected statements as output. Do not include any input text in the output.
+
+Examples:
+
+1. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+   Corrected: ""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+
+2. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+   Corrected: ""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+
+3. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+   Corrected: ""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+
+4. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+   Corrected: ""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+
+Instructions: Use the same format as in the examples. Provide only the corrected responses for the input below.
+
+Input:
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart grid management, 2. Waste management systems, 3. Flood detection.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.""
+
+Output:
+""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""1. Smart grid management, "
+2,"
+Task: Correct the following responses. Provide only the corrected statements as output. Do not include any input text in the output.
+
+Examples:
+
+1. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+   Corrected: ""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+
+2. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+   Corrected: ""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+
+3. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+   Corrected: ""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+
+4. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+   Corrected: ""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+
+Instructions: Use the same format as in the examples. Provide only the corrected responses for the input below.
+
+Input:
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart grid management, 2. Waste management systems, 3. Flood detection.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.""
+
+Output:
+""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""1. Smart grid management, "
+3,"
+Task: Correct the following responses. Provide only the corrected statements as output. Do not include any input text in the output.
+
+Examples:
+
+1. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+   Corrected: ""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+
+2. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+   Corrected: ""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+
+3. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+   Corrected: ""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+
+4. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+   Corrected: ""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+
+Instructions: Use the same format as in the examples. Provide only the corrected responses for the input below.
+
+Input:
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart grid management, 2. Waste management systems, 3. Flood detection.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.""
+
+Output:
+1. Environmental monitoring
+2. Health care monitoring
+3. Industrial process control
+1. Smart agriculture
+2. Structural health monitoring
+3. Habitat monitoring
+1. Disaster response systems
+2. Military surveillance
+3. Wildlife tracking
+1"
+4,"
+Task: Correct the following responses. Provide only the corrected statements as output. Do not include any input text in the output.
+
+Examples:
+
+1. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+   Corrected: ""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+
+2. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+   Corrected: ""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+
+3. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+   Corrected: ""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+
+4. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+   Corrected: ""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+
+Instructions: Use the same format as in the examples. Provide only the corrected responses for the input below.
+
+Input:
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart grid management, 2. Waste management systems, 3. Flood detection.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.""
+
+Output:
+1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.
+2. Smart agriculture, 3. Structural health monitoring.
+3. Habitat monitoring.
+4. Smart homes, 3. Traffic monitoring, 2."
+5,"
+Task: Correct the following responses. Provide only the corrected statements as output. Do not include any input text in the output.
+
+Examples:
+
+1. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+   Corrected: ""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+
+2. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+   Corrected: ""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+
+3. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+   Corrected: ""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+
+4. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+   Corrected: ""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+
+Instructions: Use the same format as in the examples. Provide only the corrected responses for the input below.
+
+Input:
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart grid management, 2. Waste management systems, 3. Flood detection.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.""
+
+Output:
+1. Environmental monitoring
+2. Health care monitoring
+3. Industrial process control
+1. Environmental monitoring
+2. Health care monitoring
+3. Industrial process control
+1. Smart agriculture
+2. Structural health monitoring
+3. Habitat monitoring
+"
+6,"
+Task: Correct the following responses. Provide only the corrected statements as output. Do not include any input text in the output.
+
+Examples:
+
+1. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+   Corrected: ""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+
+2. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+   Corrected: ""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+
+3. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+   Corrected: ""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+
+4. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+   Corrected: ""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+
+Instructions: Use the same format as in the examples. Provide only the corrected responses for the input below.
+
+Input:
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart grid management, 2. Waste management systems, 3. Flood detection.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.""
+
+Output:
+""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""1. Smart grid management, "
+7,"
+Task: Correct the following responses. Provide only the corrected statements as output. Do not include any input text in the output.
+
+Examples:
+
+1. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+   Corrected: ""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+
+2. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+   Corrected: ""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+
+3. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+   Corrected: ""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+
+4. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+   Corrected: ""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+
+Instructions: Use the same format as in the examples. Provide only the corrected responses for the input below.
+
+Input:
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart grid management, 2. Waste management systems, 3. Flood detection.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.""
+
+Output:
+""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""1. Smart grid management, "
+8,"
+Task: Correct the following responses. Provide only the corrected statements as output. Do not include any input text in the output.
+
+Examples:
+
+1. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+   Corrected: ""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+
+2. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+   Corrected: ""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+
+3. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+   Corrected: ""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+
+4. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+   Corrected: ""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+
+Instructions: Use the same format as in the examples. Provide only the corrected responses for the input below.
+
+Input:
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart grid management, 2. Waste management systems, 3. Flood detection.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.""
+
+Output:
+1. Environmental monitoring
+2. Health care monitoring
+3. Industrial process control
+4. Smart homes
+5. Traffic monitoring
+6. Environmental pollution tracking
+7. Forest fire detection
+8. Urban planning
+9. Air quality monitoring
+"
+9,"
+Task: Correct the following responses. Provide only the corrected statements as output. Do not include any input text in the output.
+
+Examples:
+
+1. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+   Corrected: ""1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.""
+
+2. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+   Corrected: ""1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.""
+
+3. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+   Corrected: ""1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.""
+
+4. Original: ""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+   Corrected: ""1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.""
+
+Instructions: Use the same format as in the examples. Provide only the corrected responses for the input below.
+
+Input:
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Smart grid management, 2. Waste management systems, 3. Flood detection.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.""
+""Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested.,""1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.""
+
+Output:
+1. Environmental monitoring
+2. Health care monitoring
+3. Industrial process control
+4. Smart homes
+5. Traffic monitoring
+6. Environmental pollution tracking
+7. Forest fire detection
+8. Urban planning
+9. Air quality monitoring
+"
