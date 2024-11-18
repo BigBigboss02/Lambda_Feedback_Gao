@@ -1,0 +1,68 @@
+Iteration,Response
+1,"Correct the responses:
+- Question: 3+3=7. Correction: 3+3=6.
+- Question: 10-5=2. Correction: 10-5=5.
+- Question: 2+2=5. Correction:
+- Question: 4+3=7. Correction: 4+3=7.
+- Question: 5-2=3. Correction: 5-2=3.
+- Question: 2+2"
+2,"Correct the responses:
+- Question: 3+3=7. Correction: 3+3=6.
+- Question: 10-5=2. Correction: 10-5=5.
+- Question: 2+2=5. Correction:
+- Question: 3x=6. Correction: 3x=3.
+- Question: 2x=7. Correction: 2x=5.
+- Question: 6x=12. Correction:"
+3,"Correct the responses:
+- Question: 3+3=7. Correction: 3+3=6.
+- Question: 10-5=2. Correction: 10-5=5.
+- Question: 2+2=5. Correction:
+- Question: 1+1=2. Correction: 1+1=3.
+- Question: 7+7=14. Correction: 7+7=1.
+- Question: 4+4"
+4,"Correct the responses:
+- Question: 3+3=7. Correction: 3+3=6.
+- Question: 10-5=2. Correction: 10-5=5.
+- Question: 2+2=5. Correction:
+- Question: 6+2=8. Correction: 6+2=10.
+- Question: 7-3=4. Correction: 7-3=4.
+- Question: 5+5"
+5,"Correct the responses:
+- Question: 3+3=7. Correction: 3+3=6.
+- Question: 10-5=2. Correction: 10-5=5.
+- Question: 2+2=5. Correction:
+2+2=4.
+- Question: 3+3=7. Correction:
+3+3=6.
+- Question: 10-5=2. Correction:
+10-5=5.
+- Question:"
+6,"Correct the responses:
+- Question: 3+3=7. Correction: 3+3=6.
+- Question: 10-5=2. Correction: 10-5=5.
+- Question: 2+2=5. Correction:
+- Question: 10-7=3. Correction: 10-7=3.
+- Question: 10-7=3. Correction: 10-7=5.
+- Question: 10-7"
+7,"Correct the responses:
+- Question: 3+3=7. Correction: 3+3=6.
+- Question: 10-5=2. Correction: 10-5=5.
+- Question: 2+2=5. Correction:
+2+2=3.
+- Question: 3+2=5. Correction: 3+2=4.
+- Question: 3+3=7. Correction: 3+3=6.
+-"
+8,"Correct the responses:
+- Question: 3+3=7. Correction: 3+3=6.
+- Question: 10-5=2. Correction: 10-5=5.
+- Question: 2+2=5. Correction:
+- Question: 5+3=8. Correction: 5+3=7.
+- Question: 2+2=5. Correction: 2+2=4.
+- Question: 10-5"
+9,"Correct the responses:
+- Question: 3+3=7. Correction: 3+3=6.
+- Question: 10-5=2. Correction: 10-5=5.
+- Question: 2+2=5. Correction:
+- Question: 6-6=0. Correction: 6-6=2.
+- Question: 2+3=5. Correction: 2+3=4.
+- Question: 7-3"
