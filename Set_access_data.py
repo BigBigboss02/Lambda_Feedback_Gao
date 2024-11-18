@@ -55,6 +55,7 @@ SELECT
   p."partContent",
   p."partAnswerContent",
   qv."masterContent"
+
 FROM
   "ResponseArea" AS ra
 JOIN
@@ -68,6 +69,7 @@ JOIN
 WHERE
   ef."name" = 'shortTextAnswer'
   AND q."publishedVersionId" = qv.id;
+
 '''
 
 # def queries(conn, module_name, module_instance_code):
@@ -133,7 +135,7 @@ def fetch_data():
             }, inplace=True)
             # Get the current system time for the filename
             current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
-            file_path = os.path.join("obtained_data/", f"data_{current_time}.csv")
+            file_path = os.path.join(r'C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\result\obtained_data', f"data_{current_time}.csv")
             # Save CSV with current system time
             filtered_data.to_csv(file_path, index=False)
 
