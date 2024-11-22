@@ -1,0 +1,1070 @@
+Iteration,Response
+1,"
+Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+
+            Environmental monitoring
+            Health care monitoring
+            Industrial process control
+            Smart agriculture
+            Structural health monitoring
+            Habitat monitoring
+            Disaster response systems
+            Military surveillance
+            Wildlife tracking
+            Smart homes
+            Traffic monitoring
+            Environmental pollution tracking
+            Oil and gas pipeline monitoring
+            Water quality monitoring
+            Precision agriculture
+            Forest fire detection
+            Urban planning
+            Air quality monitoring
+            Smart grid management
+            Waste management systems
+            Flood detection
+            Building security systems
+            Patient health monitoring
+            Crop yield monitoring
+            Weather forecasting
+            Power line monitoring
+            Road condition monitoring
+            Asset tracking
+            Energy usage monitoring
+            Smart parking systems 
+
+### Examples:
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart grid management, 2. Waste management systems, 3. Flood detection.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be"
+2,"
+Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+
+            Environmental monitoring
+            Health care monitoring
+            Industrial process control
+            Smart agriculture
+            Structural health monitoring
+            Habitat monitoring
+            Disaster response systems
+            Military surveillance
+            Wildlife tracking
+            Smart homes
+            Traffic monitoring
+            Environmental pollution tracking
+            Oil and gas pipeline monitoring
+            Water quality monitoring
+            Precision agriculture
+            Forest fire detection
+            Urban planning
+            Air quality monitoring
+            Smart grid management
+            Waste management systems
+            Flood detection
+            Building security systems
+            Patient health monitoring
+            Crop yield monitoring
+            Weather forecasting
+            Power line monitoring
+            Road condition monitoring
+            Asset tracking
+            Energy usage monitoring
+            Smart parking systems 
+
+### Examples:
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart grid management, 2. Waste management systems, 3. Flood detection.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be"
+3,"
+Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+
+            Environmental monitoring
+            Health care monitoring
+            Industrial process control
+            Smart agriculture
+            Structural health monitoring
+            Habitat monitoring
+            Disaster response systems
+            Military surveillance
+            Wildlife tracking
+            Smart homes
+            Traffic monitoring
+            Environmental pollution tracking
+            Oil and gas pipeline monitoring
+            Water quality monitoring
+            Precision agriculture
+            Forest fire detection
+            Urban planning
+            Air quality monitoring
+            Smart grid management
+            Waste management systems
+            Flood detection
+            Building security systems
+            Patient health monitoring
+            Crop yield monitoring
+            Weather forecasting
+            Power line monitoring
+            Road condition monitoring
+            Asset tracking
+            Energy usage monitoring
+            Smart parking systems 
+
+### Examples:
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart grid management, 2. Waste management systems, 3. Flood detection.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Energy usage monitoring, 2. Smart parking systems, 3. Asset tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Energy usage monitoring, 2. Smart parking systems, 3. Asset tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Energy usage monitoring, 2. Smart parking systems, 3. Asset tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Energy usage monitoring, 2. Smart parking systems, 3. Asset tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Energy usage monitoring, 2. Smart parking systems, 3. Asset tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Energy usage monitoring, 2. Smart parking systems, 3. Asset tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Energy usage monitoring, 2. Smart parking systems, 3. Asset tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1."
+4,"
+Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+
+            Environmental monitoring
+            Health care monitoring
+            Industrial process control
+            Smart agriculture
+            Structural health monitoring
+            Habitat monitoring
+            Disaster response systems
+            Military surveillance
+            Wildlife tracking
+            Smart homes
+            Traffic monitoring
+            Environmental pollution tracking
+            Oil and gas pipeline monitoring
+            Water quality monitoring
+            Precision agriculture
+            Forest fire detection
+            Urban planning
+            Air quality monitoring
+            Smart grid management
+            Waste management systems
+            Flood detection
+            Building security systems
+            Patient health monitoring
+            Crop yield monitoring
+            Weather forecasting
+            Power line monitoring
+            Road condition monitoring
+            Asset tracking
+            Energy usage monitoring
+            Smart parking systems 
+
+### Examples:
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart grid management, 2. Waste management systems, 3. Flood detection.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+"
+5,"
+Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+
+            Environmental monitoring
+            Health care monitoring
+            Industrial process control
+            Smart agriculture
+            Structural health monitoring
+            Habitat monitoring
+            Disaster response systems
+            Military surveillance
+            Wildlife tracking
+            Smart homes
+            Traffic monitoring
+            Environmental pollution tracking
+            Oil and gas pipeline monitoring
+            Water quality monitoring
+            Precision agriculture
+            Forest fire detection
+            Urban planning
+            Air quality monitoring
+            Smart grid management
+            Waste management systems
+            Flood detection
+            Building security systems
+            Patient health monitoring
+            Crop yield monitoring
+            Weather forecasting
+            Power line monitoring
+            Road condition monitoring
+            Asset tracking
+            Energy usage monitoring
+            Smart parking systems 
+
+### Examples:
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart grid management, 2. Waste management systems, 3. Flood detection.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1."
+6,"
+Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+
+            Environmental monitoring
+            Health care monitoring
+            Industrial process control
+            Smart agriculture
+            Structural health monitoring
+            Habitat monitoring
+            Disaster response systems
+            Military surveillance
+            Wildlife tracking
+            Smart homes
+            Traffic monitoring
+            Environmental pollution tracking
+            Oil and gas pipeline monitoring
+            Water quality monitoring
+            Precision agriculture
+            Forest fire detection
+            Urban planning
+            Air quality monitoring
+            Smart grid management
+            Waste management systems
+            Flood detection
+            Building security systems
+            Patient health monitoring
+            Crop yield monitoring
+            Weather forecasting
+            Power line monitoring
+            Road condition monitoring
+            Asset tracking
+            Energy usage monitoring
+            Smart parking systems 
+
+### Examples:
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart grid management, 2. Waste management systems, 3. Flood detection.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+"
+7,"
+Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+
+            Environmental monitoring
+            Health care monitoring
+            Industrial process control
+            Smart agriculture
+            Structural health monitoring
+            Habitat monitoring
+            Disaster response systems
+            Military surveillance
+            Wildlife tracking
+            Smart homes
+            Traffic monitoring
+            Environmental pollution tracking
+            Oil and gas pipeline monitoring
+            Water quality monitoring
+            Precision agriculture
+            Forest fire detection
+            Urban planning
+            Air quality monitoring
+            Smart grid management
+            Waste management systems
+            Flood detection
+            Building security systems
+            Patient health monitoring
+            Crop yield monitoring
+            Weather forecasting
+            Power line monitoring
+            Road condition monitoring
+            Asset tracking
+            Energy usage monitoring
+            Smart parking systems 
+
+### Examples:
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart grid management, 2. Waste management systems, 3. Flood detection.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be"
+8,"
+Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+
+            Environmental monitoring
+            Health care monitoring
+            Industrial process control
+            Smart agriculture
+            Structural health monitoring
+            Habitat monitoring
+            Disaster response systems
+            Military surveillance
+            Wildlife tracking
+            Smart homes
+            Traffic monitoring
+            Environmental pollution tracking
+            Oil and gas pipeline monitoring
+            Water quality monitoring
+            Precision agriculture
+            Forest fire detection
+            Urban planning
+            Air quality monitoring
+            Smart grid management
+            Waste management systems
+            Flood detection
+            Building security systems
+            Patient health monitoring
+            Crop yield monitoring
+            Weather forecasting
+            Power line monitoring
+            Road condition monitoring
+            Asset tracking
+            Energy usage monitoring
+            Smart parking systems 
+
+### Examples:
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart grid management, 2. Waste management systems, 3. Flood detection.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+### Input:
+Give 3 examples of WSN applications. *There may be"
+9,"
+Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+
+            Environmental monitoring
+            Health care monitoring
+            Industrial process control
+            Smart agriculture
+            Structural health monitoring
+            Habitat monitoring
+            Disaster response systems
+            Military surveillance
+            Wildlife tracking
+            Smart homes
+            Traffic monitoring
+            Environmental pollution tracking
+            Oil and gas pipeline monitoring
+            Water quality monitoring
+            Precision agriculture
+            Forest fire detection
+            Urban planning
+            Air quality monitoring
+            Smart grid management
+            Waste management systems
+            Flood detection
+            Building security systems
+            Patient health monitoring
+            Crop yield monitoring
+            Weather forecasting
+            Power line monitoring
+            Road condition monitoring
+            Asset tracking
+            Energy usage monitoring
+            Smart parking systems 
+
+### Examples:
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart grid management, 2. Waste management systems, 3. Flood detection.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be"
+10,"
+Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+
+            Environmental monitoring
+            Health care monitoring
+            Industrial process control
+            Smart agriculture
+            Structural health monitoring
+            Habitat monitoring
+            Disaster response systems
+            Military surveillance
+            Wildlife tracking
+            Smart homes
+            Traffic monitoring
+            Environmental pollution tracking
+            Oil and gas pipeline monitoring
+            Water quality monitoring
+            Precision agriculture
+            Forest fire detection
+            Urban planning
+            Air quality monitoring
+            Smart grid management
+            Waste management systems
+            Flood detection
+            Building security systems
+            Patient health monitoring
+            Crop yield monitoring
+            Weather forecasting
+            Power line monitoring
+            Road condition monitoring
+            Asset tracking
+            Energy usage monitoring
+            Smart parking systems 
+
+### Examples:
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart agriculture, 2. Structural health monitoring, 3. Habitat monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Disaster response systems, 2. Military surveillance, 3. Wildlife tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart homes, 2. Traffic monitoring, 3. Environmental pollution tracking.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Oil and gas pipeline monitoring, 2. Water quality monitoring, 3. Precision agriculture.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Forest fire detection, 2. Urban planning, 3. Air quality monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart grid management, 2. Waste management systems, 3. Flood detection.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Building security systems, 2. Patient health monitoring, 3. Crop yield monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Weather forecasting, 2. Power line monitoring, 3. Road condition monitoring.
+Output: Correct
+
+Input: Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+
+### Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems.
+Output: Correct
+
+Input:
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1."
