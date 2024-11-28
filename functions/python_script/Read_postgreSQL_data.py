@@ -12,17 +12,22 @@ first accesses each of the set in the module
 import pandas as pd
 import psycopg2
 from datetime import datetime
+from dotenv import load_dotenv
 import os
 
+# Specify the path to the renamed .env file
+env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\environments\login_configs.env"
+load_dotenv(dotenv_path=env_path)
 
 # Configuration class to store database connection details
-class Config():
-    DB_USERNAME = "lf_zg819.ysvrjbquqkmctzytvwzd"  # Replace with your actual username
-    DB_PASSWORD = '="3!67v*SY1j'                  # Replace with your actual password
-    DB_HOST = "aws-0-eu-west-2.pooler.supabase.com"
-    DB_NAME = "postgres"
-    DB_PORT = 6543
+class Config:
+    DB_USERNAME = os.getenv("DB_USERNAME")
+    DB_PASSWORD = os.getenv("DB_PASSWORD")
+    DB_HOST = os.getenv("DB_HOST")
+    DB_NAME = os.getenv("DB_NAME")
+    DB_PORT = os.getenv("DB_PORT")
 Config = Config()
+
 # Connect to the database using values from the Config class
 def connect():
     """ Connect to the PostgreSQL database server """

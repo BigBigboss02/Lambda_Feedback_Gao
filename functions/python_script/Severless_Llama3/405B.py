@@ -1,8 +1,22 @@
 import requests
 import json
+from dotenv import load_dotenv
+import os
 
-API_URL = "https://api-inference.huggingface.co/models/meta-llama/Llama-3.1-405B"
-headers = {"Authorization": "Bearer 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"}
+# Specify the path to the renamed .env file
+env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\environments\login_configs.env"
+load_dotenv(dotenv_path=env_path)
+
+class Config():
+    API_URL = os.getenv("405B_API_URL")
+    AUTHORIZATION = os.getenv("HUGGINGFACE_AUTHORIZATION")
+    examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\functions\python_script\structured_prompts\examples1.json"   
+Config = Config()
+
+
+API_URL = Config.API_URL
+headers = {"Authorization": f"Bearer {Config.AUTHORIZATION}"} 
+
 
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
@@ -42,11 +56,8 @@ Energy usage monitoring
 Smart parking systems
 ''')
 
-# Path to the examples JSON file
-examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\promts\examples1.json"
-
 # Load examples from JSON file
-with open(examples_path, "r") as file:
+with open(Config.examples_path, "r") as file:
     examples = json.load(file)
 
 # Format examples as part of the prompt
