@@ -2,25 +2,20 @@ import requests
 import json
 from dotenv import load_dotenv
 import os
+import time
 
 # Specify the path to the renamed .env file
 env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\environments\login_configs.env"
 load_dotenv(dotenv_path=env_path)
 
 class Config():
-    API_URL = os.getenv("405B_API_URL")
+    API_URL = os.getenv("3B_API_URL")
     AUTHORIZATION = os.getenv("HUGGINGFACE_AUTHORIZATION")
     examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\functions\python_script\structured_prompts\examples1.json"   
 Config = Config()
 
-
 API_URL = Config.API_URL
-headers = {"Authorization": f"Bearer {Config.AUTHORIZATION}"} 
-
-
-def query(payload):
-	response = requests.post(API_URL, headers=headers, json=payload)
-	return response.json()
+headers = {"Authorization": f"Bearer {Config.AUTHORIZATION}"}
 
 # Define the list of WSN applications
 prompt = ('''
@@ -68,7 +63,6 @@ examples_text = "\n".join(
 print(examples_text)
 
 # Sample input data
-# test = "Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems."
 test = "Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems."
 
 # Build the full prompt
@@ -86,8 +80,38 @@ You are checking if the input includes 3 valid Wireless Sensor Network (WSN) app
 {test}
 """
 
-output = query({
-	"inputs": "Can you please let us know more details about your ",
-})
+# Prepare the payload
+payload = {
+    "inputs": full_prompt,
+    "parameters": {
+        "max_new_tokens": 100,  # Limit response length
+        "temperature": 0.7,     # Control randomness
+    }
+}
 
-print(output)
+# Function to query the API with retry logic
+def query_with_wait(api_url, headers, payload, initial_wait_time=257, retry_interval=60, max_retries=5):
+    print(f"Waiting {initial_wait_time} seconds for the endpoint to load...")
+    time.sleep(initial_wait_time)
+
+    for attempt in range(max_retries):
+        response = requests.post(api_url, headers=headers, json=payload)
+
+        if response.status_code == 200:
+            return response.json()
+        elif response.status_code == 503:  # Service Unavailable
+            print(f"Attempt {attempt + 1}/{max_retries}: Model is still loading. Retrying in {retry_interval} seconds...")
+            time.sleep(retry_interval)
+        else:
+            print(f"Error: {response.status_code}, {response.text}")
+            break
+    else:
+        print("Failed to get a response after multiple retries.")
+        return None
+
+# Query the API
+output = query_with_wait(API_URL, headers, payload)
+
+# Display the output
+if output:
+    print("Model Output:", output)

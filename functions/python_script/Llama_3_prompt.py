@@ -5,6 +5,8 @@ import torch
 from datetime import datetime
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+import torch
+torch.set_default_tensor_type(torch.HalfTensor) 
 
 
 def extract_outputs(data):
@@ -32,7 +34,8 @@ def extract_outputs(data):
 
 
 # Specify your model path
-model_name = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Llama-3.2-1B"
+# model_name = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Llama-3.2-1B"
+model_name = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Llama-3.1-8B" 
 
 # Load the tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -88,7 +91,7 @@ Smart parking systems
 ''')
 
 # Path to the examples JSON file
-examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Llama-3.2-1B\promts\examples1.json"
+examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\functions\python_script\structured_prompts\examples1.json"
 
 # Load examples from JSON file
 with open(examples_path, "r") as file:
@@ -133,7 +136,7 @@ inputs = {key: value.to(device) for key, value in inputs.items()}
 
 # Filepath for the CSV file, named by the current system time
 current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-filepath = rf'C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\result\llama3_{current_time}.csv'
+filepath = rf'C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\result\Llama3_8B_test\llama3_8B_{current_time}.csv'
 
 # Open the CSV file to record results
 # Open the CSV file to record results
@@ -142,7 +145,7 @@ with open(filepath, mode='w', newline='', encoding='utf-8') as file:
     writer.writerow(["Iteration", "Input", "Response"])
 
     # Run the prompt 10 times and record the result
-    for i in range(1, 11):
+    for i in range(1, 101):
         outputs = model.generate(
             input_ids=inputs['input_ids'],
             attention_mask=inputs['attention_mask'],
@@ -155,12 +158,12 @@ with open(filepath, mode='w', newline='', encoding='utf-8') as file:
         response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
         # Extract the output
-        trimmed_response = extract_outputs(response)
+        # response = extract_outputs(response)
 
         # Print the iteration, input, and corresponding output
-        print(f"Iteration {i}: Input: {test} | Response: {trimmed_response}")
+        print(f"Iteration {i}: Input: {test} | Response: {response}")
 
         # Write the iteration, input, and corresponding output to the CSV
-        writer.writerow([i, test, trimmed_response])
+        writer.writerow([i, test, response])
 
 print(f"Results have been recorded to {filepath}")
