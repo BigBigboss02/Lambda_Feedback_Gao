@@ -8,10 +8,12 @@ import time
 env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\environments\login_configs.env"
 load_dotenv(dotenv_path=env_path)
 
+# Configuration class to load environment variables
 class Config():
-    API_URL = os.getenv("3B_API_URL")
-    AUTHORIZATION = os.getenv("HUGGINGFACE_AUTHORIZATION")
-    examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\functions\python_script\structured_prompts\examples1.json"   
+    API_URL = os.getenv("OPENAI_URL")  # Replace with the correct key for GPT-4-O API URL
+    AUTHORIZATION = os.getenv("OPENAI_API_KEY")  # Replace with the correct authorization key variable
+    examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\functions\python_script\structured_prompts\examples1.json"
+
 Config = Config()
 
 API_URL = Config.API_URL
@@ -60,7 +62,6 @@ examples_text = "\n".join(
     [f"Input: {item['original']}\nOutput: {'Correct' if item['correct'] else 'Incorrect'}\n"
      for item in examples]
 )
-print(examples_text)
 
 # Sample input data
 test = "Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems."
@@ -82,15 +83,21 @@ You are checking if the input includes 3 valid Wireless Sensor Network (WSN) app
 
 # Prepare the payload
 payload = {
-    "inputs": full_prompt,
-    "parameters": {
-        "max_new_tokens": 100,  # Limit response length
-        "temperature": 0.7,     # Control randomness
-    }
+    "model": "gpt-4o-mini",  # Specify GPT-4-O Mini as the model
+    "messages": [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": full_prompt}
+    ],
+    "max_tokens": 100,  # Limit response length
+    "temperature": 0.7  # Control randomness
 }
 
-# Function to query the API with retry logic
-def query_with_wait(api_url, headers, payload, initial_wait_time=257, retry_interval=60, max_retries=5):
+
+
+import csv
+from datetime import datetime
+
+def query_with_wait(api_url, headers, payload, initial_wait_time=10, retry_interval=60, max_retries=5):
     print(f"Waiting {initial_wait_time} seconds for the endpoint to load...")
     time.sleep(initial_wait_time)
 
@@ -109,9 +116,25 @@ def query_with_wait(api_url, headers, payload, initial_wait_time=257, retry_inte
         print("Failed to get a response after multiple retries.")
         return None
 
-# Query the API
-output = query_with_wait(API_URL, headers, payload)
+# Initialize the CSV file
+current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+filepath = rf'C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\result\Cross_Platform_Comparison\GPT-4o_mini_8B_test\{current_time}.csv'
 
-# Display the output
-if output:
-    print("Model Output:", output)
+# Write the header row
+with open(filepath, mode='w', newline='', encoding='utf-8') as file:
+    writer = csv.writer(file)
+    writer.writerow(["Query Number", "Timestamp", "API Response"])
+
+# Perform multiple queries
+for i in range(10):  # Adjust the range for the desired number of queries
+    print(f"Performing query {i + 1}")
+    output = query_with_wait(API_URL, headers, payload)
+
+    if output:
+        # Save successful response to CSV
+        with open(filepath, mode='a', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            writer.writerow([i + 1, timestamp, json.dumps(output, indent=4)])
+    else:
+        print(f"Query {i + 1} failed.")

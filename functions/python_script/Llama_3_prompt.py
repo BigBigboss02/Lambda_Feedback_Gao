@@ -35,7 +35,7 @@ def extract_outputs(data):
 
 # Specify your model path
 # model_name = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Llama-3.2-1B"
-model_name = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Llama-3.1-8B" 
+model_name = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Llama-3.2-3B" 
 
 # Load the tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -106,7 +106,7 @@ print(examples_text)
 
 # Sample input data
 # test = "Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Asset tracking, 2. Energy usage monitoring, 3. Smart parking systems."
-test = "Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems."
+test = "Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems. Output:"
 
 # Build the full prompt
 full_prompt = f"""
@@ -121,6 +121,7 @@ You are checking if the input includes 3 valid Wireless Sensor Network (WSN) app
 
 ### Input:
 {test}
+
 """
 
 # Tokenize the full prompt
@@ -136,7 +137,7 @@ inputs = {key: value.to(device) for key, value in inputs.items()}
 
 # Filepath for the CSV file, named by the current system time
 current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-filepath = rf'C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\result\Llama3_8B_test\llama3_8B_{current_time}.csv'
+filepath = rf'C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\result\Cross_Platform_Comparison\Llama3_3B_test\{current_time}.csv'
 
 # Open the CSV file to record results
 # Open the CSV file to record results
@@ -145,7 +146,7 @@ with open(filepath, mode='w', newline='', encoding='utf-8') as file:
     writer.writerow(["Iteration", "Input", "Response"])
 
     # Run the prompt 10 times and record the result
-    for i in range(1, 101):
+    for i in range(1, 201):
         outputs = model.generate(
             input_ids=inputs['input_ids'],
             attention_mask=inputs['attention_mask'],
@@ -158,9 +159,9 @@ with open(filepath, mode='w', newline='', encoding='utf-8') as file:
         response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
         # Extract the output
-        # response = extract_outputs(response)
+        response = extract_outputs(response)
 
-        # Print the iteration, input, and corresponding output
+        #Print the iteration, input, and corresponding output
         print(f"Iteration {i}: Input: {test} | Response: {response}")
 
         # Write the iteration, input, and corresponding output to the CSV
