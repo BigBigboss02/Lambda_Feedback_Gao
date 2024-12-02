@@ -96,8 +96,8 @@ payload = {
 
 import csv
 from datetime import datetime
-
-def query_with_wait(api_url, headers, payload, initial_wait_time=10, retry_interval=60, max_retries=5):
+# Update the query function to extract only relevant response data
+def query_with_wait(api_url, headers, payload, initial_wait_time=5, retry_interval=60, max_retries=5):
     print(f"Waiting {initial_wait_time} seconds for the endpoint to load...")
     time.sleep(initial_wait_time)
 
@@ -105,7 +105,15 @@ def query_with_wait(api_url, headers, payload, initial_wait_time=10, retry_inter
         response = requests.post(api_url, headers=headers, json=payload)
 
         if response.status_code == 200:
-            return response.json()
+            # Extract the assistant's message content
+            response_data = response.json()
+            choices = response_data.get("choices", [])
+            if choices:
+                assistant_message = choices[0]["message"]["content"]
+                return assistant_message  # Return only the assistant's message
+            else:
+                print("No valid choices in response.")
+                return None
         elif response.status_code == 503:  # Service Unavailable
             print(f"Attempt {attempt + 1}/{max_retries}: Model is still loading. Retrying in {retry_interval} seconds...")
             time.sleep(retry_interval)
@@ -123,18 +131,18 @@ filepath = rf'C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFe
 # Write the header row
 with open(filepath, mode='w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
-    writer.writerow(["Query Number", "Timestamp", "API Response"])
+    writer.writerow(["Query Number", "Timestamp", "Assistant Output"])  # Update column name for clarity
 
 # Perform multiple queries
-for i in range(10):  # Adjust the range for the desired number of queries
+for i in range(100):  # Adjust the range for the desired number of queries
     print(f"Performing query {i + 1}")
     output = query_with_wait(API_URL, headers, payload)
 
     if output:
-        # Save successful response to CSV
+        # Save the extracted assistant's output to CSV
         with open(filepath, mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            writer.writerow([i + 1, timestamp, json.dumps(output, indent=4)])
+            writer.writerow([i + 1, timestamp, output])  # Log only the assistant's output
     else:
         print(f"Query {i + 1} failed.")
