@@ -2,33 +2,22 @@ import csv
 import re
 import json
 import torch
+import os
 from datetime import datetime
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from tools.config import Config
 
-import torch
-torch.set_default_tensor_type(torch.HalfTensor) 
 
-class Config:
-    def __init__(self, model):
-        self.model = model  # Set the model type
 
-        # Set URLs and keys dynamically based on the model
-        if self.model == "A":
-            self.API_URL = os.getenv("MODEL_A_API_URL", "https://default-url-for-model-a.com")
-            self.AUTHORIZATION = os.getenv("MODEL_A_API_KEY", "default-api-key-for-model-a")
-        elif self.model == "B":
-            self.API_URL = os.getenv("MODEL_B_API_URL", "https://default-url-for-model-b.com")
-            self.AUTHORIZATION = os.getenv("MODEL_B_API_KEY", "default-api-key-for-model-b")
-        else:
-            raise ValueError(f"Unknown model: {self.model}")
 
-        # Use __file__ to dynamically locate the examples path
-        current_dir = os.path.dirname(__file__)
-        self.examples_path = os.path.join(
-            current_dir, 
-            "structured_prompts", 
-            "examples1.json"
-        )
+
+
+config = Config(model='llamma',endpoint='local')
+if config.endpoint == 'local':
+    import torch
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+    torch.set_default_tensor_type(torch.HalfTensor) 
+if config.endpoint == 'api':
+    from tools.api_queries import query_with_wait
 
 def extract_outputs(data):
     """
