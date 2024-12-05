@@ -1,0 +1,7 @@
+Llama3 calling having issue
+
+
+Structure design:
+1. decide what prompts is input into prompting structure it is used
+2. decide calling from local or api endpoint
+3. decide result saving format and saving location
