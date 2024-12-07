@@ -4,13 +4,34 @@ from langchain.output_parsers import RegexParser
 from langchain_huggingface.llms import HuggingFacePipeline
 from langchain.schema.runnable import RunnableSequence
 
-# Initialize HuggingFacePipeline with GPU support
-hf = HuggingFacePipeline.from_model_id(
-    model_id="gpt2",
-    task="text-generation",
-    pipeline_kwargs={"max_new_tokens": 50},
-    device=0  # Use GPU
-)
+
+load_local_model = True
+if load_local_model:
+    from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+    # Define the local model path
+    local_model_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Llama-3.2-1B"
+
+    # Load the tokenizer and model from the local path
+    tokenizer = AutoTokenizer.from_pretrained(local_model_path)
+    model = AutoModelForCausalLM.from_pretrained(local_model_path)
+
+    # Set up the Hugging Face pipeline
+    hf_pipeline = pipeline(
+        "text-generation", 
+        model=model, 
+        tokenizer=tokenizer, 
+        device=0,  # Use GPU (set to -1 for CPU)
+        max_new_tokens=50,  # Limit the number of tokens generated
+    )
+    hf = HuggingFacePipeline(pipeline=hf_pipeline)
+else:
+    # Initialize HuggingFacePipeline with GPU support
+    hf = HuggingFacePipeline.from_model_id(
+        #model_id="gpt2",
+        task="text-generation",
+        pipeline_kwargs={"max_new_tokens": 50},
+        device=0  # Use GPU
+    )
 
 
 import json
@@ -30,7 +51,7 @@ You are checking if the input includes 3 valid Wireless Sensor Network (WSN) app
 ### Input:
 {test}
 
-### Response:
+### Output:
 {answer}
 """
 prompt_template = PromptTemplate(
@@ -63,8 +84,8 @@ else:
     raise ValueError("Unexpected structure in 'example_text.json' for examples")
 
 # Define the test input
-test = "Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems. Output:"
-answer = 'Correct'
+test = "Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems."
+answer = None
 
 prompt_template = PromptTemplate(
     template=template_text,
@@ -78,7 +99,7 @@ full_prompt = prompt_template.format(
     test= test,
     answer = answer
 )
-
+print(full_prompt)
 # Print the full prompt
 #dprint(full_prompt)
 
