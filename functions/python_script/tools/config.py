@@ -49,6 +49,7 @@ class Config:
                     os.getenv("OPENAI_API_KEY")
                 )
             else:
+                #OpenAi is not available for offline calling
                 return (None)
         
 config_gpt = Config(model='gpt')

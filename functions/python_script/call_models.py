@@ -1,11 +1,10 @@
 import csv
-import re
 import json
 import torch
 import os
 from datetime import datetime
 from tools.config import Config
-
+from tools.sub_functions import trim_llama
 
 
 
@@ -17,30 +16,9 @@ if config.endpoint == 'local':
     from transformers import AutoModelForCausalLM, AutoTokenizer
     torch.set_default_tensor_type(torch.HalfTensor) 
 if config.endpoint == 'api':
-    from tools.api_queries import query_with_wait
+    from tools.sub_functions import query_with_wait
 
-def extract_outputs(data):
-    """
-    Extracts only the final 'Output' value corresponding to the actual input, ignoring examples or instructions.
 
-    Args:
-        data (str): The input text containing multiple entries with 'Output' fields.
-
-    Returns:
-        list: A list of final 'Output' values corresponding to actual inputs.
-    """
-    # Split data into sections based on iterations
-    iterations = re.split(r"### Input:", data)
-    outputs = []
-
-    for section in iterations[1:]:  # Skip the first part as it doesn't contain valid iterations
-        # Find the last 'Output:' in the section
-        match = re.search(r"Output: (.+)", section)
-        if match:
-            # Add the matched output to the list
-            outputs.append(match.group(1).strip())
-
-    return outputs
 
 
 # Specify your model path
@@ -150,7 +128,6 @@ current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 filepath = rf'C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\result\Cross_Platform_Comparison\Llama3_3B_test\{current_time}.csv'
 
 # Open the CSV file to record results
-# Open the CSV file to record results
 with open(filepath, mode='w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
     writer.writerow(["Iteration", "Input", "Response"])
@@ -169,7 +146,7 @@ with open(filepath, mode='w', newline='', encoding='utf-8') as file:
         response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
         # Extract the output
-        response = extract_outputs(response)
+        response = trim_llama(response)
 
         #Print the iteration, input, and corresponding output
         print(f"Iteration {i}: Input: {test} | Response: {response}")
