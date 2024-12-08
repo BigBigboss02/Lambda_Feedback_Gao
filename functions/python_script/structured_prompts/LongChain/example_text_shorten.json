@@ -1,0 +1,10 @@
+[
+    {
+        "original": "Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Environmental monitoring, 2. Health care monitoring, 3. Industrial process control.",
+        "correct": true
+    },
+    {
+        "original": "Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. Smart agriculture, 2. Habitat monitoring.",
+        "correct": false
+    }
+]

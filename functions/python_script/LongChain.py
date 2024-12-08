@@ -1,15 +1,25 @@
 import json
+import os
+from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate
 from langchain.output_parsers import RegexParser
 from langchain_huggingface.llms import HuggingFacePipeline
 from langchain.schema.runnable import RunnableSequence
+from tools.agents import GPT4OMiniAgent
 
-
-load_local_model = True
+# Target Tasks: list objects, answer reason in 1 line, combining of both
+# Input expected from teacher:
+    #Type of the question, all needed objects and the core reason of the response
+# Agents: 
+    # Number checker for listing, feature extraction from reason agent as agent 1/1.5
+    # Decision Maker as agent 2
+        # Reason Checker
+    # Feedback generator
+load_local_model = False
 if load_local_model:
     from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
     # Define the local model path
-    local_model_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Llama-3.2-1B"
+    local_model_path = r"Llama-3.1-8B"
 
     # Load the tokenizer and model from the local path
     tokenizer = AutoTokenizer.from_pretrained(local_model_path)
@@ -27,12 +37,23 @@ if load_local_model:
 else:
     # Initialize HuggingFacePipeline with GPU support
     hf = HuggingFacePipeline.from_model_id(
-        #model_id="gpt2",
+        model_id="gpt2",
+       
         task="text-generation",
-        pipeline_kwargs={"max_new_tokens": 50},
-        device=0  # Use GPU
+        pipeline_kwargs={"max_new_tokens": 50}
     )
 
+GPT4OMiniAgent = GPT4OMiniAgent()
+# Load environment variables
+env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\login_configs.env"
+load_dotenv(dotenv_path=env_path)
+
+api_url = os.getenv("OPENAI_URL")
+auth_key = os.getenv("OPENAI_API_KEY")
+headers = {"Authorization": f"Bearer {auth_key}"}
+
+# Initialize GPT-4-O Mini Agent
+gpt4o_agent = GPT4OMiniAgent(api_url=api_url, headers=headers)
 
 import json
 from langchain.prompts import PromptTemplate
@@ -50,9 +71,6 @@ You are checking if the input includes 3 valid Wireless Sensor Network (WSN) app
 
 ### Input:
 {test}
-
-### Output:
-{answer}
 """
 prompt_template = PromptTemplate(
     template=template_text,
@@ -63,7 +81,7 @@ prompt_template = PromptTemplate(
 # Load JSON data for correct answers
 with open(r'Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\correct_answers.json', "r") as file:
     correct_answers_temp = json.load(file)
-with open(r"Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\example_text.json", "r") as file:
+with open(r"Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\example_text_shorten.json", "r") as file:
     examples_temp = json.load(file)
 
 
@@ -84,12 +102,14 @@ else:
     raise ValueError("Unexpected structure in 'example_text.json' for examples")
 
 # Define the test input
-test = "Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems."
-answer = None
+test = '''
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems. 
+Output:
+       '''
 
 prompt_template = PromptTemplate(
     template=template_text,
-    input_variables=["correct_answers", "examples_text", "test", "answer "],
+    input_variables=["correct_answers", "examples_text", "test"],
 )
 
 # Build the full prompt
@@ -97,7 +117,6 @@ full_prompt = prompt_template.format(
     correct_answers=correct_answers,
     examples_text=examples_data,
     test= test,
-    answer = answer
 )
 print(full_prompt)
 # Print the full prompt
@@ -110,8 +129,8 @@ parser = RegexParser(
     output_keys=["binary_response"]   # Match the capture group
 )
 
-# raw_output = hf(full_prompt)
-# print("Raw Output:", raw_output)
+raw_output = hf(full_prompt)
+print("Raw Output:", raw_output)
 
 # Create a chain as a sequence
 chain = RunnableSequence(hf, parser)
