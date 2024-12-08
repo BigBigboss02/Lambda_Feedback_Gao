@@ -1,7 +1,4 @@
-import os
 from dotenv import load_dotenv
-
-# Import necessary libraries for API requests
 import requests
 
 # Define GPT-4-O Mini Agent
