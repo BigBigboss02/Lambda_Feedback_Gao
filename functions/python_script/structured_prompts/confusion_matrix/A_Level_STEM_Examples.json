@@ -1,0 +1,224 @@
+{
+    "examples_with_correctness": {
+        "Physics_Energy": [
+            {
+                "input": "List 3 types of physics energy.",
+                "output": "1. Kinetic energy, 2. Potential energy, 3. Thermal energy.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of physics energy.",
+                "output": "1. Chemical energy, 2. Nuclear energy, 3. Elastic potential energy.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of physics energy.",
+                "output": "1. Kinetic energy, 2. Potential energy.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of physics energy.",
+                "output": "1. 12345, 2. 67890, 3. 24680.",
+                "correct": false
+            }
+        ],
+        "Biology_Levels_Organisation": [
+            {
+                "input": "List 3 types of biology levels organisation.",
+                "output": "1. Cells, 2. Tissues, 3. Organs.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of biology levels organisation.",
+                "output": "1. Organ systems, 2. Organisms, 3. Populations.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of biology levels organisation.",
+                "output": "1. Cells, 2. Tissues.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of biology levels organisation.",
+                "output": "1. 12345, 2. 67890, 3. 24680.",
+                "correct": false
+            }
+        ],
+        "Chemistry_Properties_Metals": [
+            {
+                "input": "List 3 types of chemistry properties metals.",
+                "output": "1. Conductivity, 2. Malleability, 3. Ductility.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of chemistry properties metals.",
+                "output": "1. Shiny appearance, 2. High density, 3. High melting point.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of chemistry properties metals.",
+                "output": "1. Conductivity, 2. Malleability.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of chemistry properties metals.",
+                "output": "1. 12345, 2. 67890, 3. 24680.",
+                "correct": false
+            }
+        ],
+        "Mathematics_Types_Numbers": [
+            {
+                "input": "List 3 types of mathematics types numbers.",
+                "output": "1. Natural numbers, 2. Whole numbers, 3. Integers.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of mathematics types numbers.",
+                "output": "1. Rational numbers, 2. Irrational numbers, 3. Real numbers.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of mathematics types numbers.",
+                "output": "1. Natural numbers, 2. Whole numbers.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of mathematics types numbers.",
+                "output": "1. 12345, 2. 67890, 3. 24680.",
+                "correct": false
+            }
+        ],
+        "Physics_Fundamental_Forces": [
+            {
+                "input": "List 3 types of physics fundamental forces.",
+                "output": "1. Gravitational force, 2. Electromagnetic force, 3. Strong nuclear force.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of physics fundamental forces.",
+                "output": "1. Weak nuclear force, 2. Frictional force, 3. Tension force.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of physics fundamental forces.",
+                "output": "1. Gravitational force, 2. Electromagnetic force.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of physics fundamental forces.",
+                "output": "1. 12345, 2. 67890, 3. 24680.",
+                "correct": false
+            }
+        ],
+        "Biology_Components_Cell": [
+            {
+                "input": "List 3 types of biology components cell.",
+                "output": "1. Nucleus, 2. Mitochondria, 3. Ribosomes.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of biology components cell.",
+                "output": "1. Endoplasmic reticulum, 2. Golgi apparatus, 3. Lysosomes.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of biology components cell.",
+                "output": "1. Nucleus, 2. Mitochondria.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of biology components cell.",
+                "output": "1. 12345, 2. 67890, 3. 24680.",
+                "correct": false
+            }
+        ],
+        "Chemistry_Chemical_Bonds": [
+            {
+                "input": "List 3 types of chemistry chemical bonds.",
+                "output": "1. Ionic bond, 2. Covalent bond, 3. Metallic bond.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of chemistry chemical bonds.",
+                "output": "1. Hydrogen bond, 2. Van der Waals forces, 3. Polar covalent bond.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of chemistry chemical bonds.",
+                "output": "1. Ionic bond, 2. Covalent bond.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of chemistry chemical bonds.",
+                "output": "1. 12345, 2. 67890, 3. 24680.",
+                "correct": false
+            }
+        ],
+        "Mathematics_Shapes_Geometry": [
+            {
+                "input": "List 3 types of mathematics shapes geometry.",
+                "output": "1. Triangle, 2. Square, 3. Rectangle.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of mathematics shapes geometry.",
+                "output": "1. Circle, 2. Polygon, 3. Pentagon.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of mathematics shapes geometry.",
+                "output": "1. Triangle, 2. Square.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of mathematics shapes geometry.",
+                "output": "1. 12345, 2. 67890, 3. 24680.",
+                "correct": false
+            }
+        ],
+        "Physics_Types_Waves": [
+            {
+                "input": "List 3 types of physics types waves.",
+                "output": "1. Longitudinal waves, 2. Transverse waves, 3. Electromagnetic waves.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of physics types waves.",
+                "output": "1. Mechanical waves, 2. Surface waves, 3. Sound waves.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of physics types waves.",
+                "output": "1. Longitudinal waves, 2. Transverse waves.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of physics types waves.",
+                "output": "1. 12345, 2. 67890, 3. 24680.",
+                "correct": false
+            }
+        ],
+        "Biology_Human_Digestive_System": [
+            {
+                "input": "List 3 types of biology human digestive system.",
+                "output": "1. Mouth, 2. Esophagus, 3. Stomach.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of biology human digestive system.",
+                "output": "1. Small intestine, 2. Large intestine, 3. Rectum.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of biology human digestive system.",
+                "output": "1. Mouth, 2. Esophagus.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of biology human digestive system.",
+                "output": "1. 12345, 2. 67890, 3. 24680.",
+                "correct": false
+            }
+        ]
+    }
+}

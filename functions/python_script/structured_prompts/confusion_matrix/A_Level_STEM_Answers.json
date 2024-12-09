@@ -1,0 +1,124 @@
+{
+    "example_text": {
+        "Physics_Energy": [
+            "Kinetic energy",
+            "Potential energy",
+            "Thermal energy",
+            "Chemical energy",
+            "Nuclear energy",
+            "Elastic potential energy",
+            "Gravitational potential energy",
+            "Sound energy",
+            "Light energy",
+            "Mechanical energy"
+        ],
+        "Biology_Levels_Organisation": [
+            "Cells",
+            "Tissues",
+            "Organs",
+            "Organ systems",
+            "Organisms",
+            "Populations",
+            "Communities",
+            "Ecosystems",
+            "Biomes",
+            "Biosphere"
+        ],
+        "Chemistry_Properties_Metals": [
+            "Conductivity",
+            "Malleability",
+            "Ductility",
+            "Shiny appearance",
+            "High density",
+            "High melting point",
+            "High boiling point",
+            "Sonority",
+            "Opacity",
+            "Thermal conductivity"
+        ],
+        "Mathematics_Types_Numbers": [
+            "Natural numbers",
+            "Whole numbers",
+            "Integers",
+            "Rational numbers",
+            "Irrational numbers",
+            "Real numbers",
+            "Complex numbers",
+            "Prime numbers",
+            "Composite numbers",
+            "Transcendental numbers"
+        ],
+        "Physics_Fundamental_Forces": [
+            "Gravitational force",
+            "Electromagnetic force",
+            "Strong nuclear force",
+            "Weak nuclear force",
+            "Frictional force",
+            "Tension force",
+            "Normal force",
+            "Air resistance",
+            "Applied force",
+            "Spring force"
+        ],
+        "Biology_Components_Cell": [
+            "Nucleus",
+            "Mitochondria",
+            "Ribosomes",
+            "Endoplasmic reticulum",
+            "Golgi apparatus",
+            "Lysosomes",
+            "Chloroplasts",
+            "Cell membrane",
+            "Cell wall",
+            "Cytoplasm"
+        ],
+        "Chemistry_Chemical_Bonds": [
+            "Ionic bond",
+            "Covalent bond",
+            "Metallic bond",
+            "Hydrogen bond",
+            "Van der Waals forces",
+            "Polar covalent bond",
+            "Nonpolar covalent bond",
+            "Coordinate bond",
+            "Sigma bond",
+            "Pi bond"
+        ],
+        "Mathematics_Shapes_Geometry": [
+            "Triangle",
+            "Square",
+            "Rectangle",
+            "Circle",
+            "Polygon",
+            "Pentagon",
+            "Hexagon",
+            "Octagon",
+            "Ellipse",
+            "Parallelogram"
+        ],
+        "Physics_Types_Waves": [
+            "Longitudinal waves",
+            "Transverse waves",
+            "Electromagnetic waves",
+            "Mechanical waves",
+            "Surface waves",
+            "Sound waves",
+            "Radio waves",
+            "Light waves",
+            "Infrared waves",
+            "Microwaves"
+        ],
+        "Biology_Human_Digestive_System": [
+            "Mouth",
+            "Esophagus",
+            "Stomach",
+            "Small intestine",
+            "Large intestine",
+            "Rectum",
+            "Anus",
+            "Liver",
+            "Gallbladder",
+            "Pancreas"
+        ]
+    }
+}
