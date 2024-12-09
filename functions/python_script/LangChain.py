@@ -171,7 +171,9 @@ full_prompt = prompt_template.format(
     examples_text=examples_data,
     test= test,
 )
+print('---------------')
 print(full_prompt)
+print('---------------')
 # Print the full prompt
 #dprint(full_prompt)
 
