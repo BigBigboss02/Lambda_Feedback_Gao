@@ -1,0 +1,114 @@
+{
+    "examples_with_correctness": {
+        "Physics_Energy": [
+            {
+                "input": "List 3 types of physics energy.",
+                "output": "1. Kinetic energy, 2. Potential energy, 3. Light energy.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of physics energy.",
+                "output": "1. Gravitational potential energy, 2. Nuclear energy, 3. Elastic potential energy.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of physics energy.",
+                "output": "1. Light energy, 2. Potential energy.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of physics energy.",
+                "output": "1. 12345, 2. lalala, 3. hahaha.",
+                "correct": false
+            }
+        ],
+        "Biology_Levels_Organisation": [
+            {
+                "input": "List 3 types of biology levels organisation.",
+                "output": "1. Cells, 2. Communities, 3. Organs.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of biology levels organisation.",
+                "output": "1. Organ systems, 2. Organisms, 3. Biomes.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of biology levels organisation.",
+                "output": "1. Biomes, 2. Tissues.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of biology levels organisation.",
+                "output": "1. 12345, 2. donald trump, 3. 24680.",
+                "correct": false
+            }
+        ],
+        "Chemistry_Properties_Metals": [
+            {
+                "input": "List 3 types of chemistry properties metals.",
+                "output": "1. High boiling point, 2. Malleability, 3. Ductility.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of chemistry properties metals.",
+                "output": "1. Shiny appearance, 2. Conductivity, 3. High melting point.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of chemistry properties metals.",
+                "output": "1. High boiling point, 2. Malleability.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of chemistry properties metals.",
+                "output": "1. hubby, 2. 67890, 3. A.",
+                "correct": false
+            }
+        ],
+        "Mathematics_Types_Numbers": [
+            {
+                "input": "List 3 types of mathematics types numbers.",
+                "output": "1. Natural numbers, 2. Rational numbers, 3. Integers.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of mathematics types numbers.",
+                "output": "1. Rational numbers, 2. Transcendental numbers, 3. Real numbers.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of mathematics types numbers.",
+                "output": "1. Rational numbers, 2. Whole numbers.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of mathematics types numbers.",
+                "output": "1. 12345, 2. Rational numbers, 3. 24680.",
+                "correct": false
+            }
+        ],
+            "Biology_Human_Digestive_System": [
+            {
+                "input": "List 3 types of biology human digestive system.",
+                "output": "1. Mouth, 2. Esophagus, 3. Rectum.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of biology human digestive system.",
+                "output": "1. Mouth, 2. Large intestine, 3. Rectum.",
+                "correct": true
+            },
+            {
+                "input": "List 3 types of biology human digestive system.",
+                "output": "1. Mouth, 2. Esophagus.",
+                "correct": false
+            },
+            {
+                "input": "List 3 types of biology human digestive system.",
+                "output": "1. Mouth, 2. 67890, 3. Esophagus.",
+                "correct": false
+            }
+        ]
+    }
+}

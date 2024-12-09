@@ -109,7 +109,7 @@ payload = {
 import csv
 from datetime import datetime
 # Update the query function to extract only relevant response data
-def query_with_wait(api_url, headers, payload, initial_wait_time=5, retry_interval=60, max_retries=5):
+def query_with_wait(api_url, headers, payload, initial_wait_time=1, retry_interval=60, max_retries=5):
     print(f"Waiting {initial_wait_time} seconds for the endpoint to load...")
     time.sleep(initial_wait_time)
 
