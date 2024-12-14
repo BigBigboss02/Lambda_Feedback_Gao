@@ -1,5 +1,6 @@
 import json
 import os
+
 from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate
 from langchain.output_parsers import RegexParser
@@ -29,18 +30,38 @@ class Config:
         self.openai_url = os.getenv("OPENAI_URL")
         self.openai_api_key = os.getenv('OPENAI_API_KEY')
 
+        #repeative testing related
+        self.examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\functions\python_script\structured_prompts\examples1.json"
+        self.csv_saving_basepath = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\test_results\confusion_matrix\confusion_matrix"
+        self.repetive_test_num = 5
+# Specify the path to the renamed .env file
+env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\login_configs.env"
+load_dotenv(dotenv_path=env_path)
+  
+
+
+
+
 config = Config()
 
-
-
-
 if config.load_local_model:
+    import torch
     from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+
+    #init  GPU
+    torch.set_default_device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"Using device: {device}")
+
+    
     # Define the local model path
     local_model_path = config.local_model_path
 
-    # Load the tokenizer and model from the local path
+    # Setup Padding for Hf Tokeniser from Transformer
     tokenizer = AutoTokenizer.from_pretrained(local_model_path)
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
     model = AutoModelForCausalLM.from_pretrained(local_model_path)
 
     # Set up the Hugging Face pipeline
@@ -48,9 +69,11 @@ if config.load_local_model:
         "text-generation", 
         model=model, 
         tokenizer=tokenizer, 
+        max_length=1028, #this 1028 defines the total token of input and output together
         device=0,  # Use GPU (set to -1 for CPU)
         max_new_tokens=50,  # Limit the number of tokens generated
     )
+
     hf = HuggingFacePipeline(pipeline=hf_pipeline)
 else:
     # Initialize HuggingFacePipeline with GPU support
@@ -62,10 +85,9 @@ else:
 
 
 
-#Calling GPT4o-mini
+# Define GPT4-o mini Agent
 from dotenv import load_dotenv
 import requests
-# Define GPT-4-O Mini Agent
 class GPT4OMiniAgent:
     def __init__(self, api_url, headers):
         self.api_url = api_url
@@ -94,8 +116,6 @@ class GPT4OMiniAgent:
                 return "No valid choices returned from the model."
         else:
             raise Exception(f"Error: {response.status_code}, {response.text}")
-
-# Initialize GPT-4-O Mini Agent
 gpt4o_agent = GPT4OMiniAgent(
     api_url=config.openai_url,
     headers={"Authorization": f"Bearer {config.openai_api_key}"}
@@ -106,6 +126,58 @@ gpt4o_agent = GPT4OMiniAgent(
 
 import json
 from langchain.prompts import PromptTemplate
+
+
+def process_json_files(correct_answers_file, examples_file):
+    """
+    Process JSON files to extract and format "correct_answers" and "examples_text".
+
+    Args:
+        correct_answers_file (str): Path to the correct answers JSON file.
+        examples_file (str): Path to the examples JSON file.
+
+    Returns:
+        tuple: A tuple containing:
+            - correct_answers (str): Formatted correct answers.
+            - examples_data (str): Formatted examples text.
+
+    Raises:
+        ValueError: If the JSON structure is unexpected.
+    """
+    # Load JSON data for correct answers
+    with open(correct_answers_file, "r") as file:
+        correct_answers_temp = json.load(file)
+
+    with open(examples_file, "r") as file:
+        examples_temp = json.load(file)
+
+    # Process correct answers
+    if "example_text" in correct_answers_temp and isinstance(correct_answers_temp["example_text"], list):
+        correct_answers = "\n".join(correct_answers_temp["example_text"])
+    else:
+        raise ValueError("Unexpected structure in 'correct_answers.json' for correct_answers")
+
+    # Process examples data
+    if isinstance(examples_temp, list):
+        examples_data = "\n".join(
+            [
+                f"Input: {example['original']}\nOutput: {'Correct' if example['correct'] else 'Incorrect'}"
+                for example in examples_temp
+            ]
+        )
+    else:
+        raise ValueError("Unexpected structure in 'example_text.json' for examples")
+
+    return correct_answers, examples_data
+
+correct_answers_file = r'Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\correct_answers_shorten.json'
+examples_file = r'Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\example_text_shorten.json'
+correct_answers, examples_data = process_json_files(correct_answers_file, examples_file)
+# Define the test input
+test = '''
+Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems. 
+Output:
+       '''
 
 # Define the prompt template
 template_text = """
@@ -123,48 +195,8 @@ You are checking if the input includes 3 valid Wireless Sensor Network (WSN) app
 """
 prompt_template = PromptTemplate(
     template=template_text,
-    input_variables=["correct_answers", "examples_text", "test", "answer"],
-)
-
-
-# Load JSON data for correct answers
-with open(r'Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\correct_answers_shorten.json', "r") as file:
-    correct_answers_temp = json.load(file)
-with open(r"Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\example_text_shorten.json", "r") as file:
-    examples_temp = json.load(file)
-
-
-
-if "example_text" in correct_answers_temp and isinstance(correct_answers_temp["example_text"], list):
-    correct_answers = "\n".join(correct_answers_temp["example_text"])  # Join list elements
-else:
-    raise ValueError("Unexpected structure in 'correct_answers.json' for correct_answers")
-
-if isinstance(examples_temp, list):
-    examples_data = "\n".join(
-        [
-            f"Input: {example['original']}\nOutput: {'Correct' if example['correct'] else 'Incorrect'}"
-            for example in examples_temp
-        ]
-    )
-else:
-    raise ValueError("Unexpected structure in 'example_text.json' for examples")
-
-
-
-# Define the test input
-test = '''
-Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems. 
-Output:
-       '''
-
-
-
-prompt_template = PromptTemplate(
-    template=template_text,
     input_variables=["correct_answers", "examples_text", "test"],
 )
-
 # Build the full prompt
 full_prompt = prompt_template.format(
     correct_answers=correct_answers,
@@ -177,7 +209,8 @@ print('---------------')
 # Print the full prompt
 #dprint(full_prompt)
 
-
+import time
+time.sleep(100)
 
 
 
@@ -204,13 +237,12 @@ def combined_parser(text: str):
 
 
 
-# #Calling the chain
-chain = RunnableSequence(
-    hf,
-    combined_parser   # Combined parser pipeline
-)
+# # #Calling the chain
+# chain =  full_prompt | hf #|combined_parser  
 
-# Call the chain with the full prompt
-result = chain.invoke(full_prompt)
 
-print(f'binary result: {result}')
+# # Call the chain with the full prompt
+# result = chain.invoke()
+# question = "What is electroencephalography?"
+
+# print(chain.invoke({"question": question}))
