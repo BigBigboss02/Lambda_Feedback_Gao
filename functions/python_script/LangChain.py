@@ -34,10 +34,6 @@ class Config:
         self.examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\functions\python_script\structured_prompts\examples1.json"
         self.csv_saving_basepath = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\test_results\confusion_matrix\confusion_matrix"
         self.repetive_test_num = 5
-# Specify the path to the renamed .env file
-env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\login_configs.env"
-load_dotenv(dotenv_path=env_path)
-  
 
 
 
@@ -122,69 +118,100 @@ gpt4o_agent = GPT4OMiniAgent(
 )
 
 
-#Pipeline Template
+# #Pipeline Template
 
-import json
-from langchain.prompts import PromptTemplate
+# import json
+# from langchain.prompts import PromptTemplate
 
 
-def process_json_files(correct_answers_file, examples_file):
-    """
-    Process JSON files to extract and format "correct_answers" and "examples_text".
+# def process_json_files(correct_answers_file, examples_file):
+#     """
+#     Process JSON files to extract and format "correct_answers" and "examples_text".
 
-    Args:
-        correct_answers_file (str): Path to the correct answers JSON file.
-        examples_file (str): Path to the examples JSON file.
+#     Args:
+#         correct_answers_file (str): Path to the correct answers JSON file.
+#         examples_file (str): Path to the examples JSON file.
 
-    Returns:
-        tuple: A tuple containing:
-            - correct_answers (str): Formatted correct answers.
-            - examples_data (str): Formatted examples text.
+#     Returns:
+#         tuple: A tuple containing:
+#             - correct_answers (str): Formatted correct answers.
+#             - examples_data (str): Formatted examples text.
 
-    Raises:
-        ValueError: If the JSON structure is unexpected.
-    """
-    # Load JSON data for correct answers
-    with open(correct_answers_file, "r") as file:
-        correct_answers_temp = json.load(file)
+#     Raises:
+#         ValueError: If the JSON structure is unexpected.
+#     """
+#     # Load JSON data for correct answers
+#     with open(correct_answers_file, "r") as file:
+#         correct_answers_temp = json.load(file)
 
-    with open(examples_file, "r") as file:
-        examples_temp = json.load(file)
+#     with open(examples_file, "r") as file:
+#         examples_temp = json.load(file)
 
-    # Process correct answers
-    if "example_text" in correct_answers_temp and isinstance(correct_answers_temp["example_text"], list):
-        correct_answers = "\n".join(correct_answers_temp["example_text"])
-    else:
-        raise ValueError("Unexpected structure in 'correct_answers.json' for correct_answers")
+#     # Process correct answers
+#     if "example_text" in correct_answers_temp and isinstance(correct_answers_temp["example_text"], list):
+#         correct_answers = "\n".join(correct_answers_temp["example_text"])
+#     else:
+#         raise ValueError("Unexpected structure in 'correct_answers.json' for correct_answers")
 
-    # Process examples data
-    if isinstance(examples_temp, list):
-        examples_data = "\n".join(
-            [
-                f"Input: {example['original']}\nOutput: {'Correct' if example['correct'] else 'Incorrect'}"
-                for example in examples_temp
-            ]
-        )
-    else:
-        raise ValueError("Unexpected structure in 'example_text.json' for examples")
+#     # Process examples data
+#     if isinstance(examples_temp, list):
+#         examples_data = "\n".join(
+#             [
+#                 f"Input: {example['original']}\nOutput: {'Correct' if example['correct'] else 'Incorrect'}"
+#                 for example in examples_temp
+#             ]
+#         )
+#     else:
+#         raise ValueError("Unexpected structure in 'example_text.json' for examples")
 
-    return correct_answers, examples_data
+#     return correct_answers, examples_data
 
-correct_answers_file = r'Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\correct_answers_shorten.json'
-examples_file = r'Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\example_text_shorten.json'
-correct_answers, examples_data = process_json_files(correct_answers_file, examples_file)
-# Define the test input
-test = '''
-Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems. 
-Output:
-       '''
+# correct_answers_file = r'Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\correct_answers_shorten.json'
+# examples_file = r'Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\example_text_shorten.json'
+# correct_answers, examples_data = process_json_files(correct_answers_file, examples_file)
+# # Define the test input
+# test = '''
+# Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems. 
+# Output:
+#        '''
+
+# # Define the prompt template
+# template_text = """
+# Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Give binary response that appropriately completes the request.
+
+# ### Instruction:
+# You are checking if the input includes 3 valid Wireless Sensor Network (WSN) applications from the given list:
+# {correct_answers}
+
+# ### Examples:
+# {examples_text}
+
+# ### Input:
+# {test}
+# """
+# prompt_template = PromptTemplate(
+#     template=template_text,
+#     input_variables=["correct_answers", "examples_text", "test"],
+# )
+# # Build the full prompt
+# full_prompt = prompt_template.format(
+#     correct_answers=correct_answers,
+#     examples_text=examples_data,
+#     test= test,
+# )
+# print('---------------')
+# print(full_prompt)
+# print('---------------')
+# # Print the full prompt
+# #dprint(full_prompt)
+
 
 # Define the prompt template
 template_text = """
 Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Give binary response that appropriately completes the request.
 
 ### Instruction:
-You are checking if the input includes 3 valid Wireless Sensor Network (WSN) applications from the given list:
+You are checking if the input includes 3 similar answers from the given list, and returning only True or False for if the Answer is Correct:
 {correct_answers}
 
 ### Examples:
@@ -195,22 +222,104 @@ You are checking if the input includes 3 valid Wireless Sensor Network (WSN) app
 """
 prompt_template = PromptTemplate(
     template=template_text,
-    input_variables=["correct_answers", "examples_text", "test"],
+    input_variables=["correct_answers", "examples_text", "test"]
 )
-# Build the full prompt
-full_prompt = prompt_template.format(
-    correct_answers=correct_answers,
-    examples_text=examples_data,
-    test= test,
-)
-print('---------------')
-print(full_prompt)
-print('---------------')
-# Print the full prompt
-#dprint(full_prompt)
 
-import time
-time.sleep(100)
+# Load JSON data for correct answers
+with open(r'Lambda_Feedback_Gao\functions\python_script\structured_prompts\confusion_matrix\A_Level_STEM_Answers.json', "r") as file:
+    correct_answers_temp = json.load(file)
+with open(r"Lambda_Feedback_Gao\functions\python_script\structured_prompts\confusion_matrix\A_Level_STEM_Examples.json", "r") as file:
+    examples_temp = json.load(file)
+with open(r"Lambda_Feedback_Gao\functions\python_script\structured_prompts\confusion_matrix\A_Level_STEM_Inputs.json", "r") as file:
+    inputs_temp = json.load(file)
+
+
+examples_with_correctness = examples_temp["examples_with_correctness"]
+example_text = correct_answers_temp["example_text"]
+inputs= inputs_temp["examples_with_correctness"]
+# Iterate through test examples and compare results
+results = []
+
+
+# Simulating the repeated execution of the loop 30 times
+for _ in range(config.repetive_test_num):
+    for subject, examples in examples_with_correctness.items():
+        if subject in example_text:
+            correct_answers = example_text[subject]  # Correct answers from example_text
+
+
+        # Define the list of examples
+        examples_list = [
+            {'input': 'List 3 types of physics energy.', 'output': '1. Kinetic energy, 2. Potential energy, 3. Thermal energy.', 'correct': True},
+            {'input': 'List 3 types of physics energy.', 'output': '1. Chemical energy, 2. Nuclear energy, 3. Elastic potential energy.', 'correct': True},
+            {'input': 'List 3 types of physics energy.', 'output': '1. Kinetic energy, 2. Potential energy.', 'correct': False},
+            {'input': 'List 3 types of physics energy.', 'output': '1. 12345, 2. 67890, 3. 24680.', 'correct': False}
+        ]
+
+        # Template for formatting an example
+        example_template = """
+        Example:
+        Input: {input}
+        Answer: {answer}
+        Correct: {correct}
+        """
+
+        # Build the prompt with four examples
+        EXAMPLES = ""
+        for example in examples[:4]:  # Select up to 4 examples
+            EXAMPLES += example_template.format(
+                input=example['input'],
+                answer=example['output'],
+                correct=example['correct']
+            ).strip() + "\n\n"  # Add spacing between examples
+
+        if subject in inputs:
+            for current_input in inputs[subject]:
+
+
+                def format_inputs(example):
+                    formatted_string = (
+                        f"Input: {example['input']}\n"
+                        f"Answer: {example['output']}\n"
+                        f"Correct: "
+                    )
+                    return formatted_string
+
+                # full_prompt = prompt_template.format(
+                #     correct_answers=correct_answers,
+                #     examples_text=EXAMPLES,
+                #     test= format_inputs(current_input)
+                # )
+                # Define the chain
+                chain = prompt_template | hf.bind(skip_prompt=True)
+
+                # Invoke the chain
+                model_response = chain.invoke({
+                    'correct_answers':correct_answers,
+                    'examples_text':EXAMPLES,
+                    'test': format_inputs(current_input)
+                })
+
+                print(f'model response: {model_response}')
+
+
+
+                import time
+                time.sleep(100)
+
+
+
+                # Compare with expected output
+                is_correct = (model_response == ("Correct" if current_input["correct"] else "Incorrect"))
+                results.append({
+                    "input": current_input["input"],
+                    "expected": "Correct" if current_input["correct"] else "Incorrect",
+                    "output": model_response,
+                    "result": "Pass" if is_correct else "Fail"
+                })
+                print(f'results: {results}')
+
+
 
 
 
@@ -233,10 +342,6 @@ def combined_parser(text: str):
 
 
 
-
-
-
-
 # # #Calling the chain
 # chain =  full_prompt | hf #|combined_parser  
 
@@ -246,3 +351,37 @@ def combined_parser(text: str):
 # question = "What is electroencephalography?"
 
 # print(chain.invoke({"question": question}))
+
+
+
+
+
+for result in results:
+    print(f"Input: {result['input']}")
+    print(f"Expected: {result['expected']}")
+    print(f"Output: {result['output']}")
+    print(f"Result: {result['result']}")
+    print("---")
+
+
+#Confusion Matrix Base CSV saving Area
+import csv
+from datetime import datetime
+
+csv_saving_basepath = config.csv_saving_basepath 
+current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+filepath = os.path.join(csv_saving_basepath, f"results_{current_time}.csv")
+with open(filepath, mode='w', newline='', encoding='utf-8') as file:
+    writer = csv.writer(file)
+    writer.writerow(["Input", "Expected Output", "Model Output", "Result"])  # Define column headers
+with open(filepath, mode='a', newline='', encoding='utf-8') as file:
+    writer = csv.writer(file)
+    for result in results:
+        writer.writerow([result["input"], result["expected"], result["output"], result["result"]])
+
+print(f"Results have been saved to {filepath}")
+
+
+
+
+
