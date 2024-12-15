@@ -65,9 +65,10 @@ if config.load_local_model:
         "text-generation", 
         model=model, 
         tokenizer=tokenizer, 
-        max_length=1028, #this 1028 defines the total token of input and output together
+        #max_length=1028, #this 1028 defines the total token of input and output together
         device=0,  # Use GPU (set to -1 for CPU)
-        max_new_tokens=50,  # Limit the number of tokens generated
+        max_new_tokens= 2,  # Limit the number of tokens generated
+        min_new_tokens = 1
     )
 
     hf = HuggingFacePipeline(pipeline=hf_pipeline)
@@ -82,7 +83,6 @@ else:
 
 
 # Define GPT4-o mini Agent
-from dotenv import load_dotenv
 import requests
 class GPT4OMiniAgent:
     def __init__(self, api_url, headers):
@@ -116,94 +116,6 @@ gpt4o_agent = GPT4OMiniAgent(
     api_url=config.openai_url,
     headers={"Authorization": f"Bearer {config.openai_api_key}"}
 )
-
-
-# #Pipeline Template
-
-# import json
-# from langchain.prompts import PromptTemplate
-
-
-# def process_json_files(correct_answers_file, examples_file):
-#     """
-#     Process JSON files to extract and format "correct_answers" and "examples_text".
-
-#     Args:
-#         correct_answers_file (str): Path to the correct answers JSON file.
-#         examples_file (str): Path to the examples JSON file.
-
-#     Returns:
-#         tuple: A tuple containing:
-#             - correct_answers (str): Formatted correct answers.
-#             - examples_data (str): Formatted examples text.
-
-#     Raises:
-#         ValueError: If the JSON structure is unexpected.
-#     """
-#     # Load JSON data for correct answers
-#     with open(correct_answers_file, "r") as file:
-#         correct_answers_temp = json.load(file)
-
-#     with open(examples_file, "r") as file:
-#         examples_temp = json.load(file)
-
-#     # Process correct answers
-#     if "example_text" in correct_answers_temp and isinstance(correct_answers_temp["example_text"], list):
-#         correct_answers = "\n".join(correct_answers_temp["example_text"])
-#     else:
-#         raise ValueError("Unexpected structure in 'correct_answers.json' for correct_answers")
-
-#     # Process examples data
-#     if isinstance(examples_temp, list):
-#         examples_data = "\n".join(
-#             [
-#                 f"Input: {example['original']}\nOutput: {'Correct' if example['correct'] else 'Incorrect'}"
-#                 for example in examples_temp
-#             ]
-#         )
-#     else:
-#         raise ValueError("Unexpected structure in 'example_text.json' for examples")
-
-#     return correct_answers, examples_data
-
-# correct_answers_file = r'Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\correct_answers_shorten.json'
-# examples_file = r'Lambda_Feedback_Gao\functions\python_script\structured_prompts\LongChain\example_text_shorten.json'
-# correct_answers, examples_data = process_json_files(correct_answers_file, examples_file)
-# # Define the test input
-# test = '''
-# Give 3 examples of WSN applications. *There may be more correct answers than the ones suggested., 1. KFC takeaway, 2. Energy usage monitoring, 3. Smart parking systems. 
-# Output:
-#        '''
-
-# # Define the prompt template
-# template_text = """
-# Below is an instruction to determine right or wrong on student's coursework answers, paired with an input that provides further context. Give binary response that appropriately completes the request.
-
-# ### Instruction:
-# You are checking if the input includes 3 valid Wireless Sensor Network (WSN) applications from the given list:
-# {correct_answers}
-
-# ### Examples:
-# {examples_text}
-
-# ### Input:
-# {test}
-# """
-# prompt_template = PromptTemplate(
-#     template=template_text,
-#     input_variables=["correct_answers", "examples_text", "test"],
-# )
-# # Build the full prompt
-# full_prompt = prompt_template.format(
-#     correct_answers=correct_answers,
-#     examples_text=examples_data,
-#     test= test,
-# )
-# print('---------------')
-# print(full_prompt)
-# print('---------------')
-# # Print the full prompt
-# #dprint(full_prompt)
 
 
 # Define the prompt template
@@ -248,13 +160,13 @@ for _ in range(config.repetive_test_num):
             correct_answers = example_text[subject]  # Correct answers from example_text
 
 
-        # Define the list of examples
-        examples_list = [
-            {'input': 'List 3 types of physics energy.', 'output': '1. Kinetic energy, 2. Potential energy, 3. Thermal energy.', 'correct': True},
-            {'input': 'List 3 types of physics energy.', 'output': '1. Chemical energy, 2. Nuclear energy, 3. Elastic potential energy.', 'correct': True},
-            {'input': 'List 3 types of physics energy.', 'output': '1. Kinetic energy, 2. Potential energy.', 'correct': False},
-            {'input': 'List 3 types of physics energy.', 'output': '1. 12345, 2. 67890, 3. 24680.', 'correct': False}
-        ]
+        # # Define the list of examples
+        # examples_list = [
+        #     {'input': 'List 3 types of physics energy.', 'output': '1. Kinetic energy, 2. Potential energy, 3. Thermal energy.', 'correct': True},
+        #     {'input': 'List 3 types of physics energy.', 'output': '1. Chemical energy, 2. Nuclear energy, 3. Elastic potential energy.', 'correct': True},
+        #     {'input': 'List 3 types of physics energy.', 'output': '1. Kinetic energy, 2. Potential energy.', 'correct': False},
+        #     {'input': 'List 3 types of physics energy.', 'output': '1. 12345, 2. 67890, 3. 24680.', 'correct': False}
+        # ]
 
         # Template for formatting an example
         example_template = """
@@ -272,6 +184,9 @@ for _ in range(config.repetive_test_num):
                 answer=example['output'],
                 correct=example['correct']
             ).strip() + "\n\n"  # Add spacing between examples
+        # print(EXAMPLES)
+        # import time
+        # time.sleep(100)
 
         if subject in inputs:
             for current_input in inputs[subject]:
@@ -291,36 +206,52 @@ for _ in range(config.repetive_test_num):
                 #     test= format_inputs(current_input)
                 # )
                 # Define the chain
-                chain = prompt_template | hf.bind(skip_prompt=True)
 
+                chain = prompt_template | hf.bind(skip_prompt=True)
+                # simple_test_input = (
+                #     "Correct Answers: Mouth, Esophagus, Stomach\n\n"
+                #     "Examples:\nExample Input: List 3 types of biology human digestive system.\n"
+                #     "Example Answer: Mouth, Esophagus, Stomach.\nCorrect: True\n\n"
+                #     "Test:\nInput: List 3 types of biology human digestive system.\n"
+                #     "Answer: Mouth, Esophagus, Stomach.\nCorrect:"
+                # )
+                # print(hf(simple_test_input))
                 # Invoke the chain
                 model_response = chain.invoke({
                     'correct_answers':correct_answers,
                     'examples_text':EXAMPLES,
                     'test': format_inputs(current_input)
                 })
-
                 print(f'model response: {model_response}')
 
+                # # Combine input_text into a single string for tokenization
+                # input_text = (
+                #     f"Correct Answers: {', '.join(correct_answers)}\n\n"
+                #     f"Examples:\n{EXAMPLES}\n\n"
+                #     f"Test:\n{format_inputs(current_input)}"
+                # )
 
+                # # Tokenize the combined string and calculate tokenized length
+                # tokenized_length = len(tokenizer(input_text)['input_ids'])
+                # print(f"Tokenized Length: {tokenized_length}")
 
-                import time
-                time.sleep(100)
-
-
-
-                # Compare with expected output
-                is_correct = (model_response == ("Correct" if current_input["correct"] else "Incorrect"))
-                results.append({
-                    "input": current_input["input"],
-                    "expected": "Correct" if current_input["correct"] else "Incorrect",
-                    "output": model_response,
-                    "result": "Pass" if is_correct else "Fail"
-                })
-                print(f'results: {results}')
+                
 
 
 
+                # # Compare with expected output
+                # is_correct = (model_response == ("Correct" if current_input["correct"] else "Incorrect"))
+                # results.append({
+                #     "input": current_input["input"],
+                #     "expected": "Correct" if current_input["correct"] else "Incorrect",
+                #     "output": model_response,
+                #     "result": "Pass" if is_correct else "Fail"
+                # })
+                # print(f'results: {results}')
+
+
+import time
+time.sleep(100)
 
 
 # Parser
