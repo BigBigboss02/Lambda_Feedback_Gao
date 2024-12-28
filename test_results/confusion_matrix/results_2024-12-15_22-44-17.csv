@@ -1,0 +1,143 @@
+Input,Expected Output,Model Output,Result
+List 3 types of physics energy.,Correct, 1,undefined
+List 3 types of physics energy.,Correct,"Explanation:
+",undefined
+List 3 types of physics energy.,Incorrect,    -,undefined
+List 3 types of physics energy.,Incorrect,"Explanation:
+",undefined
+List 3 types of biology levels organisation.,Correct,Input:,undefined
+List 3 types of biology levels organisation.,Correct,Input:,undefined
+List 3 types of biology levels organisation.,Incorrect,"Explanation:
+",undefined
+List 3 types of biology levels organisation.,Incorrect,Explanation:,undefined
+List 3 types of chemistry properties metals.,Correct,"Explanation:
+",undefined
+List 3 types of chemistry properties metals.,Correct,Explanation:,undefined
+List 3 types of chemistry properties metals.,Incorrect,Input:,undefined
+List 3 types of chemistry properties metals.,Incorrect,"True
+
+",undefined
+List 3 types of mathematics types numbers.,Correct,Correct:,undefined
+List 3 types of mathematics types numbers.,Correct,Explanation:,undefined
+List 3 types of mathematics types numbers.,Incorrect,Input:,undefined
+List 3 types of mathematics types numbers.,Incorrect,Explanation:,undefined
+List 3 types of biology human digestive system.,Correct,Correct:,undefined
+List 3 types of biology human digestive system.,Correct,Correct:,undefined
+List 3 types of biology human digestive system.,Incorrect,### Output,undefined
+List 3 types of biology human digestive system.,Incorrect,"Explanation:
+",undefined
+List 3 types of physics energy.,Correct,Input:,undefined
+List 3 types of physics energy.,Correct,"Explanation:
+",undefined
+List 3 types of physics energy.,Incorrect,"Example:
+",undefined
+List 3 types of physics energy.,Incorrect,"Explanation:
+",undefined
+List 3 types of biology levels organisation.,Correct,Explanation:,undefined
+List 3 types of biology levels organisation.,Correct,Correct:,undefined
+List 3 types of biology levels organisation.,Incorrect,Input:,undefined
+List 3 types of biology levels organisation.,Incorrect,"Example:
+",undefined
+List 3 types of chemistry properties metals.,Correct,"Explanation:
+",undefined
+List 3 types of chemistry properties metals.,Correct,"Explanation:
+",undefined
+List 3 types of chemistry properties metals.,Incorrect,"Example:
+",undefined
+List 3 types of chemistry properties metals.,Incorrect,"Explanation:
+",undefined
+List 3 types of mathematics types numbers.,Correct,"Explanation:
+",undefined
+List 3 types of mathematics types numbers.,Correct,Input:,undefined
+List 3 types of mathematics types numbers.,Incorrect,Explanation:,undefined
+List 3 types of mathematics types numbers.,Incorrect,Explanation:,undefined
+List 3 types of biology human digestive system.,Correct,Explanation:,undefined
+List 3 types of biology human digestive system.,Correct,Explanation:,undefined
+List 3 types of biology human digestive system.,Incorrect,"Explanation:
+",undefined
+List 3 types of biology human digestive system.,Incorrect,Input:,undefined
+List 3 types of physics energy.,Correct,Explanation:,undefined
+List 3 types of physics energy.,Correct,"Explanation:
+",undefined
+List 3 types of physics energy.,Incorrect,Explanation:,undefined
+List 3 types of physics energy.,Incorrect,Explanation:,undefined
+List 3 types of biology levels organisation.,Correct,Explanation:,undefined
+List 3 types of biology levels organisation.,Correct,"Example:
+",undefined
+List 3 types of biology levels organisation.,Incorrect,Explanation:,undefined
+List 3 types of biology levels organisation.,Incorrect,"Explanation:
+",undefined
+List 3 types of chemistry properties metals.,Correct,Input:,undefined
+List 3 types of chemistry properties metals.,Correct,"Explanation:
+",undefined
+List 3 types of chemistry properties metals.,Incorrect,1.,undefined
+List 3 types of chemistry properties metals.,Incorrect,### Output,undefined
+List 3 types of mathematics types numbers.,Correct,Explanation:,undefined
+List 3 types of mathematics types numbers.,Correct,Explanation:,undefined
+List 3 types of mathematics types numbers.,Incorrect,Explanation:,undefined
+List 3 types of mathematics types numbers.,Incorrect,### Output,undefined
+List 3 types of biology human digestive system.,Correct,"Explanation:
+",undefined
+List 3 types of biology human digestive system.,Correct,Input:,undefined
+List 3 types of biology human digestive system.,Incorrect,Output:,undefined
+List 3 types of biology human digestive system.,Incorrect,Input:,undefined
+List 3 types of physics energy.,Correct,Explanation:,undefined
+List 3 types of physics energy.,Correct,Explanation:,undefined
+List 3 types of physics energy.,Incorrect,Explanation:,undefined
+List 3 types of physics energy.,Incorrect,"Explanation:
+",undefined
+List 3 types of biology levels organisation.,Correct,"Example:
+",undefined
+List 3 types of biology levels organisation.,Correct,"Explanation:
+",undefined
+List 3 types of biology levels organisation.,Incorrect,"Explanation:
+",undefined
+List 3 types of biology levels organisation.,Incorrect,"Explanation:
+",undefined
+List 3 types of chemistry properties metals.,Correct,"Explanation:
+",undefined
+List 3 types of chemistry properties metals.,Correct,"Explanation:
+",undefined
+List 3 types of chemistry properties metals.,Incorrect,"Example:
+",undefined
+List 3 types of chemistry properties metals.,Incorrect,"Explanation:
+",undefined
+List 3 types of mathematics types numbers.,Correct,Input:,undefined
+List 3 types of mathematics types numbers.,Correct,Explanation:,undefined
+List 3 types of mathematics types numbers.,Incorrect,Explanation:,undefined
+List 3 types of mathematics types numbers.,Incorrect,Explanation:,undefined
+List 3 types of biology human digestive system.,Correct,    -,undefined
+List 3 types of biology human digestive system.,Correct,"Example:
+",undefined
+List 3 types of biology human digestive system.,Incorrect,"Explanation:
+",undefined
+List 3 types of biology human digestive system.,Incorrect,"Explanation:
+",undefined
+List 3 types of physics energy.,Correct,"Explanation:
+",undefined
+List 3 types of physics energy.,Correct,"Explanation:
+",undefined
+List 3 types of physics energy.,Incorrect,        Input,undefined
+List 3 types of physics energy.,Incorrect,"Explanation:
+",undefined
+List 3 types of biology levels organisation.,Correct,Explanation:,undefined
+List 3 types of biology levels organisation.,Correct,Input:,undefined
+List 3 types of biology levels organisation.,Incorrect,Input:,undefined
+List 3 types of biology levels organisation.,Incorrect,Explanation:,undefined
+List 3 types of chemistry properties metals.,Correct,Input:,undefined
+List 3 types of chemistry properties metals.,Correct,"Example:
+",undefined
+List 3 types of chemistry properties metals.,Incorrect,        Input,undefined
+List 3 types of chemistry properties metals.,Incorrect,"Explanation:
+",undefined
+List 3 types of mathematics types numbers.,Correct,"Explanation:
+",undefined
+List 3 types of mathematics types numbers.,Correct,"Explanation:
+",undefined
+List 3 types of mathematics types numbers.,Incorrect,Output:,undefined
+List 3 types of mathematics types numbers.,Incorrect,"Explanation:
+",undefined
+List 3 types of biology human digestive system.,Correct,Explanation:,undefined
+List 3 types of biology human digestive system.,Correct,Input:,undefined
+List 3 types of biology human digestive system.,Incorrect,Output:,undefined
+List 3 types of biology human digestive system.,Incorrect,Explanation:,undefined

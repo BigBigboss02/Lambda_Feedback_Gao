@@ -32,7 +32,7 @@ class Config:
 
         #repeative testing related
         self.examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\functions\python_script\structured_prompts\examples1.json"
-        self.csv_saving_basepath = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\test_results\confusion_matrix\confusion_matrix"
+        self.csv_saving_basepath = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\test_results\confusion_matrix"
         self.repetive_test_num = 5
 
 
@@ -248,7 +248,12 @@ for _ in range(config.repetive_test_num):
                 #     "result": "Pass" if is_correct else "Fail"
                 # })
                 # print(f'results: {results}')
-
+                results.append({
+                    "input": current_input["input"],
+                    "expected": "Correct" if current_input["correct"] else "Incorrect",
+                    "output": model_response,
+                    "result": 'undefined'
+                })
 
 import time
 time.sleep(100)
@@ -284,15 +289,6 @@ def combined_parser(text: str):
 # print(chain.invoke({"question": question}))
 
 
-
-
-
-for result in results:
-    print(f"Input: {result['input']}")
-    print(f"Expected: {result['expected']}")
-    print(f"Output: {result['output']}")
-    print(f"Result: {result['result']}")
-    print("---")
 
 
 #Confusion Matrix Base CSV saving Area
