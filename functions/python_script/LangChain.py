@@ -159,15 +159,6 @@ for _ in range(config.repetive_test_num):
         if subject in example_text:
             correct_answers = example_text[subject]  # Correct answers from example_text
 
-
-        # # Define the list of examples
-        # examples_list = [
-        #     {'input': 'List 3 types of physics energy.', 'output': '1. Kinetic energy, 2. Potential energy, 3. Thermal energy.', 'correct': True},
-        #     {'input': 'List 3 types of physics energy.', 'output': '1. Chemical energy, 2. Nuclear energy, 3. Elastic potential energy.', 'correct': True},
-        #     {'input': 'List 3 types of physics energy.', 'output': '1. Kinetic energy, 2. Potential energy.', 'correct': False},
-        #     {'input': 'List 3 types of physics energy.', 'output': '1. 12345, 2. 67890, 3. 24680.', 'correct': False}
-        # ]
-
         # Template for formatting an example
         example_template = """
         Example:
@@ -184,14 +175,9 @@ for _ in range(config.repetive_test_num):
                 answer=example['output'],
                 correct=example['correct']
             ).strip() + "\n\n"  # Add spacing between examples
-        # print(EXAMPLES)
-        # import time
-        # time.sleep(100)
 
         if subject in inputs:
             for current_input in inputs[subject]:
-
-
                 def format_inputs(example):
                     formatted_string = (
                         f"Input: {example['input']}\n"
@@ -200,23 +186,8 @@ for _ in range(config.repetive_test_num):
                     )
                     return formatted_string
 
-                # full_prompt = prompt_template.format(
-                #     correct_answers=correct_answers,
-                #     examples_text=EXAMPLES,
-                #     test= format_inputs(current_input)
-                # )
-                # Define the chain
-
                 chain = prompt_template | hf.bind(skip_prompt=True)
-                # simple_test_input = (
-                #     "Correct Answers: Mouth, Esophagus, Stomach\n\n"
-                #     "Examples:\nExample Input: List 3 types of biology human digestive system.\n"
-                #     "Example Answer: Mouth, Esophagus, Stomach.\nCorrect: True\n\n"
-                #     "Test:\nInput: List 3 types of biology human digestive system.\n"
-                #     "Answer: Mouth, Esophagus, Stomach.\nCorrect:"
-                # )
-                # print(hf(simple_test_input))
-                # Invoke the chain
+
                 model_response = chain.invoke({
                     'correct_answers':correct_answers,
                     'examples_text':EXAMPLES,
@@ -224,30 +195,7 @@ for _ in range(config.repetive_test_num):
                 })
                 print(f'model response: {model_response}')
 
-                # # Combine input_text into a single string for tokenization
-                # input_text = (
-                #     f"Correct Answers: {', '.join(correct_answers)}\n\n"
-                #     f"Examples:\n{EXAMPLES}\n\n"
-                #     f"Test:\n{format_inputs(current_input)}"
-                # )
 
-                # # Tokenize the combined string and calculate tokenized length
-                # tokenized_length = len(tokenizer(input_text)['input_ids'])
-                # print(f"Tokenized Length: {tokenized_length}")
-
-                
-
-
-
-                # # Compare with expected output
-                # is_correct = (model_response == ("Correct" if current_input["correct"] else "Incorrect"))
-                # results.append({
-                #     "input": current_input["input"],
-                #     "expected": "Correct" if current_input["correct"] else "Incorrect",
-                #     "output": model_response,
-                #     "result": "Pass" if is_correct else "Fail"
-                # })
-                # print(f'results: {results}')
                 results.append({
                     "input": current_input["input"],
                     "expected": "Correct" if current_input["correct"] else "Incorrect",
@@ -275,19 +223,6 @@ def combined_parser(text: str):
     if not binary_match:
         return(f"extracted text: {extracted_text}")
     return {"binary_response": binary_match.group(1)}
-
-
-
-# # #Calling the chain
-# chain =  full_prompt | hf #|combined_parser  
-
-
-# # Call the chain with the full prompt
-# result = chain.invoke()
-# question = "What is electroencephalography?"
-
-# print(chain.invoke({"question": question}))
-
 
 
 
