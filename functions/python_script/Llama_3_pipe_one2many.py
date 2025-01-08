@@ -1,8 +1,34 @@
 from langchain_huggingface.llms import HuggingFacePipeline
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+import os
+
 import torch
 import json
+from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
+
+from langchain.prompts import PromptTemplate
+from langchain_huggingface.llms import HuggingFacePipeline
+
+class Config:
+    # Path to the .env file containing credentials
+    # env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\login_configs.env"
+    env_path = 'login_configs.env'
+    load_dotenv(dotenv_path=env_path)
+
+    def __init__(self):
+        self.local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
+        self.load_local_model = False
+        # self.env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\login_configs.env"
+        self.openai_url = os.getenv("OPENAI_URL")
+        self.openai_api_key = os.getenv('OPENAI_API_KEY')
+
+        # #repeative testing related
+        # self.examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\functions\python_script\structured_prompts\examples1.json"
+        # self.csv_saving_basepath = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\test_results\confusion_matrix"
+        # self.repetive_test_num = 5
+
+config = Config()
 
 # Set default device
 torch.set_default_device('cuda' if torch.cuda.is_available() else 'cpu')
