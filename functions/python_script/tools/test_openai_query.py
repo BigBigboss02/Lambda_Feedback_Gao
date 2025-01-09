@@ -1,4 +1,4 @@
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import OpenAI
 from langchain.schema import HumanMessage, AIMessage, SystemMessage
 import os
 from dotenv import load_dotenv
@@ -8,11 +8,11 @@ openai_api_key = os.getenv('OPENAI_API_KEY')
 
 
 # Initialize the ChatOpenAI object with GPT-4
-chat = ChatOpenAI(
+chat = OpenAI(
     model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
     temperature=0.7,  # Adjust for creativity
-    max_tokens=2000,  # Limit on response tokens
-    openai_api_key="your_openai_api_key"  # Replace with your API key
+    max_tokens=10,  # Limit on response tokens
+    openai_api_key=openai_api_key  # Replace with your API key
 )
 
 # Define messages for the conversation

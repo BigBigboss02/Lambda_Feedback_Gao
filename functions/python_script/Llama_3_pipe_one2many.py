@@ -19,7 +19,7 @@ class Config:
         self.openai_api_key = os.getenv('OPENAI_API_KEY')
         
         # Define the prompt template
-        listing_template_text = """
+        self.listing_template_text = """
             ### Instruction:
             You are checking if the input is included in the following list, if yes the response will be true, else not:
             
@@ -32,7 +32,7 @@ class Config:
             Response:
             """
         # Define the prompt template
-        reasoning_template_text = """
+        self.reasoning_template_text = """
             ### Instruction:
             You are tasked with determining whether the student's short answer is reasonable and aligns with the given question. If the answer is correct or plausible, respond with 'True'; otherwise, respond with 'False'.
 
@@ -78,11 +78,14 @@ if config.mode == 'llama3_local':
     # Create the pipeline
     pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=10)
     llm = HuggingFacePipeline(pipeline=pipe)
+
 elif config.mode == 'gpt':
-    from langchain.chat_models import ChatOpenAI
-    openai = OpenAI(
-        model_name="gpt-3.5-turbo-instruct",
-        http_client=httpx.Client(proxies="http://proxy.yourcompany.com:8080"),
+    from langchain_openai import OpenAI
+    llm = OpenAI(
+        model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
+        temperature=0.7,  # Adjust for creativity
+        max_tokens=10,  # Limit on response tokens
+        openai_api_key=config.openai_api_key # Replace with your API key
     )
 
 
@@ -95,7 +98,9 @@ prompt_template = PromptTemplate(
 correct_answers = 'Chinese; Math; Russian; Physics; Chemistry; Biology; Communism; Geography; History '
 input_word = 'History'
 
-chain = prompt_template | llm.bind(skip_prompt=True)
+# chain = prompt_template | llm.bind(skip_prompt=True)
+chain = prompt_template | llm
+
 
 # Invoke the chain
 result = chain.invoke({
