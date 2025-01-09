@@ -81,12 +81,18 @@ if config.mode == 'llama3_local':
 
 elif config.mode == 'gpt':
     from langchain_openai import OpenAI
-    llm = OpenAI(
-        model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
-        temperature=0.7,  # Adjust for creativity
-        max_tokens=10,  # Limit on response tokens
-        openai_api_key=config.openai_api_key # Replace with your API key
-    )
+    from langchain.schema import HumanMessage
+    # llm = OpenAI(
+    #     model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
+    #     temperature=0.7,  # Adjust for creativity
+    #     max_tokens=10,  # Limit on response tokens
+    #     messages = [
+    #         {"role": "system", "content": "You are a helpful assistant."},
+    #         {"role": "user", "content": full_prompt}
+    #     ],
+    #     openai_api_key=config.openai_api_key, # Replace with your API key
+    #     openai_api_base=config.openai_url
+    # )
 
 
 
@@ -99,14 +105,27 @@ correct_answers = 'Chinese; Math; Russian; Physics; Chemistry; Biology; Communis
 input_word = 'History'
 
 # chain = prompt_template | llm.bind(skip_prompt=True)
-chain = prompt_template | llm
+#chain = prompt_template | llm
 
 
 # Invoke the chain
-result = chain.invoke({
-    "list": correct_answers,
-    "word": input_word
-})
+# response = chain.invoke({
+#     "list": correct_answers,
+#     "word": input_word
+# })
 
+messages = [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "What is the weather today?"}
+]
+llm = OpenAI(
+    model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
+    temperature=0.7,  # Adjust for creativity
+    max_tokens=10,  # Limit on response tokens
+    messages = messages,
+    openai_api_key=config.openai_api_key, # Replace with your API key
+    openai_api_base=config.openai_url
+)
+response = llm.invoke
 # Print the result
-print(result)
+print(response)
