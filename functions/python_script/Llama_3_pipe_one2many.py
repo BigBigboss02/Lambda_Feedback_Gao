@@ -110,9 +110,10 @@ prompt_template = PromptTemplate(
     input_variables=["list", "word"]
 )
 
+#check if in list
 correct_answers = 'Chinese; Math; Russian; Physics; Chemistry; Biology; Communism; Geography; History '
 input_word = 'History'
-
+#determing bolean result then give short reasoning
 question = "Explain how the volume of a cube is calculated."
 student_answer = "Multiply the length of one side by 4."
 
@@ -126,7 +127,7 @@ if config.mode == 'llama3_local':
         "word": input_word
     })
     print(response)
-    
+
 elif config.mode == 'gpt':
     gpt_prompt_template = PromptTemplate(template=config.answer_short_question_template,
         input_variables=["question", "student_answer"])
