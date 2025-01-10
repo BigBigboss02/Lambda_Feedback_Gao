@@ -44,6 +44,19 @@ class Config:
 
             Response:
             """    
+
+        self.answer_short_question_template="""
+            You are a STEM course teacher determining whether the student's 'answer' to a 'question' is true or false. 
+            Provide clear feedback based on the accuracy of the answer.
+
+            Question: {question}
+
+            Student's Answer: {student_answer}
+
+            Your Evaluation:
+            """
+
+
         # #repeative testing related
         # self.examples_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\functions\python_script\structured_prompts\examples1.json"
         # self.csv_saving_basepath = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\test_results\confusion_matrix"
@@ -80,19 +93,15 @@ if config.mode == 'llama3_local':
     llm = HuggingFacePipeline(pipeline=pipe)
 
 elif config.mode == 'gpt':
-    from langchain_openai import OpenAI
+    from langchain_openai import ChatOpenAI
     from langchain.schema import HumanMessage
-    # llm = OpenAI(
-    #     model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
-    #     temperature=0.7,  # Adjust for creativity
-    #     max_tokens=10,  # Limit on response tokens
-    #     messages = [
-    #         {"role": "system", "content": "You are a helpful assistant."},
-    #         {"role": "user", "content": full_prompt}
-    #     ],
-    #     openai_api_key=config.openai_api_key, # Replace with your API key
-    #     openai_api_base=config.openai_url
-    # )
+    llm = ChatOpenAI(
+        model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
+        temperature=0.7,  # Adjust for creativity
+        max_tokens=10,  # Limit on response tokens
+        openai_api_key=config.openai_api_key # Replace with your API key
+        # openai_api_base=openai_url
+    )
 
 
 
@@ -104,28 +113,33 @@ prompt_template = PromptTemplate(
 correct_answers = 'Chinese; Math; Russian; Physics; Chemistry; Biology; Communism; Geography; History '
 input_word = 'History'
 
-# chain = prompt_template | llm.bind(skip_prompt=True)
-#chain = prompt_template | llm
+if config.mode == 'llama'
+    #chain = prompt_template | llm.bind(skip_prompt=True)
+    chain = prompt_template | llm
 
+    # Invoke the chain
+    response = chain.invoke({
+        "list": correct_answers,
+        "word": input_word
+    })
 
-# Invoke the chain
-# response = chain.invoke({
-#     "list": correct_answers,
-#     "word": input_word
-# })
-
-messages = [
-    {"role": "system", "content": "You are a helpful assistant."},
-    {"role": "user", "content": "What is the weather today?"}
-]
-llm = OpenAI(
-    model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
-    temperature=0.7,  # Adjust for creativity
-    max_tokens=10,  # Limit on response tokens
-    messages = messages,
-    openai_api_key=config.openai_api_key, # Replace with your API key
-    openai_api_base=config.openai_url
-)
-response = llm.invoke
-# Print the result
-print(response)
+elif config.mode == 'gpt':
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "You are a STEM course teacher determining whether the student's 'answer' to a 'question' is true or false."
+            )
+        },
+        {
+            "role": "user",
+            "content": "Explain how the volume of a cube is calculated."
+        },
+        {
+            "role": "user",
+            "content": "Answer of the student."
+        }
+    ]
+    response = llm.invoke(messages)
+    # Print the result
+    print(response)
