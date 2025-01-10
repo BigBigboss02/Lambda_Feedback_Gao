@@ -98,7 +98,7 @@ elif config.mode == 'gpt':
     llm = ChatOpenAI(
         model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
         temperature=0.7,  # Adjust for creativity
-        max_tokens=10,  # Limit on response tokens
+        max_tokens=50,  # Limit on response tokens
         openai_api_key=config.openai_api_key # Replace with your API key
         # openai_api_base=openai_url
     )
@@ -113,7 +113,10 @@ prompt_template = PromptTemplate(
 correct_answers = 'Chinese; Math; Russian; Physics; Chemistry; Biology; Communism; Geography; History '
 input_word = 'History'
 
-if config.mode == 'llama'
+question = "Explain how the volume of a cube is calculated."
+student_answer = "Multiply the length of one side by 4."
+
+if config.mode == 'llama3_local':
     #chain = prompt_template | llm.bind(skip_prompt=True)
     chain = prompt_template | llm
 
@@ -122,24 +125,16 @@ if config.mode == 'llama'
         "list": correct_answers,
         "word": input_word
     })
-
-elif config.mode == 'gpt':
-    messages = [
-        {
-            "role": "system",
-            "content": (
-                "You are a STEM course teacher determining whether the student's 'answer' to a 'question' is true or false."
-            )
-        },
-        {
-            "role": "user",
-            "content": "Explain how the volume of a cube is calculated."
-        },
-        {
-            "role": "user",
-            "content": "Answer of the student."
-        }
-    ]
-    response = llm.invoke(messages)
-    # Print the result
     print(response)
+    
+elif config.mode == 'gpt':
+    gpt_prompt_template = PromptTemplate(template=config.answer_short_question_template,
+        input_variables=["question", "student_answer"])
+    chain = gpt_prompt_template | llm
+
+    response = chain.invoke({
+        "question": question,
+        "student_answer": student_answer
+    })
+
+    print(response["content"])
