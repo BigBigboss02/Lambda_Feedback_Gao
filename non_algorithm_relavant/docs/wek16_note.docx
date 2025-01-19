@@ -1,1 +1,5 @@
 1. It takes too long for the endpoint to respond when using langchain
+2. I deployed Llama3.1 7B on endpoint of huggingface
+3. Llama3 7B seems not support changing max input token, No instruction but only example input suggestion taken
+4. Sequence of giving True, False or not sure is essential
+5. when token is limited model sometimes treat 'not' and 'sure' as 2 words, so I use unsure to replace

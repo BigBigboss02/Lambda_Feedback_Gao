@@ -1,0 +1,2001 @@
+target,word,response
+food,melody,	False
+car,cash,
+food,laptop,	False
+art,voyage,	False
+health,painting,	False
+car,voyage,
+money,physics,	Not
+food,painting,	False
+money,voyage,	False
+food,medicine,	False
+journey,physics,	Not
+science,melody,	False
+food,laptop,	False
+journey,cuisine,	True
+health,physics,	False
+art,automobile,	False
+art,cuisine,
+health,laptop,	False
+music,physics,	Not
+science,cuisine,	True
+health,medicine,	True
+computer,medicine,	False
+journey,physics,	Not
+car,laptop,
+car,painting,
+food,cuisine,
+art,medicine,	False
+science,laptop,	True
+money,cuisine,	Not
+food,medicine,	False
+money,medicine,	False
+food,melody,	False
+money,voyage,	False
+science,laptop,	True
+food,melody,	False
+music,laptop,	False
+computer,cuisine,
+music,cash,	False
+car,laptop,
+journey,laptop,	False
+health,voyage,	False
+food,painting,	False
+car,automobile,
+car,melody,
+food,laptop,	False
+health,laptop,	False
+food,medicine,	False
+car,voyage,
+journey,laptop,	False
+money,painting,	Not
+science,automobile,	False
+computer,physics,	False
+music,cuisine,	True
+music,melody,
+food,automobile,	False
+art,laptop,
+health,laptop,	False
+journey,medicine,	False
+music,melody,
+money,voyage,	False
+health,voyage,	False
+art,laptop,
+car,medicine,
+health,automobile,	False
+music,cash,	False
+car,cuisine,
+science,painting,	Not
+journey,medicine,	False
+car,automobile,
+music,melody,
+music,physics,	Not
+music,cash,	False
+car,painting,
+science,physics,	True
+art,physics,	False
+health,medicine,	True
+food,voyage,	False
+journey,melody,	True
+science,cash,	False
+art,physics,	False
+journey,cuisine,	True
+art,medicine,	False
+journey,laptop,	False
+car,cuisine,
+computer,automobile,
+health,cuisine,	False
+journey,cuisine,	True
+music,painting,	True
+health,laptop,	False
+food,laptop,	False
+food,painting,	False
+food,automobile,	False
+health,automobile,	False
+art,automobile,	False
+music,cuisine,	True
+food,cuisine,
+money,laptop,	False
+journey,automobile,	False
+money,medicine,	False
+car,painting,
+science,melody,	False
+music,melody,
+science,painting,	Not
+food,medicine,	False
+car,cash,
+music,painting,	True
+art,cuisine,	True
+music,medicine,	False
+music,laptop,	False
+music,melody,
+art,voyage,	False
+science,cash,	False
+computer,voyage,
+music,physics,	Not
+health,laptop,	False
+health,voyage,	False
+art,voyage,	False
+art,voyage,	False
+computer,automobile,
+food,physics,	False
+music,physics,	Not
+food,voyage,	False
+food,medicine,	False
+art,laptop,
+health,physics,	False
+health,painting,	False
+food,physics,	False
+computer,automobile,
+science,physics,	True
+car,automobile,
+art,cash,
+car,automobile,
+music,automobile,	False
+car,voyage,
+computer,melody,
+art,automobile,	False
+health,physics,	False
+car,physics,	False
+car,physics,	False
+art,melody,
+money,laptop,	False
+computer,voyage,
+music,voyage,	False
+science,physics,	True
+music,medicine,	False
+art,melody,
+food,painting,	False
+money,cuisine,	Not
+computer,laptop,
+music,voyage,	False
+money,medicine,	False
+science,melody,	False
+car,cuisine,
+car,automobile,
+computer,voyage,
+science,automobile,	False
+journey,painting,	Not
+art,cuisine,	True
+science,melody,	False
+money,voyage,	False
+health,medicine,	True
+car,melody,
+science,physics,	True
+computer,automobile,
+health,laptop,	False
+car,cash,
+science,voyage,	True
+food,automobile,	False
+computer,painting,
+computer,automobile,
+music,physics,	Not
+art,voyage,	False
+journey,voyage,
+money,cash,
+money,painting,	Not
+money,automobile,	False
+computer,painting,
+money,melody,	False
+art,voyage,	False
+journey,physics,	Not
+health,cuisine,	False
+health,cuisine,	False
+car,physics,	False
+health,melody,	False
+money,automobile,	False
+journey,laptop,	False
+art,medicine,	False
+science,voyage,	True
+music,laptop,	False
+journey,laptop,	False
+health,medicine,	True
+journey,laptop,	False
+food,cuisine,
+money,physics,	Not
+computer,cash,
+health,cuisine,	False
+computer,laptop,
+money,cuisine,	Not
+food,voyage,	False
+car,melody,
+food,painting,	False
+car,laptop,
+journey,cuisine,	True
+journey,automobile,
+food,automobile,	False
+car,automobile,
+car,voyage,
+health,automobile,	False
+car,painting,
+health,medicine,	True
+food,melody,	False
+health,voyage,	False
+science,automobile,	False
+money,painting,	Not
+money,painting,	Not
+art,physics,	False
+money,laptop,	False
+science,melody,	False
+car,medicine,
+car,physics,	False
+food,cash,	False
+science,automobile,	False
+journey,painting,	Not
+journey,physics,	Not
+computer,medicine,	False
+music,painting,	True
+journey,cash,	False
+journey,painting,	Not
+journey,cash,	False
+computer,physics,	False
+journey,cuisine,	True
+health,laptop,	False
+science,melody,	False
+health,voyage,	False
+health,melody,	False
+computer,voyage,
+health,laptop,	False
+art,cash,
+money,physics,	Not
+art,automobile,	False
+car,painting,
+car,medicine,
+money,melody,	False
+art,melody,
+health,medicine,	True
+food,medicine,	False
+art,melody,
+music,cuisine,	True
+journey,cash,	False
+journey,laptop,	False
+money,melody,	False
+science,laptop,	True
+journey,cash,	False
+health,laptop,	False
+computer,painting,
+money,laptop,	False
+art,laptop,
+science,cuisine,	True
+music,cuisine,	True
+art,cuisine,
+art,medicine,	False
+art,physics,	False
+health,medicine,	True
+food,cash,	False
+car,laptop,
+journey,melody,	True
+music,cuisine,	True
+music,cuisine,	True
+money,voyage,	False
+money,medicine,	False
+computer,voyage,
+money,medicine,	False
+journey,physics,	Not
+car,cuisine,
+science,voyage,	True
+science,medicine,	True
+art,painting,
+computer,cash,
+science,melody,	False
+art,voyage,	False
+computer,automobile,
+science,cuisine,	True
+art,voyage,	False
+art,voyage,	False
+science,melody,	False
+money,laptop,	False
+science,cuisine,	True
+science,laptop,	True
+car,automobile,
+car,medicine,
+food,cash,	False
+food,painting,	False
+music,cash,	False
+money,medicine,	False
+journey,automobile,
+car,medicine,
+car,medicine,
+food,voyage,	False
+computer,painting,
+money,cash,
+art,painting,
+science,painting,	Not
+computer,cash,
+money,voyage,	False
+car,physics,	False
+art,cash,
+science,automobile,	False
+science,melody,	False
+food,physics,	False
+health,painting,	False
+science,physics,	True
+food,cuisine,
+music,painting,	True
+music,voyage,	False
+computer,cuisine,	False
+money,painting,	Not
+money,cash,
+health,medicine,	True
+computer,laptop,
+science,cuisine,	True
+health,laptop,	False
+food,painting,	False
+music,laptop,	False
+science,physics,	True
+health,melody,	False
+journey,medicine,	False
+food,automobile,	False
+music,cuisine,	True
+art,laptop,
+health,automobile,	False
+science,laptop,	True
+health,medicine,	True
+art,automobile,	False
+art,cash,
+music,voyage,	False
+food,automobile,	False
+money,physics,	Not
+health,painting,	False
+art,medicine,	False
+computer,automobile,
+computer,painting,
+art,voyage,	False
+journey,medicine,	False
+car,physics,	False
+music,medicine,	False
+computer,laptop,
+music,voyage,	False
+science,cash,	False
+health,laptop,	False
+car,voyage,
+journey,cuisine,	True
+money,physics,	Not
+science,cash,	False
+food,voyage,	False
+food,cash,	False
+art,melody,
+music,physics,	Not
+music,painting,	True
+money,laptop,	False
+art,automobile,	False
+art,laptop,
+health,painting,	False
+journey,melody,	True
+money,physics,	Not
+money,painting,	Not
+food,laptop,	False
+science,painting,	Not
+music,laptop,	False
+journey,painting,	Not
+food,medicine,	False
+food,automobile,	False
+science,medicine,	True
+money,cuisine,	Not
+science,automobile,	False
+health,melody,	False
+health,physics,	False
+car,automobile,
+music,melody,
+money,melody,	False
+health,cash,	False
+computer,physics,	False
+computer,painting,
+computer,medicine,	False
+art,laptop,
+journey,medicine,	False
+computer,voyage,
+science,cuisine,	True
+art,cash,
+car,physics,	False
+health,voyage,	False
+science,medicine,	True
+money,melody,	False
+science,painting,	Not
+health,automobile,	False
+car,medicine,
+money,painting,	Not
+food,laptop,	False
+journey,painting,	Not
+art,medicine,	False
+money,laptop,	False
+car,physics,	False
+computer,melody,
+art,automobile,	False
+music,melody,
+food,cuisine,
+health,physics,	False
+money,painting,	Not
+car,medicine,
+art,automobile,	False
+food,physics,	False
+food,cash,	False
+science,melody,	False
+music,physics,	Not
+art,cuisine,	True
+science,voyage,	True
+computer,painting,
+money,painting,	Not
+food,melody,	False
+music,cuisine,	True
+health,physics,	False
+art,medicine,	False
+car,painting,
+food,painting,	False
+music,automobile,	False
+money,cash,
+money,laptop,	False
+food,physics,	False
+food,voyage,	False
+journey,automobile,	False
+computer,physics,	False
+art,cash,
+music,physics,	Not
+art,medicine,	False
+journey,voyage,
+art,laptop,
+computer,cuisine,
+money,melody,	False
+health,voyage,	False
+car,medicine,
+journey,painting,	Not
+health,laptop,	False
+science,laptop,	True
+health,voyage,	False
+money,melody,	False
+health,painting,	False
+food,cuisine,
+music,physics,	Not
+journey,voyage,
+computer,cash,
+health,melody,	False
+car,physics,	False
+science,painting,	Not
+art,cuisine,	True
+food,laptop,	False
+car,physics,	False
+science,laptop,	True
+car,medicine,
+health,automobile,	False
+food,cuisine,
+money,physics,	Not
+food,cash,	False
+journey,automobile,
+art,physics,	False
+journey,laptop,	False
+health,painting,	False
+health,melody,	False
+car,cuisine,
+art,laptop,
+journey,cash,	False
+computer,voyage,
+food,voyage,	False
+computer,automobile,
+money,physics,	Not
+science,automobile,	False
+food,automobile,	False
+art,voyage,	False
+health,voyage,	False
+computer,voyage,
+computer,voyage,
+car,voyage,
+science,medicine,	True
+computer,cash,
+art,melody,
+music,laptop,	False
+food,melody,	False
+music,cuisine,	True
+science,painting,	Not
+computer,physics,	False
+money,cash,
+science,melody,	False
+car,cash,
+car,automobile,
+health,automobile,	False
+food,cash,	False
+computer,cuisine,	False
+car,painting,
+science,melody,	False
+art,physics,	False
+food,voyage,	False
+journey,automobile,	False
+art,medicine,	False
+computer,cuisine,	False
+science,melody,	False
+science,physics,	True
+science,painting,	Not
+science,physics,	True
+computer,voyage,
+journey,cuisine,	True
+money,voyage,	False
+music,physics,	Not
+car,cash,
+money,melody,	False
+art,laptop,
+computer,painting,
+food,melody,	False
+computer,laptop,
+science,medicine,	True
+car,physics,	False
+computer,cuisine,	False
+food,painting,	False
+art,automobile,	False
+science,physics,	True
+car,physics,	False
+computer,physics,	False
+science,voyage,	True
+music,physics,	Not
+health,cuisine,	False
+health,automobile,	False
+computer,medicine,	False
+computer,physics,	False
+health,voyage,	False
+car,physics,	False
+computer,automobile,
+journey,painting,	Not
+computer,physics,	False
+music,voyage,	False
+journey,painting,	Not
+journey,cuisine,	True
+computer,cash,
+health,cash,	False
+food,laptop,	False
+music,automobile,	False
+science,medicine,	True
+music,painting,	True
+journey,painting,	Not
+journey,cash,	False
+art,medicine,	False
+music,physics,	Not
+health,physics,	False
+money,melody,	False
+money,medicine,	False
+car,physics,	False
+music,cash,	False
+science,laptop,	True
+art,cash,
+car,cash,
+journey,melody,	True
+food,cash,	False
+health,melody,	False
+journey,painting,	Not
+car,cash,
+science,cash,	False
+journey,automobile,	False
+science,cash,	False
+money,cash,
+music,physics,	Not
+science,automobile,	False
+art,cuisine,	True
+music,medicine,	False
+computer,melody,
+food,voyage,	False
+car,melody,
+music,medicine,	False
+art,cuisine,
+journey,physics,	Not
+computer,cuisine,	False
+art,voyage,	False
+food,cuisine,
+music,physics,	Not
+food,physics,	False
+science,physics,	True
+music,painting,	True
+journey,cuisine,	True
+journey,painting,	Not
+music,voyage,	False
+computer,cuisine,
+computer,automobile,
+computer,laptop,
+music,automobile,	False
+car,cuisine,
+journey,cash,	False
+computer,automobile,
+art,automobile,	False
+journey,laptop,	False
+food,painting,	False
+money,voyage,	False
+car,physics,	False
+car,automobile,
+car,medicine,
+money,physics,	Not
+art,laptop,
+computer,melody,
+journey,voyage,
+computer,medicine,	False
+food,melody,	False
+computer,cash,
+car,melody,
+car,melody,
+money,automobile,	False
+money,automobile,	False
+money,melody,	False
+journey,physics,	Not
+food,physics,	False
+car,voyage,
+food,physics,	False
+music,automobile,	False
+music,cash,	False
+money,cuisine,	Not
+food,laptop,	False
+music,laptop,	False
+food,physics,	False
+car,medicine,
+art,automobile,	False
+journey,voyage,
+car,painting,
+journey,voyage,
+computer,cuisine,
+music,physics,	Not
+computer,painting,
+car,cash,
+car,cash,
+car,cash,
+money,painting,	Not
+art,physics,	False
+health,melody,	False
+journey,painting,	Not
+money,cuisine,	Not
+art,laptop,
+science,automobile,	False
+computer,cash,
+science,medicine,	True
+money,cash,
+car,cuisine,
+food,automobile,	False
+computer,melody,
+health,physics,	False
+health,physics,	False
+car,physics,	False
+car,cash,
+health,automobile,	False
+food,automobile,	False
+food,cash,	False
+music,melody,
+music,automobile,	False
+science,melody,	False
+health,painting,	False
+science,physics,	True
+art,painting,
+car,painting,
+computer,voyage,
+car,cuisine,
+art,cash,
+science,melody,	False
+food,laptop,	False
+computer,voyage,
+music,painting,	True
+car,cuisine,
+health,painting,	False
+money,medicine,	False
+music,cuisine,	True
+computer,voyage,
+car,painting,
+science,laptop,	True
+science,cuisine,	True
+art,melody,
+food,cash,	False
+money,cuisine,	Not
+music,medicine,	False
+money,cuisine,	Not
+journey,painting,	True
+art,physics,	False
+art,cuisine,	True
+computer,automobile,
+money,laptop,	False
+car,voyage,
+science,cash,	False
+money,painting,	Not
+art,voyage,	False
+art,automobile,	False
+music,cuisine,	True
+health,cash,	False
+science,physics,	True
+art,cash,
+health,cuisine,	False
+art,voyage,	False
+science,medicine,	True
+music,automobile,	False
+food,physics,	False
+computer,painting,
+computer,melody,
+art,cuisine,	True
+health,laptop,	False
+journey,painting,	Not
+food,cuisine,
+science,voyage,	True
+journey,medicine,	False
+science,cash,	False
+science,laptop,	True
+money,physics,	Not
+computer,automobile,
+food,physics,	False
+music,voyage,	False
+health,physics,	False
+music,cash,	False
+food,automobile,	False
+art,automobile,	False
+money,melody,	False
+money,cash,
+science,laptop,	True
+health,voyage,	False
+computer,cuisine,	False
+science,voyage,	True
+car,voyage,
+computer,medicine,	False
+food,medicine,	False
+art,voyage,	False
+money,medicine,	False
+car,cuisine,
+car,laptop,
+health,laptop,	False
+art,voyage,	False
+music,automobile,	False
+science,voyage,	True
+music,physics,	Not
+music,cash,	False
+art,laptop,
+art,medicine,	False
+science,painting,	Not
+car,painting,
+journey,melody,	True
+science,cuisine,	True
+food,melody,	False
+journey,cash,	False
+science,physics,	True
+health,painting,	False
+journey,cash,	False
+food,painting,	False
+health,automobile,	False
+science,voyage,	True
+science,medicine,	True
+car,cuisine,
+money,automobile,	False
+health,cuisine,	False
+music,painting,	True
+food,cuisine,
+health,automobile,	False
+money,physics,	Not
+car,automobile,
+music,laptop,	False
+art,medicine,	False
+health,automobile,	False
+journey,automobile,
+journey,cuisine,	True
+art,physics,	False
+journey,medicine,	False
+money,cuisine,	Not
+health,physics,	False
+art,voyage,	False
+computer,melody,
+computer,painting,
+art,medicine,	False
+food,melody,	False
+music,physics,	Not
+science,laptop,	True
+art,voyage,	False
+health,melody,	False
+science,laptop,	True
+journey,laptop,	False
+car,painting,
+health,cash,	False
+health,cash,	False
+journey,laptop,	False
+art,physics,	False
+car,voyage,
+art,medicine,	False
+health,laptop,	False
+journey,laptop,	False
+computer,cash,
+music,medicine,	False
+art,cash,
+health,cuisine,	False
+car,voyage,
+car,painting,
+journey,painting,	True
+science,cash,	False
+computer,laptop,
+computer,cash,
+music,voyage,	False
+art,cuisine,	True
+food,cuisine,
+car,automobile,
+health,painting,	False
+journey,melody,	True
+art,voyage,	False
+food,cash,	False
+food,melody,	False
+car,automobile,
+art,physics,	False
+art,automobile,	False
+computer,melody,
+food,melody,	False
+money,physics,	Not
+science,voyage,	True
+computer,medicine,	False
+car,painting,
+food,voyage,	False
+computer,cuisine,
+health,cash,	False
+science,cash,	False
+health,medicine,	True
+computer,cash,
+science,physics,	True
+journey,painting,	True
+health,melody,	False
+journey,cash,	False
+computer,melody,
+car,cuisine,
+car,physics,	False
+music,laptop,	False
+art,laptop,
+money,laptop,	False
+journey,laptop,	False
+science,melody,	False
+health,physics,	False
+journey,painting,	Not
+music,automobile,	False
+money,cash,
+journey,medicine,	False
+science,physics,	True
+computer,automobile,
+food,melody,	False
+journey,automobile,	False
+science,voyage,	True
+art,laptop,
+computer,cuisine,	False
+journey,laptop,	False
+money,medicine,	False
+computer,cuisine,	False
+food,automobile,	False
+computer,medicine,	False
+music,automobile,	False
+money,cuisine,	Not
+music,painting,	True
+music,medicine,	False
+science,automobile,	False
+money,laptop,	False
+music,laptop,	False
+music,cuisine,	True
+health,medicine,	True
+computer,automobile,
+food,physics,	False
+art,melody,
+art,voyage,	False
+health,physics,	False
+food,automobile,	False
+art,automobile,	False
+journey,melody,	True
+food,medicine,	False
+music,laptop,	False
+art,voyage,	False
+journey,cash,	False
+health,physics,	False
+health,physics,	False
+music,medicine,	False
+car,automobile,
+computer,melody,
+car,melody,
+health,laptop,	False
+computer,cash,
+computer,cash,
+food,automobile,	False
+food,painting,	False
+journey,laptop,	False
+science,cuisine,	True
+food,laptop,	False
+health,cash,	False
+science,medicine,	True
+car,medicine,
+health,melody,	False
+computer,medicine,	False
+science,melody,	False
+health,melody,	False
+car,automobile,
+health,medicine,	True
+computer,cuisine,	False
+science,cuisine,	True
+health,automobile,	False
+computer,physics,	False
+computer,laptop,
+money,cash,
+health,voyage,	False
+science,voyage,	True
+art,voyage,	False
+music,laptop,	False
+car,cuisine,
+science,melody,	False
+money,painting,	Not
+science,cuisine,	True
+science,cash,	False
+car,laptop,
+money,laptop,	False
+money,cash,
+music,automobile,	False
+art,painting,
+music,physics,	Not
+health,voyage,	False
+health,melody,	False
+music,automobile,	False
+art,medicine,	False
+journey,physics,	Not
+journey,cash,	False
+music,painting,	True
+health,painting,	False
+food,melody,	False
+computer,cuisine,	False
+health,painting,	False
+art,cuisine,
+music,physics,	Not
+art,melody,
+food,voyage,	False
+health,melody,	False
+health,automobile,	False
+food,cuisine,
+journey,physics,	Not
+art,automobile,	False
+journey,melody,	True
+art,painting,
+art,painting,
+science,cash,	False
+money,voyage,	False
+science,voyage,	True
+computer,painting,
+journey,painting,	Not
+food,voyage,	False
+music,physics,	Not
+money,voyage,	False
+computer,automobile,
+journey,cash,	False
+car,laptop,
+food,medicine,	False
+art,voyage,	False
+money,painting,	Not
+food,physics,	False
+car,voyage,
+art,cuisine,	True
+computer,physics,	False
+science,cuisine,	True
+journey,painting,	Not
+car,automobile,
+journey,painting,	True
+money,automobile,	False
+food,painting,	False
+money,laptop,	False
+money,melody,	False
+car,physics,	False
+money,voyage,	False
+computer,cash,
+journey,automobile,
+music,painting,	True
+computer,cuisine,	False
+computer,melody,
+computer,laptop,
+music,automobile,	False
+car,medicine,
+food,automobile,	False
+food,physics,	False
+journey,melody,	True
+car,cash,
+money,physics,	Not
+food,laptop,	False
+money,voyage,	False
+money,physics,	Not
+money,cash,
+money,physics,	Not
+science,voyage,	True
+science,medicine,	True
+science,laptop,	True
+food,voyage,	False
+music,laptop,	False
+money,automobile,	False
+food,medicine,	False
+food,medicine,	False
+health,cash,	False
+food,automobile,	False
+science,painting,	Not
+food,cash,	False
+computer,melody,
+computer,cash,
+food,cuisine,
+money,laptop,	False
+music,painting,	True
+computer,laptop,
+journey,medicine,	False
+food,painting,	False
+music,automobile,	False
+money,cuisine,	Not
+science,medicine,	True
+health,painting,	False
+food,cash,	False
+art,automobile,	False
+car,cash,
+science,medicine,	True
+car,automobile,
+food,cash,	False
+art,cuisine,	True
+money,voyage,	False
+music,medicine,	False
+car,cash,
+health,medicine,	True
+health,medicine,	True
+car,automobile,
+food,cuisine,
+health,melody,	False
+computer,cuisine,
+computer,cuisine,	False
+health,cuisine,	False
+health,painting,	False
+money,physics,	Not
+money,cuisine,	Not
+food,laptop,	False
+food,laptop,	False
+computer,melody,
+journey,painting,	True
+music,voyage,	False
+food,cuisine,
+science,cuisine,	True
+money,melody,	False
+food,voyage,	False
+journey,cuisine,	True
+journey,cuisine,	True
+music,laptop,	False
+music,laptop,	False
+music,melody,
+food,medicine,	False
+health,cash,	False
+science,cash,	False
+music,painting,	True
+money,cuisine,	Not
+car,cash,
+money,physics,	Not
+computer,cuisine,	False
+science,voyage,	True
+science,melody,	False
+car,melody,
+science,painting,	Not
+music,voyage,	False
+food,laptop,	False
+food,cuisine,
+money,painting,	Not
+music,laptop,	False
+computer,automobile,
+science,melody,	False
+music,painting,	True
+money,melody,	False
+food,cuisine,
+science,cash,	False
+music,voyage,	False
+journey,automobile,
+computer,laptop,
+computer,medicine,	False
+car,painting,
+health,physics,	False
+car,voyage,
+food,cash,	False
+car,cuisine,
+car,cuisine,
+art,cash,
+health,laptop,	False
+money,painting,	Not
+food,physics,	False
+art,melody,
+computer,medicine,	False
+science,laptop,	True
+computer,medicine,	False
+art,physics,	False
+computer,laptop,
+computer,laptop,
+journey,automobile,	False
+journey,painting,	Not
+food,laptop,	False
+science,physics,	True
+journey,physics,	Not
+computer,cuisine,
+journey,automobile,
+music,automobile,	False
+health,cuisine,	False
+music,laptop,	False
+music,cash,	False
+science,medicine,	True
+car,physics,	False
+health,voyage,	False
+health,automobile,	False
+food,physics,	False
+computer,voyage,
+journey,cuisine,	True
+art,cash,
+car,medicine,
+car,cuisine,
+health,melody,	False
+car,painting,
+health,automobile,	False
+car,laptop,
+art,painting,
+money,voyage,	False
+car,voyage,
+food,cash,	False
+music,medicine,	False
+health,cuisine,	False
+science,physics,	True
+food,painting,	False
+art,painting,
+food,painting,	False
+science,voyage,	True
+science,cash,	False
+science,painting,	Not
+computer,melody,
+food,automobile,	False
+money,painting,	Not
+art,physics,	False
+art,medicine,	False
+health,cuisine,	False
+music,painting,	True
+music,medicine,	False
+science,cash,	False
+health,physics,	False
+journey,melody,	True
+art,physics,	False
+food,medicine,	False
+art,medicine,	False
+food,automobile,	False
+food,melody,	False
+music,cuisine,	True
+journey,painting,	Not
+health,voyage,	False
+money,automobile,	False
+computer,painting,
+music,melody,
+money,voyage,	False
+money,cuisine,	Not
+computer,melody,
+food,cash,	False
+food,medicine,	False
+money,automobile,	False
+art,cuisine,
+art,automobile,	False
+computer,medicine,	False
+art,automobile,	False
+car,automobile,
+art,cuisine,	True
+music,voyage,	False
+car,painting,
+food,voyage,	False
+computer,cuisine,	False
+food,automobile,	False
+money,automobile,	False
+money,painting,	Not
+computer,voyage,
+computer,physics,	False
+food,automobile,	False
+food,physics,	False
+money,automobile,	False
+music,physics,	Not
+journey,painting,	Not
+computer,laptop,
+journey,medicine,	False
+art,automobile,	False
+health,voyage,	False
+food,cuisine,
+art,automobile,	False
+music,laptop,	False
+health,painting,	False
+money,melody,	False
+computer,physics,	False
+journey,cash,	False
+computer,physics,	False
+health,painting,	False
+music,automobile,	False
+music,laptop,	False
+food,cuisine,
+computer,cash,
+science,physics,	True
+car,painting,
+music,laptop,	False
+art,laptop,
+food,voyage,	False
+art,medicine,	False
+journey,laptop,	False
+money,automobile,	False
+car,cash,
+computer,automobile,
+science,melody,	False
+computer,melody,
+food,automobile,	False
+car,painting,
+computer,painting,
+money,painting,	Not
+music,cash,	False
+car,automobile,
+music,melody,
+health,cash,	False
+health,laptop,	False
+money,voyage,	False
+money,painting,	Not
+journey,laptop,	False
+health,melody,	False
+music,cuisine,	True
+science,laptop,	True
+music,laptop,	False
+food,laptop,	False
+health,melody,	False
+art,physics,	False
+money,melody,	False
+health,laptop,	False
+art,voyage,	False
+computer,cash,
+science,painting,	Not
+money,melody,	False
+health,cuisine,	False
+journey,voyage,
+art,cuisine,	True
+car,medicine,
+computer,cuisine,
+music,melody,
+science,melody,	False
+art,automobile,	False
+science,medicine,	True
+car,voyage,
+science,automobile,	False
+car,cuisine,
+health,cuisine,	False
+car,medicine,
+money,automobile,	False
+car,cuisine,
+food,laptop,	False
+science,cash,	False
+car,laptop,
+computer,melody,
+car,medicine,
+health,painting,	False
+car,laptop,
+journey,voyage,
+music,melody,
+money,cuisine,	Not
+health,laptop,	False
+food,melody,	False
+music,melody,
+food,painting,	False
+journey,medicine,	False
+science,voyage,	True
+computer,laptop,
+money,physics,	Not
+money,medicine,	False
+car,physics,	False
+computer,melody,
+journey,laptop,	False
+health,cuisine,	False
+journey,laptop,	False
+computer,painting,
+health,painting,	False
+food,laptop,	False
+car,automobile,
+computer,physics,	False
+food,melody,	False
+music,laptop,	False
+car,automobile,
+science,automobile,	False
+music,automobile,	False
+computer,medicine,	False
+computer,painting,
+car,laptop,
+food,physics,	False
+food,cash,	False
+music,melody,
+health,cuisine,	False
+money,automobile,	False
+art,painting,
+music,painting,	True
+journey,laptop,	False
+computer,voyage,
+health,laptop,	False
+computer,voyage,
+art,painting,
+money,automobile,	False
+art,voyage,	False
+food,laptop,	False
+car,medicine,
+computer,medicine,	False
+health,voyage,	False
+art,medicine,	False
+food,automobile,	False
+science,laptop,	True
+food,medicine,	False
+health,painting,	False
+computer,cuisine,	False
+music,painting,	True
+car,melody,
+music,melody,
+science,medicine,	True
+art,painting,
+car,painting,
+science,medicine,	True
+money,medicine,	False
+journey,automobile,	False
+money,melody,	False
+art,laptop,
+food,melody,	False
+food,automobile,	False
+music,laptop,	False
+computer,laptop,
+computer,melody,
+computer,cash,
+computer,medicine,	False
+health,painting,	False
+journey,cuisine,	True
+computer,painting,
+science,medicine,	True
+science,automobile,	False
+science,cash,	False
+music,cuisine,	True
+music,physics,	Not
+science,laptop,	True
+car,melody,
+computer,laptop,
+car,melody,
+health,painting,	False
+money,painting,	Not
+health,medicine,	True
+science,painting,	Not
+car,voyage,
+art,cash,
+car,cash,
+car,voyage,
+car,painting,
+music,voyage,	False
+journey,automobile,
+health,painting,	False
+journey,voyage,
+art,cuisine,	True
+science,physics,	True
+art,cash,
+science,automobile,	False
+food,painting,	False
+health,automobile,	False
+computer,melody,
+journey,physics,	Not
+journey,voyage,
+money,automobile,	False
+science,painting,	Not
+computer,laptop,
+money,laptop,	False
+food,cuisine,
+art,laptop,
+art,physics,	False
+health,voyage,	False
+food,laptop,	False
+journey,automobile,	False
+money,melody,	False
+health,automobile,	False
+art,voyage,	False
+money,automobile,	False
+food,automobile,	False
+music,painting,	True
+car,melody,
+food,cuisine,
+food,painting,	False
+health,cash,	False
+money,medicine,	False
+food,painting,	False
+food,cash,	False
+journey,voyage,
+food,voyage,	False
+health,painting,	False
+art,melody,
+car,cuisine,
+food,medicine,	False
+computer,voyage,
+journey,cash,	False
+money,automobile,	False
+art,painting,
+food,laptop,	False
+journey,laptop,	False
+health,medicine,	True
+art,medicine,	False
+journey,cash,	False
+car,cuisine,
+food,cuisine,
+science,automobile,	False
+money,cash,
+health,voyage,	False
+food,medicine,	False
+journey,melody,	True
+computer,cuisine,	False
+science,melody,	False
+music,automobile,	False
+music,medicine,	False
+music,automobile,	False
+computer,laptop,
+money,cuisine,	Not
+science,cuisine,	True
+science,medicine,	True
+art,melody,
+music,painting,	True
+computer,laptop,
+health,melody,	False
+food,laptop,	False
+money,medicine,	False
+money,melody,	False
+music,automobile,	False
+art,cuisine,
+health,automobile,	False
+science,painting,	Not
+food,laptop,	False
+health,physics,	False
+journey,painting,	Not
+car,physics,	False
+car,painting,
+computer,painting,
+music,cuisine,	True
+food,cash,	False
+health,painting,	False
+money,painting,	Not
+journey,voyage,
+money,voyage,	False
+music,automobile,	False
+science,medicine,	True
+health,laptop,	False
+car,voyage,
+music,laptop,	False
+money,physics,	Not
+money,voyage,	False
+health,voyage,	False
+art,painting,
+health,cuisine,	False
+computer,laptop,
+art,cuisine,	True
+journey,medicine,	False
+money,voyage,	False
+money,automobile,	False
+science,cuisine,	True
+money,cuisine,	Not
+science,automobile,	False
+food,cash,	False
+computer,voyage,
+art,painting,
+computer,voyage,
+money,physics,	Not
+art,melody,
+food,melody,	False
+money,cash,
+money,medicine,	False
+car,cuisine,
+money,painting,	Not
+health,cash,	False
+health,melody,	False
+journey,cash,	False
+art,melody,
+health,physics,	False
+car,laptop,
+car,painting,
+computer,melody,
+money,cuisine,	Not
+science,medicine,	True
+computer,laptop,
+health,physics,	False
+health,physics,	False
+money,painting,	Not
+journey,medicine,	False
+music,voyage,	False
+science,cash,	False
+music,painting,	True
+computer,melody,
+journey,laptop,	False
+science,voyage,	True
+music,melody,
+art,automobile,	False
+health,cash,	False
+food,medicine,	False
+money,laptop,	False
+computer,voyage,
+food,cuisine,
+science,laptop,	True
+health,physics,	False
+journey,cash,	False
+health,melody,	False
+computer,melody,
+computer,painting,
+art,painting,
+science,automobile,	False
+money,physics,	Not
+health,automobile,	False
+car,medicine,
+health,painting,	False
+art,medicine,	False
+science,melody,	False
+music,painting,	True
+car,melody,
+computer,laptop,
+journey,cuisine,	True
+art,melody,
+money,melody,	False
+music,medicine,	False
+car,cash,
+food,voyage,	False
+food,laptop,	False
+art,painting,
+journey,cuisine,	True
+music,laptop,	False
+money,laptop,	False
+food,cash,	False
+health,laptop,	False
+car,medicine,
+food,voyage,	False
+health,cash,	False
+car,medicine,
+car,melody,
+car,automobile,
+journey,medicine,	False
+journey,painting,	Not
+music,cash,	False
+car,cash,
+computer,cash,
+health,melody,	False
+journey,physics,	Not
+computer,cash,
+money,voyage,	False
+art,melody,
+money,painting,	Not
+music,painting,	True
+journey,voyage,
+food,cash,	False
+art,cash,
+computer,cash,
+money,medicine,	False
+science,medicine,	True
+music,medicine,	False
+science,melody,	False
+art,voyage,	False
+money,automobile,	False
+money,painting,	Not
+music,painting,	True
+art,laptop,
+computer,medicine,	False
+science,melody,	False
+music,melody,
+science,laptop,	True
+science,laptop,	True
+art,voyage,	False
+art,cash,
+computer,voyage,
+journey,painting,	Not
+computer,painting,
+journey,laptop,	False
+car,painting,
+computer,automobile,
+science,physics,	True
+food,melody,	False
+car,automobile,
+health,medicine,	True
+journey,laptop,	False
+food,cuisine,
+music,physics,	Not
+music,laptop,	False
+art,physics,	False
+computer,melody,
+art,medicine,	False
+music,automobile,	False
+science,physics,	True
+music,melody,
+art,cash,
+health,voyage,	False
+car,laptop,
+health,voyage,	False
+music,cash,	False
+art,physics,	False
+art,laptop,
+food,physics,	False
+computer,medicine,	False
+car,melody,
+journey,cash,	False
+music,melody,
+art,melody,
+health,cuisine,	False
+health,automobile,	False
+journey,cuisine,	True
+science,physics,	True
+computer,painting,
+money,cash,
+computer,laptop,
+music,painting,	True
+health,painting,	False
+journey,voyage,
+food,cash,	False
+money,cash,
+journey,melody,	True
+journey,physics,	Not
+art,painting,
+journey,medicine,	False
+food,physics,	False
+health,medicine,	True
+art,physics,	False
+car,laptop,
+money,medicine,	False
+money,voyage,	False
+food,painting,	False
+art,medicine,	False
+art,cash,
+food,voyage,	False
+food,cash,	False
+car,physics,	False
+health,medicine,	True
+health,cuisine,	False
+journey,voyage,
+food,voyage,	False
+music,medicine,	False
+computer,medicine,	False
+health,melody,	False
+music,cash,	False
+science,cuisine,	True
+science,cash,	False
+car,cash,
+science,voyage,	True
+science,cash,	False
+science,cuisine,	True
+journey,automobile,	False
+food,melody,	False
+health,physics,	False
+journey,laptop,	False
+money,painting,	Not
+food,cash,	False
+health,automobile,	False
+money,voyage,	False
+music,voyage,	False
+music,cash,	False
+music,medicine,	False
+computer,laptop,
+music,automobile,	False
+computer,laptop,
+money,laptop,	False
+computer,cuisine,	False
+science,laptop,	True
+food,melody,	False
+food,medicine,	False
+money,painting,	Not
+food,cuisine,
+music,automobile,	False
+health,cash,	False
+journey,voyage,
+food,melody,	False
+music,melody,
+car,voyage,
+art,cuisine,	True
+journey,cuisine,	True
+health,cash,	False
+car,voyage,
+science,painting,	Not
+computer,automobile,
+money,melody,	False
+health,melody,	False
+journey,cash,	False
+money,cuisine,	Not
+money,melody,	False
+science,physics,	True
+food,cuisine,
+art,physics,	False
+music,painting,	True
+health,cuisine,	False
+journey,cash,	False
+food,automobile,	False
+food,cuisine,
+health,medicine,	True
+music,automobile,	False
+money,automobile,	False
+health,physics,	False
+science,laptop,	True
+computer,melody,
+car,physics,	False
+art,voyage,	False
+health,laptop,	False
+car,medicine,
+money,voyage,	False
+art,laptop,
+car,medicine,
+food,automobile,	False
+art,medicine,	False
+journey,cash,	False
+computer,cash,
+health,melody,	False
+money,physics,	Not
+health,physics,	False
+car,melody,
+car,laptop,
+music,cash,	False
+science,laptop,	True
+music,physics,	Not
+journey,cuisine,	True
+computer,melody,
+journey,melody,	True
+car,laptop,
+music,cuisine,	True
+computer,cash,
+journey,voyage,
+money,voyage,	False
+money,cuisine,	Not
+money,melody,	False
+journey,physics,	Not
+food,automobile,	False
+art,melody,
+music,voyage,	False
+art,painting,
+food,voyage,	False
+car,painting,
+science,medicine,	True
+music,painting,	True
+money,cash,
+health,cuisine,	False
+art,medicine,	False
+computer,laptop,
+science,laptop,	True
+music,cuisine,	True
+art,painting,
+car,medicine,
+art,voyage,	False
+food,laptop,	False
+art,cuisine,	True
+food,melody,	False
+money,melody,	False
+journey,automobile,
+health,painting,	False
+health,painting,	False
+music,melody,
+science,automobile,	False
+health,cash,	False
+money,painting,	Not
+car,medicine,
+music,voyage,	False
+health,cash,	False
+art,melody,
+computer,laptop,
+health,voyage,	False
+journey,medicine,	False
+car,melody,
+music,cuisine,	True
+computer,automobile,
+health,automobile,	False
+computer,medicine,	False
+computer,melody,
+science,cuisine,	True
+music,automobile,	False
+money,painting,	Not
+health,painting,	False
+science,melody,	False
+money,voyage,	False
+money,painting,	Not
+art,cuisine,	True
+computer,cuisine,	False
+art,medicine,	False
+music,medicine,	False
+music,medicine,	False
+money,voyage,	False
+journey,cuisine,	True
+money,melody,	False
+music,laptop,	False
+car,automobile,
+science,melody,	False
+art,painting,
+computer,laptop,
+computer,cash,
+music,cuisine,	True
+food,melody,	False
+money,automobile,	False
+food,cash,	False
+science,automobile,	False
+journey,cuisine,	True
+journey,melody,	True
+car,medicine,
+music,laptop,	False
+money,laptop,	False
+science,laptop,	True
+money,laptop,	False
+art,cuisine,	True
+art,voyage,	False
+money,cuisine,	Not
+art,melody,
+food,medicine,	False
+health,physics,	False
+art,melody,
+food,cuisine,
+food,painting,	False
+art,physics,	False
+car,cuisine,
+food,melody,	False
+health,painting,	False
+music,cuisine,	True
+music,automobile,	False
+health,physics,	False
+money,physics,	Not
+health,voyage,	False
+art,voyage,	False
+art,voyage,	False
+music,medicine,	False
+computer,cuisine,	False
+music,physics,	Not
+journey,cash,	False
+science,melody,	False
+car,cuisine,
+music,automobile,	False
+money,cash,
+health,painting,	False
+music,laptop,	False
+art,melody,
+science,melody,	False
+car,automobile,
+car,physics,	False
+money,physics,	Not
+money,automobile,	False
+health,cash,	False
+food,melody,	False
+journey,voyage,
+journey,laptop,	False
+health,voyage,	False
+health,automobile,	False
+car,automobile,
+computer,melody,
+journey,painting,	Not
+journey,physics,	Not
+journey,cuisine,	True
+computer,cuisine,
+music,automobile,	False
+music,melody,
+science,cuisine,	True
+art,automobile,	False
+journey,melody,	True
+money,laptop,	False
+health,medicine,	True
+food,laptop,	False
+food,laptop,	False
+money,laptop,	False
+music,cash,	False
+art,melody,
+food,melody,	False
+music,cash,	False
+health,cash,	False
+science,melody,	False
+science,melody,	False
+music,physics,	Not
+art,melody,
+art,automobile,	False
+journey,laptop,	False
+science,melody,	False
+computer,melody,
+science,painting,	Not
+music,cash,	False
+art,voyage,	False
+art,automobile,	False
+music,melody,
+science,laptop,	True
+health,melody,	False
+money,voyage,	False
+computer,painting,
+car,voyage,
+food,automobile,	False
+health,laptop,	False
+art,melody,
+food,cuisine,
+health,voyage,	False
+art,physics,	False
+music,physics,	Not
+journey,cash,	False
+car,melody,
+money,painting,	Not
+art,physics,	False
+health,cash,	False
+science,laptop,	True
+food,melody,	False
+food,voyage,	False
+money,physics,	Not
+science,painting,	Not
+journey,voyage,
+art,cash,
+journey,melody,	True
+computer,cash,
+art,cuisine,	True
+health,melody,	False
+science,painting,	Not
+health,laptop,	False
+money,laptop,	False
+health,voyage,	False
+computer,melody,
+art,cash,
+car,cash,
+money,cuisine,	Not
+journey,cash,	False
+money,voyage,	False
+computer,cuisine,	False
+health,medicine,	True
+money,melody,	False
+money,painting,	Not
+food,painting,	False
+art,cuisine,
+art,painting,
+money,physics,	Not
+car,cash,
+journey,cuisine,	True
+journey,painting,	Not
+car,automobile,
+journey,physics,	Not
+food,melody,	False
+health,automobile,	False
+health,medicine,	True
+art,laptop,
+health,automobile,	False
+music,melody,
+money,laptop,	False
+computer,automobile,
+car,voyage,
+science,automobile,	False
+car,laptop,
+food,laptop,	False
+money,melody,	False
+art,painting,
+food,physics,	False
+journey,painting,	Not
+health,automobile,	False
+money,physics,	Not
+computer,melody,
+health,automobile,	False
+money,physics,	Not
+money,physics,	Not
+art,automobile,	False
+food,cash,	False
+computer,melody,
+food,medicine,	False
+art,laptop,
+health,laptop,	False
+art,physics,	False
+journey,voyage,
+health,physics,	False
+art,cuisine,	True
+computer,melody,
+science,cuisine,	True
+science,automobile,	False
+money,automobile,	False
+food,voyage,	False
+food,medicine,	False
+money,automobile,	False
+art,painting,
+computer,melody,
+health,physics,	False
+journey,voyage,
+health,laptop,	False
+money,medicine,	False
+music,laptop,	False
+computer,medicine,	False
+car,voyage,
+computer,cash,
+journey,voyage,
+food,laptop,	False
+journey,physics,	Not
+art,cash,
+computer,melody,
+food,laptop,	False
+money,cash,
+computer,medicine,	False
+science,painting,	Not
+art,automobile,	False
+health,laptop,	False
+computer,automobile,
+money,voyage,	False
+music,cash,	False
+science,painting,	Not
+music,physics,	Not
+journey,cuisine,	True
+journey,cash,	False
+money,physics,	Not
+car,cash,
+money,medicine,	False
+art,cash,
+science,cuisine,	True
+health,automobile,	False
+science,automobile,	False
+music,laptop,	False
+music,laptop,	False
+journey,physics,	Not
+journey,medicine,	False
+art,medicine,	False
+health,physics,	False
+food,melody,	False
+health,voyage,	False
+car,medicine,
+money,cuisine,	Not

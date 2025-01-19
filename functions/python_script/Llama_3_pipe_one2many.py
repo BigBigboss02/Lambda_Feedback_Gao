@@ -17,7 +17,8 @@ class Config:
         # self.env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\login_configs.env"
         self.openai_url = os.getenv("OPENAI_URL")
         self.openai_api_key = os.getenv('OPENAI_API_KEY')
-        
+        self.llama8b_endpoint = os.getenv('LLAMA3_1_8B_DdEnd')
+
         # Define the prompt template
         self.listing_template_text = """
             ### Instruction:
@@ -94,7 +95,9 @@ if config.mode == 'llama3_local':
 
 elif config.mode == 'gpt':
     from langchain_openai import ChatOpenAI
+    from langchain_huggingface import HuggingFaceEndpoint
     from langchain.schema import HumanMessage
+    endpoint = config.llama8b_endpoint
     llm = ChatOpenAI(
         model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
         temperature=0.7,  # Adjust for creativity
@@ -102,6 +105,18 @@ elif config.mode == 'gpt':
         openai_api_key=config.openai_api_key # Replace with your API key
         # openai_api_base=openai_url
     )
+
+
+    llm = HuggingFaceEndpoint(
+        endpoint_url=f"{endpoint}",
+        max_new_tokens=12,
+        top_k=10,
+        top_p=0.95,
+        typical_p=0.95,
+        temperature=0.01,
+        repetition_penalty=1.03,
+    )
+llm("What did foo say about bar?")
 
 
 

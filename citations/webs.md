@@ -5,6 +5,8 @@
 ## Website resources used
 
 **Lanchain used for combining several model agents together**\
+[Lanchain Huggingface Endpoint](https://python.langchain.com/docs/integrations/llms/huggingface_endpoint/)
+
 [Hungging face langchain docs](https://python.langchain.com/docs/integrations/llms/huggingface_pipelines/)
 
 [Local model integration in langchain docs](https://medium.com/@garysvenson09/how-to-load-local-models-in-langchain-for-your-projects-596e3dff32be)
