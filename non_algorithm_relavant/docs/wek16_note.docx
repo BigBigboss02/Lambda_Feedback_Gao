@@ -3,3 +3,11 @@
 3. Llama3 7B seems not support changing max input token, No instruction but only example input suggestion taken
 4. Sequence of giving True, False or not sure is essential
 5. when token is limited model sometimes treat 'not' and 'sure' as 2 words, so I use unsure to replace
+
+
+using exmaples instead of instruction 
+using 1to1 instead of 1to many semantic checking
+using 3*3 (4*4 practically seems needed) confusion matrix
+deploying on azura cloud 
+
+the analytical question is not done

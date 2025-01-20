@@ -2,45 +2,43 @@ import pandas as pd
 import json
 
 # File paths
-json_file_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/pairs.json"
-csv_file_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/llm_results_instructions.csv"
-output_file_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/matched_results_instructions.csv"
 
-# Load JSON data
-with open(json_file_path, 'r') as json_file:
-    json_data = json.load(json_file)
+output_file_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/matched_results.csv"
+import pandas as pd
 
-# Convert JSON data to a dictionary for quick lookup
-json_lookup = {
-    (entry[0], entry[1]): entry[2] for entry in [eval(item) for item in json_data]
-}
+# Load the uploaded files
+file1_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/json_pairs_cleaned.csv"
+file2_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/llm_results_instructions.csv"
 
-# Load CSV data
-df = pd.read_csv(csv_file_path)
+# Reading the CSV files
+file1 = pd.read_csv(file1_path)
+file2 = pd.read_csv(file2_path)
 
-# Ensure CSV has the expected columns
-df.columns = [col.strip().lower() for col in df.columns]
-assert 'target' in df.columns and 'word' in df.columns and 'response' in df.columns, "CSV must contain 'target', 'word', and 'response' columns"
+# Merge the two files based on the first two columns ('target' and 'word')
+merged = pd.merge(file1, file2, on=['target', 'word'], suffixes=('_file1', '_file2'))
 
-# Create a new column for match result
-def match_result(row):
-    json_response = json_lookup.get((row['target'], row['word']), None)
-    csv_response = row['response'].strip()
+# Define a function to handle the comparison logic
+def compare_responses(response1, response2):
+    response1 = response1.strip().lower()
+    response2 = response2.strip().lower()
+    
+    # Match logic
+    if response1 in ['true', 'false']:
+        if response1 == response2:
+            return True
+        else:
+            return False
+    # Unsure l
+    elif response1 not in ['true', 'false'] and response2 == 'unsure':
+        return True
+    else:
+        return False
 
-    if not csv_response:  # If CSV response is empty
-        return "nothing" if json_response is None else "false"
+# Apply the comparison function
+merged['comparison_result'] = merged.apply(
+    lambda row: compare_responses(row['response_file1'], row['response_file2']), axis=1
+)
 
-    if csv_response.lower() == json_response:
-        return "true"
-
-    if json_response == "unsure" and csv_response.lower() not in ["true", "false"]:
-        return "true"
-
-    return "false"
-
-df["match_result"] = df.apply(match_result, axis=1)
-
-# Save the updated DataFrame to a new CSV
-df.to_csv(output_file_path, index=False)
-
-print(f"Match results saved to {output_file_path}")
+# Select relevant columns for output
+result = merged[['target', 'word', 'response_file1', 'response_file2', 'comparison_result']]
+print(result)
