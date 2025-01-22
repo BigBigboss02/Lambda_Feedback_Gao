@@ -20,3 +20,6 @@ Work on the first function first. Create a list of tests it should pass, then cr
 Then your plan is related to the above work.
  
  ## Deploy dedicated endpoints and create 3*3 confusion matrix
+
+note:
+the relative term to 'save cache for last result of same input' need to be turned off for confusion matrix test, put this in final paper.

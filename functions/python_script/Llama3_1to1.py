@@ -14,7 +14,7 @@ class Config:
     # env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\login_configs.env"
     env_path = 'login_configs.env'
     load_dotenv(dotenv_path=env_path)
-    mode = 'llama3_endpoint' #currently available option: gpt, llama3_cloud, llama3_local
+    mode = 'gpt' #currently available option: gpt, llama3_cloud, llama3_local
 
     def __init__(self):
         self.local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
@@ -34,16 +34,23 @@ class Config:
         '''
         '''
         ### Examples:
-        1. Word1: "happy", Word2: "joyful"  
+        Word1: "happy", Word2: "happy"  
         Response: True
 
-        2. Word1: "cat", Word 2: "dog"  
+        Word1: "happy", Word2: "joyful"  
+        Response: True
+
+        Word1: "cat", Word 2: "dog"  
         Response: False
 
-        3. Word1: "bank", Word 2: "river"  
-        Response: Unsure
+        Word1: "bank", Word 2: "actor"  
+        Response: False
 
-        Word 1:{target}, Word2:{word}
+        Word1: "science", Word 2: "physics"  
+        Response: unsure
+        
+        ### Input:
+        Word1:{target}, Word2:{word}
         Response:
         '''
         # Define the prompt template
@@ -121,45 +128,54 @@ elif config.mode == 'llama3_endpoint':
         temperature=0.01,
         huggingfacehub_api_token=config.HuggingAuth
     )
-    prompt_template = PromptTemplate(
-        template=config.semantic_comparison_template,
-        input_variables=["target", "word"]
-    )
+    
+prompt_template = PromptTemplate(
+    template=config.semantic_comparison_template,
+    input_variables=["target", "word"]
+)
     
 
 import random
 import pandas as pd
 
-if config.mode == 'llama3_endpoint':
-    # target_list = ['drinking', 'math', 'cash', 'money', 'drinking water', 'mathematics']
-    # word_list = ['drinking', 'math', 'cash', 'money', 'drinking water', 'mathematics']
-    target_list = ['car', 'journey', 'money', 'computer', 'food', 'music', 'science', 'art', 'health']
-    word_list = ['automobile', 'voyage', 'cash', 'laptop', 'cuisine', 'melody', 'physics', 'painting', 'medicine']
 
+chain = prompt_template | llm.bind(skip_prompt=True)
+
+results = []
+counter = 0
+
+
+pseudolist = []
+df = pd.DataFrame(pseudolist, columns=["Word1", "Word2", "Ground Truth"])
+
+
+for index, row in df.iterrows():
+    if counter >= 2000:  # Ensure we don't exceed the loop limit
+        break
+
+    # Simulate the word1 and word2 execution within the loop
+    word1 = row["Word1"]
+    word2 = row["Word2"]
+    ground_truth = row["Ground Truth"]
     
-    chain = prompt_template | llm.bind(skip_prompt=True)
+    # Invoke the chain
+    response = chain.invoke({
+        "target": word1,
+        "word": word2
+    })
+    # Print output for debugging
+    print(response)
+    print(counter)
     
-    results = []
-    counter = 0
-    for _ in range(2000):
-        # Randomly select target and word
-        target = random.choice(target_list)
-        word = random.choice(word_list)
-        
-        # Invoke the chain
-        response = chain.invoke({
-            "target": target,
-            "word": word
-        })
-        print(response)
-        print(counter)
-        counter += 1
-        # Append the result as a tuple
-        results.append((target, word, response))
+    # Increment the counter
+    counter += 1
     
-    # Save results to a CSV file
-    data = pd.DataFrame(results, columns=["target", "word", "response"])
-    data.to_csv('/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/llm_results_instructions2.csv', index=False)
-    
-    print("Results saved")
+    # Append the result as a tuple
+    results.append((word1, word2, ground_truth, response))
+
+# Save results to a CSV file
+data = pd.DataFrame(results, columns=["Word1", "Word2", "Ground Truth", "Response"])
+data.to_csv('/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/llm_results_instructions2.csv', index=False)
+
+print("Results saved")
 
