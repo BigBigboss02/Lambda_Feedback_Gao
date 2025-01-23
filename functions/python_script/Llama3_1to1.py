@@ -12,7 +12,7 @@ from langchain.prompts import PromptTemplate
 class Config:
     # Path to the .env file containing credentials
     # env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\login_configs.env"
-    env_path = 'login_configs.env'
+    env_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/login_configs.env'
     load_dotenv(dotenv_path=env_path)
     mode = 'gpt' #currently available option: gpt, llama3_cloud, llama3_local
 
@@ -61,9 +61,24 @@ class Config:
         - "False" if the words are semantically different.
         - "Unsure" if it is unclear based on the given words.
 
-        ### 2 words
-        - word1: {target}
-        - word2: {word}
+        ### Examples:
+        Word1: "happy", Word2: "happy"  
+        Response: True
+
+        Word1: "happy", Word2: "joyful"  
+        Response: True
+
+        Word1: "cat", Word 2: "dog"  
+        Response: False
+
+        Word1: "bank", Word 2: "actor"  
+        Response: False
+
+        Word1: "science", Word 2: "physics"  
+        Response: unsure
+        
+        ### Input:
+        Word1:{target}, Word2:{word}
         
         ### Response:
         """ 
@@ -103,8 +118,8 @@ elif config.mode == 'gpt':
     from langchain.schema import HumanMessage
     llm = ChatOpenAI(
         model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
-        temperature=0.7,  # Adjust for creativity
-        max_tokens=50,  # Limit on response tokens
+        temperature=0.1,  # Adjust for creativity
+        max_tokens=4,  # Limit on response tokens
         openai_api_key=config.openai_api_key # Replace with your API key
         # openai_api_base=openai_url
     )
@@ -135,22 +150,21 @@ prompt_template = PromptTemplate(
 )
     
 
-import random
 import pandas as pd
 
 
-chain = prompt_template | llm.bind(skip_prompt=True)
+# chain = prompt_template | llm.bind(skip_prompt=True)
+chain = prompt_template | llm
+
 
 results = []
 counter = 0
+examples_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/semantic_comparisons.csv'
+df = pd.read_csv(examples_path)
 
-
-pseudolist = []
-df = pd.DataFrame(pseudolist, columns=["Word1", "Word2", "Ground Truth"])
-
-
+# ground truth validation
 for index, row in df.iterrows():
-    if counter >= 2000:  # Ensure we don't exceed the loop limit
+    if counter >= 1000:  # Ensure we don't exceed the loop limit
         break
 
     # Simulate the word1 and word2 execution within the loop
@@ -163,19 +177,18 @@ for index, row in df.iterrows():
         "target": word1,
         "word": word2
     })
+    content = response.content
     # Print output for debugging
-    print(response)
     print(counter)
     
     # Increment the counter
     counter += 1
     
     # Append the result as a tuple
-    results.append((word1, word2, ground_truth, response))
-
+    results.append((word1, word2, ground_truth, content))
 # Save results to a CSV file
 data = pd.DataFrame(results, columns=["Word1", "Word2", "Ground Truth", "Response"])
-data.to_csv('/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/llm_results_instructions2.csv', index=False)
+data.to_csv('/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/week16_experiments/gpt_results_instNshot2.csv', index=False)
 
 print("Results saved")
 
