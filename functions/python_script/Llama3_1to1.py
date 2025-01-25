@@ -14,87 +14,152 @@ class Config:
     # env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\login_configs.env"
     env_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/login_configs.env'
     load_dotenv(dotenv_path=env_path)
-    mode = 'gpt' #currently available option: gpt, llama3_cloud, llama3_local
+
+    mode = 'llama3' #currently available option: gpt, llama3, llama3_local
+    llama_version = '3_2_1B' # only available for llama3 mode
+
     debug_mode = False #Set to True to stop saving results
-    temperature = 0.3
+    temperature = 0.01
     max_new_token = 5
-    skip_prompt = False 
+    skip_prompt = False #some models have their defalt prompt structure
     save_results = True
     if_plot = True
     local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
     example_path = 'test_results/1to1/cross_platform_experiments_1000trials/semantic_comparisons.csv'
-    result_saving_path = 'test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_030000503'
+    result_saving_path = 'test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_00100050203'
     os.makedirs(result_saving_path, exist_ok=True) # Create the directory if it doesn't exist
     def __init__(self):
         self.openai_url = os.getenv("OPENAI_URL")
         self.openai_api_key = os.getenv('OPENAI_API_KEY')
         self.HuggingAuth  = os.getenv("HUGGINGFACE_AUTHORIZATION")
         self.llama3_2_repo_ID = os.getenv("LLAMA3_2_1B_REPO_ID")
-        self.endpoint = os.getenv("LLAMA3_1_8B_DdEnd")
-
-        self.instructive_template= '''        
-        ### Instruction:
-        Determine if the following two words are semantically similar. Provide one of the following responses:
-        - "True" if the words are semantically the same.
-        - "False" if the words are semantically different.
-        - "Not Sure" if it is unclear based on the given words.
-
-        ### Input:
-        Word1:{target}, Word2:{word}
+        self.endpoint_3_1_8B = os.getenv("LLAMA3_1_8B_ENDPOINT")
+        self.endpoint_3_2_1B = os.getenv("LLAMA3_2_1B_ENDPOINT")
+        self.endpoint_3_2_3B = os.getenv("LLAMA3_2_3B_ENDPOINT")
+        self.endpoint_3_3_70B = os.getenv("LLAMA3_3_70B_ENDPOINT")
         
-        ### Response:
-        '''
-        self.few_shot_template ='''
-        ### Examples:
-        Word1: "happy", Word2: "happy"  
-        Response: True
+        # Templates
+        self.templates_2D = {
+            "01": '''
+            ### Examples:
+            Word1: "happy", Word2: "happy"  
+            Response: True
 
-        Word1: "happy", Word2: "joyful"  
-        Response: True
+            Word1: "happy", Word2: "joyful"  
+            Response: True
 
-        Word1: "cat", Word 2: "dog"  
-        Response: False
+            Word1: "cat", Word 2: "dog"  
+            Response: False
 
-        Word1: "bank", Word 2: "actor"  
-        Response: False
+            Word1: "bank", Word 2: "actor"  
+            Response: False
 
-        Word1: "science", Word 2: "physics"  
-        Response: unsure
-        
-        ### Input:
-        Word1:{target}, Word2:{word}
-        Response:
-        '''
-        # Define the prompt template
-        self.semantic_comparison_template = """
-        ### Instruction:
-        Determine if the 2 words are semantically similar. Provide one of the following responses:
-        - "True" if the words are semantically the same.
-        - "False" if the words are semantically different.
-        - "Unsure" if it is unclear based on the given words.
+            ### Input:
+            Word1:{target}, Word2:{word}
+            Response:
+            ''',
+            "02": '''
+            ### Instruction:
+            Determine if the following two words are semantically similar. Provide one of the following responses:
+            - "True" if the words are semantically the same.
+            - "False" if the words are semantically different.
 
-        ### Examples:
-        Word1: "happy", Word2: "happy"  
-        Response: True
+            ### Input:
+            Word1:{target}, Word2:{word}
 
-        Word1: "happy", Word2: "joyful"  
-        Response: True
+            ### Response:
+            ''',
+            "03": '''
+            ### Instruction:
+            Determine if the 2 words are semantically similar. Provide one of the following responses:
+            - "True" if the words are semantically the same.
+            - "False" if the words are semantically different.
 
-        Word1: "cat", Word 2: "dog"  
-        Response: False
+            ### Examples:
+            Word1: "happy", Word2: "happy"  
+            Response: True
 
-        Word1: "bank", Word 2: "actor"  
-        Response: False
+            Word1: "happy", Word2: "joyful"  
+            Response: True
 
-        Word1: "science", Word 2: "physics"  
-        Response: unsure
-        
-        ### Input:
-        Word1:{target}, Word2:{word}
-        
-        ### Response:
-        """ 
-   
+            Word1: "cat", Word 2: "dog"  
+            Response: False
+
+            Word1: "bank", Word 2: "actor"  
+            Response: False
+
+            ### Input:
+            Word1:{target}, Word2:{word}
+
+            ### Response:
+            '''
+        }
+        self.templates_3D = {
+            "01": '''
+            ### Examples:
+            Word1: "happy", Word2: "happy"  
+            Response: True
+
+            Word1: "happy", Word2: "joyful"  
+            Response: True
+
+            Word1: "cat", Word 2: "dog"  
+            Response: False
+
+            Word1: "bank", Word 2: "actor"  
+            Response: False
+
+            Word1: "science", Word 2: "physics"  
+            Response: unsure
+
+            ### Input:
+            Word1:{target}, Word2:{word}
+            Response:
+            ''',
+            "02": '''
+            ### Instruction:
+            Determine if the following two words are semantically similar. Provide one of the following responses:
+            - "True" if the words are semantically the same.
+            - "False" if the words are semantically different.
+            - "Not Sure" if it is unclear based on the given words.
+
+            ### Input:
+            Word1:{target}, Word2:{word}
+
+            ### Response:
+            ''',
+            "03": '''
+            ### Instruction:
+            Determine if the 2 words are semantically similar. Provide one of the following responses:
+            - "True" if the words are semantically the same.
+            - "False" if the words are semantically different.
+            - "Unsure" if it is unclear based on the given words.
+
+            ### Examples:
+            Word1: "happy", Word2: "happy"  
+            Response: True
+
+            Word1: "happy", Word2: "joyful"  
+            Response: True
+
+            Word1: "cat", Word 2: "dog"  
+            Response: False
+
+            Word1: "bank", Word 2: "actor"  
+            Response: False
+
+            Word1: "science", Word 2: "physics"  
+            Response: unsure
+
+            ### Input:
+            Word1:{target}, Word2:{word}
+
+            ### Response:
+            '''
+        }
+        self.prompt_template = self.templates_2D["03"]
+
+
 config = Config()
 
 
@@ -137,14 +202,21 @@ if config.mode == 'gpt':
         openai_api_key=config.openai_api_key # Replace with your API key
     )
 
-elif config.mode == 'llama3_1_8B':
+elif config.mode == 'llama3':
     from langchain_huggingface import HuggingFaceEndpoint
-    from langchain.chains import LLMChain
+    # from langchain.chains import LLMChain
+    if config.llama_version == '3_1_8B':
+        endpoint = config.endpoint_3_1_8B
+    elif config.llama_version == '3_2_1B':
+        endpoint = config.endpoint_3_2_1B
+    elif config.llama_version == '3_2_3B':
+        endpoint = config.endpoint_3_2_1B
+    elif config.llama_version == '3_3_70B':
+        endpoint = config.endpoint_3_3_70B
 
-    repo_id = config.llama3_2_repo_ID 
 
     llm = HuggingFaceEndpoint(
-        endpoint_url=f"{config.endpoint}",
+        endpoint_url=f"{endpoint}",
         # Specify the maximum input tokens (if supported by the model)
         # model_kwargs={"max_input_tokens": 4096},
         max_new_tokens=config.max_new_token,      
@@ -153,7 +225,7 @@ elif config.mode == 'llama3_1_8B':
     )
     
 prompt_template = PromptTemplate(
-    template=config.semantic_comparison_template,
+    template=config.prompt_template,
     input_variables=["target", "word"]
 )
 
@@ -185,7 +257,10 @@ if config.save_results:
             "target": word1,
             "word": word2
         })
-        content = response.content
+        if config.mode == 'gpt':
+            content = response.content
+        else:
+            content = response
         # Print output for debugging
         print(counter)
         
@@ -200,31 +275,63 @@ if config.save_results:
     result_saving_path = os.path.join(config.result_saving_path, f"{timestamp}.csv")
     data.to_csv(result_saving_path, index=False)
     print("Results saved")
-    if config.if_plot:
-        import matplotlib.pyplot as plt
-        import seaborn as sns
-        from sklearn.metrics import confusion_matrix
-        label_mapping = {"True": 1, "False": 0, "Unsure": 2}
-        data['Ground Truth'] = data['Ground Truth'].map(label_mapping)
-        data['Response'] = data['Response'].map(label_mapping)
 
-        # Filter only the necessary columns and clean the data
-        filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
+    # if config.if_plot:
+    #     import matplotlib.pyplot as plt
+    #     import seaborn as sns
+    #     from sklearn.metrics import confusion_matrix
+    #     label_mapping = {"True": 1, "False": 0, "Unsure": 2}
+    #     data['Ground Truth'] = data['Ground Truth'].map(label_mapping)
+    #     data['Response'] = data['Response'].map(label_mapping)
 
-        # Calculate the confusion matrix
-        conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[0, 1, 2])
+    #     # Filter only the necessary columns and clean the data
+    #     filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
 
-        # Plot the confusion matrix
-        plt.figure(figsize=(8, 6))
-        sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['False', 'True', 'Unsure'], yticklabels=['False', 'True', 'Unsure'])
-        plt.title('Confusion Matrix')
-        plt.xlabel('Predicted Labels')
-        plt.ylabel('True Labels')
-        plt.tight_layout()
+    #     # Calculate the confusion matrix
+    #     conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[0, 1, 2])
+
+    #     # Plot the confusion matrix
+    #     plt.figure(figsize=(8, 6))
+    #     sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['False', 'True', 'Unsure'], yticklabels=['False', 'True', 'Unsure'])
+    #     plt.title('Confusion Matrix')
+    #     plt.xlabel('Predicted Labels')
+    #     plt.ylabel('True Labels')
+    #     plt.tight_layout()
     
-        # Save the plot in the same base folder as the CSV file
-        plot_saving_path = os.path.join(config.result_saving_path, f"{timestamp}_confusion_matrix.png")
-        plt.savefig(plot_saving_path, dpi=300)
-        print(f"Plot saved at {plot_saving_path}")
+    #     # Save the plot in the same base folder as the CSV file
+    #     plot_saving_path = os.path.join(config.result_saving_path, f"{timestamp}_confusion_matrix.png")
+    #     plt.savefig(plot_saving_path, dpi=300)
+    #     print(f"Plot saved at {plot_saving_path}")
 
-        # plt.show()
+    #     # plt.show()
+
+
+#2D CASE PLZZZZZZZZZZZZZZZZZZZZZZZZZZZZ 
+if config.if_plot:
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    from sklearn.metrics import confusion_matrix
+
+    label_mapping = {"True": 1, "False": 0}
+    data['Ground Truth'] = data['Ground Truth'].map(label_mapping)
+    data['Response'] = data['Response'].map(label_mapping)
+
+    # Filter only the necessary columns and clean the data
+    filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
+
+    # Calculate the confusion matrix
+    conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[0, 1])
+
+    # Plot the confusion matrix
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['False', 'True'], yticklabels=['False', 'True'])
+    plt.title('Confusion Matrix')
+    plt.xlabel('Predicted Labels')
+    plt.ylabel('True Labels')
+    plt.tight_layout()
+
+    # Save the plot in the same base folder as the CSV file
+    plot_saving_path = os.path.join(config.result_saving_path, f"{timestamp}_confusion_matrix.png")
+    plt.savefig(plot_saving_path, dpi=300)
+    print(f"Plot saved at {plot_saving_path}")
+    # plt.show()

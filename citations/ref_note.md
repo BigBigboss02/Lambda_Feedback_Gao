@@ -23,3 +23,6 @@ Then your plan is related to the above work.
 
 note:
 the relative term to 'save cache for last result of same input' need to be turned off for confusion matrix test, put this in final paper.
+
+note: 
+GPT4 will not stop the behavior of less responsieve of unsure, even when temperature is set to pretty low

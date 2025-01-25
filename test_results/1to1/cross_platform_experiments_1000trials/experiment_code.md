@@ -18,7 +18,13 @@ The temperature is represented to **4 decimal places**.
 The max new tokens value is represented to **3 significant figures**.  
 - Example: For `max_new_token = 50`, the corresponding code is `050`.
 
-### 4. Instruction Type
+### 4. Prompt Dimension
+The number of outcomes expected from a prompt structure:
+- True or False: `02`
+- True or False of Unsure: `03`
+- Higher dimensions : `04`,`05`......
+  
+### 5. Instruction Type
 The instruction type is encoded according to the following table:
 - Few-shot type: `01`
 - Zero-shot instruction type: `02`
