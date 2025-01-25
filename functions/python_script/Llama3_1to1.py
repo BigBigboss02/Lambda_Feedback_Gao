@@ -16,13 +16,16 @@ class Config:
     load_dotenv(dotenv_path=env_path)
     mode = 'gpt' #currently available option: gpt, llama3_cloud, llama3_local
     debug_mode = False #Set to True to stop saving results
-    temperature = 0.05
+    temperature = 0.005
     max_new_token = 5
-    skip_prompt = True
-
+    skip_prompt = False 
+    save_results = True
+    if_plot = True
+    local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
+    example_path = 'test_results/1to1/cross_platform_experiments_1000trials/semantic_comparisons.csv'
+    result_saving_path = 'test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_000500503'
+    os.makedirs(result_saving_path, exist_ok=True) # Create the directory if it doesn't exist
     def __init__(self):
-        self.local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
-        self.examples_path = 'test_results/1to1/cross_platform_experiments_1000trials/semantic_comparisons.csv'
         self.openai_url = os.getenv("OPENAI_URL")
         self.openai_api_key = os.getenv('OPENAI_API_KEY')
         self.HuggingAuth  = os.getenv("HUGGINGFACE_AUTHORIZATION")
@@ -132,7 +135,6 @@ if config.mode == 'gpt':
         temperature=config.temperature,  # Adjust for creativity
         max_tokens=config.max_new_token,  # Limit on response tokens
         openai_api_key=config.openai_api_key # Replace with your API key
-        # openai_api_base=openai_url
     )
 
 elif config.mode == 'llama3_1_8B':
@@ -160,40 +162,69 @@ if config.skip_prompt:
 else:
     chain = prompt_template | llm
 
+if config.save_results:
+    import pandas as pd
+    from datetime import datetime
+    results = []
+    counter = 0
+    examples_path = config.example_path
+    df = pd.read_csv(examples_path)
 
-import pandas as pd
-results = []
-counter = 0
-examples_path = config.example_path
-df = pd.read_csv(examples_path)
+    # ground truth validation
+    for index, row in df.iterrows():
+        if counter >= 1000:  # Ensure we don't exceed the loop limit
+            break
 
-# ground truth validation
-for index, row in df.iterrows():
-    if counter >= 1000:  # Ensure we don't exceed the loop limit
-        break
+        # Simulate the word1 and word2 execution within the loop
+        word1 = row["Word1"]
+        word2 = row["Word2"]
+        ground_truth = row["Ground Truth"]
+        
+        # Invoke the chain
+        response = chain.invoke({
+            "target": word1,
+            "word": word2
+        })
+        content = response.content
+        # Print output for debugging
+        print(counter)
+        
+        # Increment the counter
+        counter += 1
+        
+        # Append the result as a tuple
+        results.append((word1, word2, ground_truth, content))
+    # Save results to a CSV file
+    data = pd.DataFrame(results, columns=["Word1", "Word2", "Ground Truth", "Response"])
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    result_saving_path = os.path.join(config.result_saving_path, f"{timestamp}.csv")
+    data.to_csv(result_saving_path, index=False)
+    print("Results saved")
+    if config.if_plot:
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+        from sklearn.metrics import confusion_matrix
+        label_mapping = {"True": 1, "False": 0, "Unsure": 2}
+        data['Ground Truth'] = data['Ground Truth'].map(label_mapping)
+        data['Response'] = data['Response'].map(label_mapping)
 
-    # Simulate the word1 and word2 execution within the loop
-    word1 = row["Word1"]
-    word2 = row["Word2"]
-    ground_truth = row["Ground Truth"]
+        # Filter only the necessary columns and clean the data
+        filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
+
+        # Calculate the confusion matrix
+        conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[0, 1, 2])
+
+        # Plot the confusion matrix
+        plt.figure(figsize=(8, 6))
+        sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['False', 'True', 'Unsure'], yticklabels=['False', 'True', 'Unsure'])
+        plt.title('Confusion Matrix')
+        plt.xlabel('Predicted Labels')
+        plt.ylabel('True Labels')
+        plt.tight_layout()
     
-    # Invoke the chain
-    response = chain.invoke({
-        "target": word1,
-        "word": word2
-    })
-    content = response.content
-    # Print output for debugging
-    print(counter)
-    
-    # Increment the counter
-    counter += 1
-    
-    # Append the result as a tuple
-    results.append((word1, word2, ground_truth, content))
-# Save results to a CSV file
-data = pd.DataFrame(results, columns=["Word1", "Word2", "Ground Truth", "Response"])
-data.to_csv('/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/week16_experiments/gpt_results_instNshot2.csv', index=False)
+        # Save the plot in the same base folder as the CSV file
+        plot_saving_path = os.path.join(config.result_saving_path, f"{timestamp}_confusion_matrix.png")
+        plt.savefig(plot_saving_path, dpi=300)
+        print(f"Plot saved at {plot_saving_path}")
 
-print("Results saved")
-
+        plt.show()
