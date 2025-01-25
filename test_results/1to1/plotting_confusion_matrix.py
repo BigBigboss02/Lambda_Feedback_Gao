@@ -25,8 +25,8 @@ plt.title('Confusion Matrix')
 plt.xlabel('Predicted Labels')
 plt.ylabel('True Labels')
 plt.tight_layout()
-plt.show()
+
 # Save the plot in the same base folder as the CSV file
-plot_saving_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_001000503/confusion_matrix.png"
+plot_saving_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_001000503/20250125_120351.jpg"
 plt.savefig(plot_saving_path, dpi=300)
 print(f"Plot saved at {plot_saving_path}")

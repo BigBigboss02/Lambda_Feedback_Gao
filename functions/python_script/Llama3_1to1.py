@@ -16,14 +16,14 @@ class Config:
     load_dotenv(dotenv_path=env_path)
     mode = 'gpt' #currently available option: gpt, llama3_cloud, llama3_local
     debug_mode = False #Set to True to stop saving results
-    temperature = 0.005
+    temperature = 0.3
     max_new_token = 5
     skip_prompt = False 
     save_results = True
     if_plot = True
     local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
     example_path = 'test_results/1to1/cross_platform_experiments_1000trials/semantic_comparisons.csv'
-    result_saving_path = 'test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_000500503'
+    result_saving_path = 'test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_030000503'
     os.makedirs(result_saving_path, exist_ok=True) # Create the directory if it doesn't exist
     def __init__(self):
         self.openai_url = os.getenv("OPENAI_URL")
@@ -227,4 +227,4 @@ if config.save_results:
         plt.savefig(plot_saving_path, dpi=300)
         print(f"Plot saved at {plot_saving_path}")
 
-        plt.show()
+        # plt.show()
