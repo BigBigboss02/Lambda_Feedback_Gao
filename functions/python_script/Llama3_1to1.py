@@ -15,24 +15,33 @@ class Config:
     env_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/login_configs.env'
     load_dotenv(dotenv_path=env_path)
     mode = 'gpt' #currently available option: gpt, llama3_cloud, llama3_local
+    debug_mode = False #Set to True to stop saving results
+    temperature = 0.05
+    max_new_token = 5
+    skip_prompt = True
 
     def __init__(self):
         self.local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
-        self.load_local_model = False
-        # self.env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\login_configs.env"
+        self.examples_path = 'test_results/1to1/cross_platform_experiments_1000trials/semantic_comparisons.csv'
         self.openai_url = os.getenv("OPENAI_URL")
         self.openai_api_key = os.getenv('OPENAI_API_KEY')
         self.HuggingAuth  = os.getenv("HUGGINGFACE_AUTHORIZATION")
         self.llama3_2_repo_ID = os.getenv("LLAMA3_2_1B_REPO_ID")
         self.endpoint = os.getenv("LLAMA3_1_8B_DdEnd")
-        self.INSTRUCTION = '''        
+
+        self.instructive_template= '''        
         ### Instruction:
         Determine if the following two words are semantically similar. Provide one of the following responses:
         - "True" if the words are semantically the same.
         - "False" if the words are semantically different.
         - "Not Sure" if it is unclear based on the given words.
+
+        ### Input:
+        Word1:{target}, Word2:{word}
+        
+        ### Response:
         '''
-        '''
+        self.few_shot_template ='''
         ### Examples:
         Word1: "happy", Word2: "happy"  
         Response: True
@@ -88,6 +97,8 @@ config = Config()
 
 # Set default device
 if config.mode == 'llama3_local':
+    # local models currently not available for testing, but can same code can be used to deploy modesls on 
+    # universal gpu servers
     from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
     from langchain.output_parsers import RegexParser
     from langchain_huggingface.llms import HuggingFacePipeline
@@ -113,34 +124,29 @@ if config.mode == 'llama3_local':
     pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=10)
     llm = HuggingFacePipeline(pipeline=pipe)
 
-elif config.mode == 'gpt':
+if config.mode == 'gpt':
     from langchain_openai import ChatOpenAI
     from langchain.schema import HumanMessage
     llm = ChatOpenAI(
         model="gpt-4o-mini",  # Use "gpt-4" or "gpt-4-turbo"
-        temperature=0.1,  # Adjust for creativity
-        max_tokens=4,  # Limit on response tokens
+        temperature=config.temperature,  # Adjust for creativity
+        max_tokens=config.max_new_token,  # Limit on response tokens
         openai_api_key=config.openai_api_key # Replace with your API key
         # openai_api_base=openai_url
     )
 
-elif config.mode == 'llama3_endpoint':
+elif config.mode == 'llama3_1_8B':
     from langchain_huggingface import HuggingFaceEndpoint
     from langchain.chains import LLMChain
 
     repo_id = config.llama3_2_repo_ID 
-    # llm = HuggingFaceEndpoint(
-    #     repo_id=repo_id,
-    #     max_new_tokens=5,
-    #     temperature=0.2,
-    #     huggingfacehub_api_token=config.HuggingAuth
-    # )
+
     llm = HuggingFaceEndpoint(
         endpoint_url=f"{config.endpoint}",
         # Specify the maximum input tokens (if supported by the model)
         # model_kwargs={"max_input_tokens": 4096},
-        max_new_tokens=5,      # Set a higher output token limit
-        temperature=0.01,
+        max_new_tokens=config.max_new_token,      
+        temperature=config.temperature,
         huggingfacehub_api_token=config.HuggingAuth
     )
     
@@ -148,18 +154,17 @@ prompt_template = PromptTemplate(
     template=config.semantic_comparison_template,
     input_variables=["target", "word"]
 )
-    
+
+if config.skip_prompt:
+    chain = prompt_template | llm.bind(skip_prompt=True)
+else:
+    chain = prompt_template | llm
+
 
 import pandas as pd
-
-
-# chain = prompt_template | llm.bind(skip_prompt=True)
-chain = prompt_template | llm
-
-
 results = []
 counter = 0
-examples_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/semantic_comparisons.csv'
+examples_path = config.example_path
 df = pd.read_csv(examples_path)
 
 # ground truth validation
