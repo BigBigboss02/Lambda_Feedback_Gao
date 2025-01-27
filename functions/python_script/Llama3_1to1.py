@@ -15,17 +15,20 @@ class Config:
     env_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/login_configs.env'
     load_dotenv(dotenv_path=env_path)
 
-    mode = 'llama3' #currently available option: gpt, llama3, llama3_local
+    mode = 'gpt' #currently available option: gpt, llama3, llama3_local
     llama_version = '3_2_1B' # only available for llama3 mode
 
-    debug_mode = False #Set to True to stop saving results
+    debug_mode = False #Set to True to test the connection 
     temperature = 0.01
     max_new_token = 5
     skip_prompt = False #some models have their defalt prompt structure
     save_results = True
     if_plot = True
+    template_type = 'templates_2D'  #options: 'templates_2D', 'templates_3D'
+    dimension = '03'#options: '01', '02', '03'
+
     local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
-    example_path = 'test_results/1to1/cross_platform_experiments_1000trials/semantic_comparisons.csv'
+    example_path = 'test_results/1to1/cross_platform_experiments_1000trials/semantic_comparisons_2D.csv'
     result_saving_path = 'test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_00100050203'
     os.makedirs(result_saving_path, exist_ok=True) # Create the directory if it doesn't exist
     def __init__(self):
@@ -157,7 +160,8 @@ class Config:
             ### Response:
             '''
         }
-        self.prompt_template = self.templates_2D["03"]
+
+        self.prompt_template = getattr(self, self.template_type)[self.dimension]
 
 
 config = Config()
@@ -244,9 +248,12 @@ if config.save_results:
 
     # ground truth validation
     for index, row in df.iterrows():
-        if counter >= 1000:  # Ensure we don't exceed the loop limit
-            break
-
+        if config.debug_mode:
+            if counter >= 5:
+                break
+        else:
+            if counter >= 1000:  # Ensure we don't exceed the loop limit
+                break
         # Simulate the word1 and word2 execution within the loop
         word1 = row["Word1"]
         word2 = row["Word2"]
@@ -276,62 +283,55 @@ if config.save_results:
     data.to_csv(result_saving_path, index=False)
     print("Results saved")
 
-    # if config.if_plot:
-    #     import matplotlib.pyplot as plt
-    #     import seaborn as sns
-    #     from sklearn.metrics import confusion_matrix
-    #     label_mapping = {"True": 1, "False": 0, "Unsure": 2}
-    #     data['Ground Truth'] = data['Ground Truth'].map(label_mapping)
-    #     data['Response'] = data['Response'].map(label_mapping)
+    if config.if_plot:
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+        from sklearn.metrics import confusion_matrix
+        if config.template_type == 'templates_3D':
+            label_mapping = {"True": 1, "False": 0, "Unsure": 2}
+            data['Ground Truth'] = data['Ground Truth'].map(label_mapping)
+            data['Response'] = data['Response'].map(label_mapping)
 
-    #     # Filter only the necessary columns and clean the data
-    #     filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
+            # Filter only the necessary columns and clean the data
+            filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
 
-    #     # Calculate the confusion matrix
-    #     conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[0, 1, 2])
+            # Calculate the confusion matrix
+            conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[0, 1, 2])
 
-    #     # Plot the confusion matrix
-    #     plt.figure(figsize=(8, 6))
-    #     sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['False', 'True', 'Unsure'], yticklabels=['False', 'True', 'Unsure'])
-    #     plt.title('Confusion Matrix')
-    #     plt.xlabel('Predicted Labels')
-    #     plt.ylabel('True Labels')
-    #     plt.tight_layout()
-    
-    #     # Save the plot in the same base folder as the CSV file
-    #     plot_saving_path = os.path.join(config.result_saving_path, f"{timestamp}_confusion_matrix.png")
-    #     plt.savefig(plot_saving_path, dpi=300)
-    #     print(f"Plot saved at {plot_saving_path}")
+            # Plot the confusion matrix
+            plt.figure(figsize=(8, 6))
+            sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['False', 'True', 'Unsure'], yticklabels=['False', 'True', 'Unsure'])
+            plt.title('Confusion Matrix')
+            plt.xlabel('Predicted Labels')
+            plt.ylabel('True Labels')
+            plt.tight_layout()
+        
+            # Save the plot in the same base folder as the CSV file
+            plot_saving_path = os.path.join(config.result_saving_path, f"{timestamp}_confusion_matrix.png")
+            plt.savefig(plot_saving_path, dpi=300)
+            print(f"Plot saved at {plot_saving_path}")
 
-    #     # plt.show()
+        elif config.template_type == 'templates_2D':
+            label_mapping = {"True": 1, "False": 0}
+            data['Ground Truth'] = data['Ground Truth'].map(label_mapping)
+            data['Response'] = data['Response'].map(label_mapping)
 
+            # Filter only the necessary columns and clean the data
+            filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
 
-#2D CASE PLZZZZZZZZZZZZZZZZZZZZZZZZZZZZ 
-if config.if_plot:
-    import matplotlib.pyplot as plt
-    import seaborn as sns
-    from sklearn.metrics import confusion_matrix
+            # Calculate the confusion matrix
+            conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[0, 1])
 
-    label_mapping = {"True": 1, "False": 0}
-    data['Ground Truth'] = data['Ground Truth'].map(label_mapping)
-    data['Response'] = data['Response'].map(label_mapping)
+            # Plot the confusion matrix
+            plt.figure(figsize=(8, 6))
+            sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['False', 'True'], yticklabels=['False', 'True'])
+            plt.title('Confusion Matrix')
+            plt.xlabel('Predicted Labels')
+            plt.ylabel('True Labels')
+            plt.tight_layout()
 
-    # Filter only the necessary columns and clean the data
-    filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
-
-    # Calculate the confusion matrix
-    conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[0, 1])
-
-    # Plot the confusion matrix
-    plt.figure(figsize=(8, 6))
-    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['False', 'True'], yticklabels=['False', 'True'])
-    plt.title('Confusion Matrix')
-    plt.xlabel('Predicted Labels')
-    plt.ylabel('True Labels')
-    plt.tight_layout()
-
-    # Save the plot in the same base folder as the CSV file
-    plot_saving_path = os.path.join(config.result_saving_path, f"{timestamp}_confusion_matrix.png")
-    plt.savefig(plot_saving_path, dpi=300)
-    print(f"Plot saved at {plot_saving_path}")
-    # plt.show()
+            # Save the plot in the same base folder as the CSV file
+            plot_saving_path = os.path.join(config.result_saving_path, f"{timestamp}_confusion_matrix.png")
+            plt.savefig(plot_saving_path, dpi=300)
+            print(f"Plot saved at {plot_saving_path}")
+        # plt.show()
