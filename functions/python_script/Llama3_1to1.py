@@ -16,20 +16,21 @@ class Config:
     load_dotenv(dotenv_path=env_path)
 
     mode = 'gpt' #currently available option: gpt, llama3, llama3_local
-    llama_version = '3_2_1B' # only available for llama3 mode
+    llama_version = '3_1_8B' # only available for llama3 mode
 
     debug_mode = False #Set to True to test the connection 
     temperature = 0.01
     max_new_token = 5
+    cycle_num = 100
     skip_prompt = False #some models have their defalt prompt structure
     save_results = True
     if_plot = True
     template_type = 'templates_2D'  #options: 'templates_2D', 'templates_3D'
-    dimension = '03'#options: '01', '02', '03'
+    dimension = '04'#options: '01', '02', '03','0
 
     local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
-    example_path = 'test_results/1to1/cross_platform_experiments_1000trials/semantic_comparisons_2D.csv'
-    result_saving_path = 'test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_00100050203'
+    example_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/semantic_comparisons_lower_pressure.csv'
+    result_saving_path = 'test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_00100050204'
     os.makedirs(result_saving_path, exist_ok=True) # Create the directory if it doesn't exist
     def __init__(self):
         self.openai_url = os.getenv("OPENAI_URL")
@@ -92,9 +93,22 @@ class Config:
             Response: False
 
             ### Input:
-            Word1:{target}, Word2:{word}
+            Word1:{target}, Word2:
 
             ### Response:
+            ''',
+            
+            "04": '''
+            apple,malus,true
+            pear,pear,true
+            banana,apple,false
+            red,blue,false
+            color,colour,true
+            box,boxes,true
+            TV, computers, false
+            
+            {target},{word}, ...
+            (complete the prompt)
             '''
         }
         self.templates_3D = {
@@ -252,7 +266,7 @@ if config.save_results:
             if counter >= 5:
                 break
         else:
-            if counter >= 1000:  # Ensure we don't exceed the loop limit
+            if counter >= config.cycle_num:  # Ensure we don't exceed the loop limit
                 break
         # Simulate the word1 and word2 execution within the loop
         word1 = row["Word1"]
@@ -296,21 +310,18 @@ if config.save_results:
             filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
 
             # Calculate the confusion matrix
-            conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[0, 1, 2])
+            conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[1, 0, 2])
 
             # Plot the confusion matrix
             plt.figure(figsize=(8, 6))
-            sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['False', 'True', 'Unsure'], yticklabels=['False', 'True', 'Unsure'])
+            sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues',
+                        xticklabels=['True', 'False', 'Unsure'],
+                        yticklabels=['True', 'False', 'Unsure'])
             plt.title('Confusion Matrix')
             plt.xlabel('Predicted Labels')
             plt.ylabel('True Labels')
             plt.tight_layout()
         
-            # Save the plot in the same base folder as the CSV file
-            plot_saving_path = os.path.join(config.result_saving_path, f"{timestamp}_confusion_matrix.png")
-            plt.savefig(plot_saving_path, dpi=300)
-            print(f"Plot saved at {plot_saving_path}")
-
         elif config.template_type == 'templates_2D':
             label_mapping = {"True": 1, "False": 0}
             data['Ground Truth'] = data['Ground Truth'].map(label_mapping)
@@ -320,11 +331,13 @@ if config.save_results:
             filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
 
             # Calculate the confusion matrix
-            conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[0, 1])
+            conf_matrix = confusion_matrix(filtered_data['Ground Truth'], filtered_data['Response'], labels=[1, 0])
 
             # Plot the confusion matrix
             plt.figure(figsize=(8, 6))
-            sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['False', 'True'], yticklabels=['False', 'True'])
+            sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues',
+                        xticklabels=['True', 'False'],
+                        yticklabels=['True', 'False'])
             plt.title('Confusion Matrix')
             plt.xlabel('Predicted Labels')
             plt.ylabel('True Labels')

@@ -16,7 +16,8 @@ from dotenv import load_dotenv
 import os
 
 # Specify the path to the renamed .env file
-env_path = r"C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\environments\login_configs.env"
+env_path = 'login_configs.env'
+basepath = 'test_results/database_clips'
 load_dotenv(dotenv_path=env_path)
 
 # Configuration class to store database connection details
@@ -76,6 +77,40 @@ WHERE
   AND q."publishedVersionId" = qv.id;
 
 '''
+query2 ='''
+SELECT
+  "ResponseArea".*,
+  "EvaluationFunction".*,
+  "Part".*,
+  "QuestionVersion".*,
+  "QuestionAlgorithmFunction".*
+FROM
+  "ResponseArea",
+  (
+    SELECT * FROM "EvaluationFunction"
+    WHERE "name" = 'shortTextAnswer'
+  ) AS "EvaluationFunction",
+  (
+    SELECT * FROM "Part"
+    WHERE "Part"."id" = "ResponseArea"."partId"
+  ) AS "Part",
+  (
+    SELECT * FROM "QuestionVersion"
+    WHERE "QuestionVersion"."id" = "Part"."questionVersionId"
+  ) AS "QuestionVersion",
+  (
+    SELECT * FROM "Question"
+    WHERE "Question"."publishedVersionId" = "QuestionVersion"."id"
+  ) AS "Question",
+  (
+    SELECT * FROM "QuestionAlgorithmFunction"
+    WHERE "QuestionAlgorithmFunction"."id" = "Part"."questionAlgorithmFunctionId"
+  ) AS "QuestionAlgorithmFunction"
+WHERE
+  "ResponseArea"."evaluationFunctionId" = "EvaluationFunction".id
+  AND "Part"."questionVersionId" = "QuestionVersion".id
+  AND "QuestionVersion"."questionId" = "Question".id;
+'''
 
 # def queries(conn, module_name, module_instance_code):
 
@@ -131,18 +166,18 @@ def fetch_data():
             print("Data fetched successfully.")
             print(df)  # Print the DataFrame
             # Display only the relevant columns: 'documentationContent', 'partContent', and 'partAnswerContent'
-            filtered_data = df[['documentationContent', 'postResponseText', 'preResponseText']].copy()
+            #filtered_data = df[['documentationContent', 'postResponseText', 'preResponseText']].copy()
 
             # Renaming columns to match user request: 'postResponseText' -> 'partContent', 'preResponseText' -> 'partAnswerContent'
-            filtered_data.rename(columns={
-                'postResponseText': 'partContent',
-                'preResponseText': 'partAnswerContent'
-            }, inplace=True)
+            # filtered_data.rename(columns={
+            #     'postResponseText': 'partContent',
+            #     'preResponseText': 'partAnswerContent'
+            # }, inplace=True)
             # Get the current system time for the filename
             current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
-            file_path = os.path.join(r'C:\Users\Malub.000\.spyder-py3\AI_project_alpha\Zhuangfei_LambdaFeedback\Lambda_Feedback_Gao\result\obtained_data', f"data_{current_time}.csv")
+            file_path = os.path.join(basepath, f"data_{current_time}.csv")
             # Save CSV with current system time
-            filtered_data.to_csv(file_path, index=False)
+            df.to_csv(file_path, index=False)
 
             print("Data saved to 'data.csv'.")
         except Exception as e:

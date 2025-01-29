@@ -15,6 +15,7 @@
 
 **Imperial SQL is not directly relavant to the course but a study resource**\
 [Imperial College SQL connection](https://github.com/ImperialCollegeLondon/learning-analytics/blob/main/lambdaFeedback/Tosin/SQL_connections.py)
+[PostgreSQL doc](https://www.postgresql.org/docs/current/index.html)
 
 **Hugginface calling related documents**\
 [Llama3.2 -1B model endpoint documentation](https://huggingface.co/docs/api-inference/tasks/text-generation)
