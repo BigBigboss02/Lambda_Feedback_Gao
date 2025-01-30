@@ -1,0 +1,201 @@
+Word1,Word2,Ground Truth,Response
+use a pressure regulator,increase speed,False,False
+change fluid properties,increase viscosity,False,False
+release gas,block airflow,False,False
+change fluid properties,increase viscosity,False,False
+reduce temperature,reduce temperature,True,True
+release gas,block airflow,False,False
+strengthen sealing,leak air,False,False
+reduce temperature,compress gas,False,False
+release gas,vent excess,True,False
+increase volume,increase volume,True,True
+release gas,release gas,True,True
+modify flow rate,raise pressure,False,True
+absorb shock,absorb shock,True,True
+strengthen sealing,leak air,False,False
+change fluid properties,increase viscosity,False,False
+change fluid properties,increase viscosity,False,False
+absorb shock,absorb shock,True,True
+release gas,release gas,True,True
+absorb shock,increase impact,False,False
+reduce temperature,reduce temperature,True,True
+strengthen sealing,leak air,False,False
+use expansion valves,seal tightly,False,False
+enhance ventilation,restrict flow,False,False
+use a pressure regulator,increase speed,False,False
+absorb shock,increase impact,False,False
+reduce temperature,cool down,True,True
+use expansion valves,seal tightly,False,False
+release gas,release gas,True,True
+enhance ventilation,restrict flow,False,False
+increase volume,expand container,True,False
+enhance ventilation,restrict flow,False,False
+increase volume,expand container,True,False
+reduce temperature,cool down,True,True
+reduce temperature,cool down,True,True
+use a pressure regulator,use a pressure regulator,True,True
+reduce temperature,reduce temperature,True,True
+use a pressure regulator,use a pressure regulator,True,True
+absorb shock,absorb shock,True,True
+reduce temperature,reduce temperature,True,True
+increase volume,increase volume,True,True
+absorb shock,use dampers,True,True
+enhance ventilation,restrict flow,False,False
+increase volume,increase volume,True,True
+enhance ventilation,restrict flow,False,False
+absorb shock,increase impact,False,False
+reduce temperature,reduce temperature,True,True
+enhance ventilation,restrict flow,False,False
+use a pressure regulator,control pressure,True,True
+reduce temperature,cool down,True,True
+absorb shock,absorb shock,True,True
+reduce temperature,cool down,True,True
+increase volume,increase volume,True,True
+modify flow rate,raise pressure,False,True
+use a pressure regulator,use a pressure regulator,True,True
+modify flow rate,raise pressure,False,True
+release gas,vent excess,True,False
+increase volume,expand container,True,True
+use a pressure regulator,increase speed,False,False
+modify flow rate,raise pressure,False,True
+release gas,release gas,True,True
+increase volume,heat up,False,False
+use expansion valves,seal tightly,False,False
+release gas,block airflow,False,False
+increase volume,heat up,False,False
+increase volume,expand container,True,True
+absorb shock,increase impact,False,False
+increase volume,increase volume,True,True
+release gas,vent excess,True,False
+use a pressure regulator,use a pressure regulator,True,True
+release gas,release gas,True,True
+release gas,vent excess,True,False
+strengthen sealing,leak air,False,False
+absorb shock,increase impact,False,False
+use a pressure regulator,increase speed,False,False
+reduce temperature,reduce temperature,True,True
+reduce temperature,compress gas,False,False
+release gas,vent excess,True,False
+use a pressure regulator,control pressure,True,True
+absorb shock,absorb shock,True,True
+use a pressure regulator,use a pressure regulator,True,True
+increase volume,expand container,True,True
+reduce temperature,reduce temperature,True,True
+use a pressure regulator,increase speed,False,False
+reduce temperature,reduce temperature,True,True
+use a pressure regulator,increase speed,False,False
+absorb shock,use dampers,True,True
+absorb shock,use dampers,True,True
+use a pressure regulator,use a pressure regulator,True,True
+release gas,vent excess,True,False
+use a pressure regulator,increase speed,False,False
+use a pressure regulator,use a pressure regulator,True,True
+release gas,release gas,True,True
+change fluid properties,increase viscosity,False,False
+use a pressure regulator,increase speed,False,False
+increase volume,increase volume,True,True
+increase volume,heat up,False,False
+enhance ventilation,restrict flow,False,False
+reduce temperature,reduce temperature,True,True
+release gas,vent excess,True,False
+enhance ventilation,restrict flow,False,False
+absorb shock,absorb shock,True,True
+reduce temperature,reduce temperature,True,True
+increase volume,increase volume,True,True
+reduce temperature,reduce temperature,True,True
+increase volume,expand container,True,False
+strengthen sealing,leak air,False,False
+absorb shock,absorb shock,True,True
+absorb shock,use dampers,True,True
+change fluid properties,increase viscosity,False,False
+reduce temperature,reduce temperature,True,True
+use a pressure regulator,increase speed,False,False
+absorb shock,increase impact,False,False
+strengthen sealing,leak air,False,False
+increase volume,heat up,False,False
+change fluid properties,increase viscosity,False,False
+use a pressure regulator,increase speed,False,False
+release gas,release gas,True,True
+absorb shock,increase impact,False,False
+release gas,block airflow,False,False
+use a pressure regulator,increase speed,False,False
+release gas,release gas,True,True
+release gas,block airflow,False,False
+increase volume,expand container,True,False
+absorb shock,increase impact,False,False
+increase volume,expand container,True,True
+release gas,block airflow,False,False
+increase volume,increase volume,True,True
+strengthen sealing,leak air,False,False
+release gas,vent excess,True,False
+use a pressure regulator,use a pressure regulator,True,True
+change fluid properties,increase viscosity,False,False
+release gas,release gas,True,True
+release gas,block airflow,False,False
+use a pressure regulator,control pressure,True,True
+change fluid properties,increase viscosity,False,False
+release gas,release gas,True,True
+reduce temperature,reduce temperature,True,True
+reduce temperature,cool down,True,True
+absorb shock,absorb shock,True,True
+modify flow rate,raise pressure,False,True
+release gas,block airflow,False,False
+increase volume,expand container,True,True
+release gas,release gas,True,True
+increase volume,expand container,True,True
+use a pressure regulator,use a pressure regulator,True,True
+absorb shock,increase impact,False,False
+increase volume,increase volume,True,True
+reduce temperature,compress gas,False,False
+use a pressure regulator,control pressure,True,True
+absorb shock,use dampers,True,False
+increase volume,expand container,True,True
+modify flow rate,raise pressure,False,True
+release gas,block airflow,False,False
+reduce temperature,compress gas,False,False
+use expansion valves,seal tightly,False,False
+strengthen sealing,leak air,False,False
+use expansion valves,seal tightly,False,False
+reduce temperature,cool down,True,True
+increase volume,expand container,True,False
+reduce temperature,reduce temperature,True,True
+release gas,block airflow,False,False
+release gas,vent excess,True,False
+absorb shock,increase impact,False,False
+use expansion valves,seal tightly,False,False
+reduce temperature,reduce temperature,True,True
+modify flow rate,raise pressure,False,True
+absorb shock,absorb shock,True,True
+modify flow rate,raise pressure,False,True
+increase volume,increase volume,True,True
+increase volume,increase volume,True,True
+absorb shock,increase impact,False,False
+increase volume,expand container,True,True
+absorb shock,increase impact,False,False
+release gas,block airflow,False,False
+use expansion valves,seal tightly,False,False
+release gas,release gas,True,True
+strengthen sealing,leak air,False,False
+increase volume,heat up,False,False
+modify flow rate,raise pressure,False,True
+use expansion valves,seal tightly,False,False
+use a pressure regulator,use a pressure regulator,True,True
+absorb shock,use dampers,True,True
+release gas,block airflow,False,False
+modify flow rate,raise pressure,False,True
+use a pressure regulator,control pressure,True,True
+absorb shock,use dampers,True,True
+release gas,vent excess,True,False
+absorb shock,use dampers,True,True
+modify flow rate,raise pressure,False,True
+modify flow rate,raise pressure,False,True
+modify flow rate,raise pressure,False,True
+strengthen sealing,leak air,False,False
+enhance ventilation,restrict flow,False,False
+absorb shock,absorb shock,True,True
+release gas,vent excess,True,False
+change fluid properties,increase viscosity,False,False
+release gas,release gas,True,True
+absorb shock,absorb shock,True,True
+absorb shock,increase impact,False,False
+use a pressure regulator,increase speed,False,False

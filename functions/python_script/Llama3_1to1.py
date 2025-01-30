@@ -21,16 +21,16 @@ class Config:
     debug_mode = False #Set to True to test the connection 
     temperature = 0.01
     max_new_token = 5
-    cycle_num = 100
+    cycle_num = 200
     skip_prompt = False #some models have their defalt prompt structure
     save_results = True
     if_plot = True
     template_type = 'templates_2D'  #options: 'templates_2D', 'templates_3D'
-    dimension = '04'#options: '01', '02', '03','0
+    dimension = '03'#options: '01', '02', '03','04'
 
     local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
     example_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/semantic_comparisons_lower_pressure.csv'
-    result_saving_path = 'test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_00100050204'
+    result_saving_path = 'test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_00100050203'
     os.makedirs(result_saving_path, exist_ok=True) # Create the directory if it doesn't exist
     def __init__(self):
         self.openai_url = os.getenv("OPENAI_URL")
@@ -108,7 +108,7 @@ class Config:
             TV, computers, false
             
             {target},{word}, ...
-            (complete the prompt)
+            (complete the prompt with only True or False)
             '''
         }
         self.templates_3D = {
@@ -247,6 +247,18 @@ prompt_template = PromptTemplate(
     input_variables=["target", "word"]
 )
 
+#define a binary parser
+import re
+from langchain.schema.runnable import RunnableLambda
+
+# Parser function to extract the last occurrence of "True" or "False"
+def parse_last_boolean(response):
+    matches = re.findall(r'\b(true|false)\b', response, re.IGNORECASE)
+    return matches[-1].capitalize() if matches else "Unknown"
+
+# Wrap parser in a LangChain Runnable
+parser = RunnableLambda(parse_last_boolean)
+
 if config.skip_prompt:
     chain = prompt_template | llm.bind(skip_prompt=True)
 else:
@@ -301,10 +313,12 @@ if config.save_results:
         import matplotlib.pyplot as plt
         import seaborn as sns
         from sklearn.metrics import confusion_matrix
+        import os
+
         if config.template_type == 'templates_3D':
             label_mapping = {"True": 1, "False": 0, "Unsure": 2}
-            data['Ground Truth'] = data['Ground Truth'].map(label_mapping)
-            data['Response'] = data['Response'].map(label_mapping)
+            data['Ground Truth'] = data['Ground Truth'].astype(str).str.strip().str.capitalize().map(label_mapping)
+            data['Response'] = data['Response'].astype(str).str.strip().str.capitalize().map(label_mapping)
 
             # Filter only the necessary columns and clean the data
             filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
@@ -324,8 +338,9 @@ if config.save_results:
         
         elif config.template_type == 'templates_2D':
             label_mapping = {"True": 1, "False": 0}
-            data['Ground Truth'] = data['Ground Truth'].map(label_mapping)
-            data['Response'] = data['Response'].map(label_mapping)
+            data['Ground Truth'] = data['Ground Truth'].astype(str).str.strip().str.capitalize().map(label_mapping)
+            data['Response'] = data['Response'].astype(str).str.strip().str.capitalize().map(label_mapping)
+
 
             # Filter only the necessary columns and clean the data
             filtered_data = data[['Ground Truth', 'Response']].dropna().astype(int)
@@ -347,4 +362,6 @@ if config.save_results:
             plot_saving_path = os.path.join(config.result_saving_path, f"{timestamp}_confusion_matrix.png")
             plt.savefig(plot_saving_path, dpi=300)
             print(f"Plot saved at {plot_saving_path}")
-        # plt.show()
+
+
+            # plt.show()
