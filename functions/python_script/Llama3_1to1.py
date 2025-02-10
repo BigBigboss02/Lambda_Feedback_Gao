@@ -93,7 +93,7 @@ class Config:
             Response: False
 
             ### Input:
-            Word1:{target}, Word2:
+            Word1:{target}, Word2:{word}
 
             ### Response:
             ''',
@@ -262,7 +262,7 @@ parser = RunnableLambda(parse_last_boolean)
 if config.skip_prompt:
     chain = prompt_template | llm.bind(skip_prompt=True)
 else:
-    chain = prompt_template | llm
+    chain = prompt_template | llm | parser
 
 if config.save_results:
     import pandas as pd
