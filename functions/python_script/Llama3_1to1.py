@@ -15,22 +15,22 @@ class Config:
     env_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/login_configs.env'
     load_dotenv(dotenv_path=env_path)
 
-    mode = 'gpt' #currently available option: gpt, llama3, llama3_local
+    mode = 'llama3' #currently available option: gpt, llama3, llama3_local
     llama_version = '3_1_8B' # only available for llama3 mode
 
     debug_mode = False #Set to True to test the connection 
     temperature = 0.01
     max_new_token = 5
-    cycle_num = 200
+    cycle_num = 10
     skip_prompt = False #some models have their defalt prompt structure
     save_results = True
     if_plot = True
     template_type = 'templates_2D'  #options: 'templates_2D', 'templates_3D'
-    dimension = '03'#options: '01', '02', '03','04'
+    dimension = '05'#options: '01', '02', '03','04'
 
     local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
     example_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/semantic_comparisons_lower_pressure.csv'
-    result_saving_path = 'test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_00100050203'
+    result_saving_path = 'test_results/1to1/finetuned_model_test/llama321B_00100050205'
     os.makedirs(result_saving_path, exist_ok=True) # Create the directory if it doesn't exist
     def __init__(self):
         self.openai_url = os.getenv("OPENAI_URL")
@@ -108,7 +108,14 @@ class Config:
             TV, computers, false
             
             {target},{word}, ...
-            (complete the prompt with only True or False)
+            (complete the prompt with only True or False)''',
+            #this is the one for the finetuned model
+            "05": ''' 
+            ### Instruction: 
+            Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+            ### Input: 
+            # Word1:{target}, Word2:{word}
+            ### Response:
             '''
         }
         self.templates_3D = {
