@@ -29,3 +29,6 @@ GPT4 will not stop the behavior of less responsieve of unsure, even when tempera
 
 note:
 For listing question, teacher only need to input all correct questions
+
+note:
+CAUSAL_LM option and sequenceclassification is critical when training a model.

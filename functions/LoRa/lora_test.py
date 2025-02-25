@@ -12,6 +12,9 @@ device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")  # 
 
 # Load tokenizer and base model
 tokenizer = AutoTokenizer.from_pretrained(base_model_name)
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+    
 base_model = LlamaForCausalLM.from_pretrained(
     base_model_name, 
     torch_dtype=torch.float16, 
@@ -26,7 +29,7 @@ input_text = '''
 ### Instruction:
 Determine if the 2 words are semantically similar. Provide 'True' or 'False'
 ### Input:
-Word1: Pressure, Word2: Energy
+Word1: Pressure, Word2: FCSJAID
 '''
 inputs = tokenizer(input_text, return_tensors="pt")
 inputs = {k: v.to(device) for k, v in inputs.items()}  # Move tensors to the same device as the model
