@@ -4,6 +4,9 @@
 
 ## Website resources used
 
+**Runpod for deploying GPU:**\
+[Runpod](https://www.runpod.io/pricing)
+
 **Lanchain used for combining several model agents together**\
 [Lanchain Huggingface Endpoint](https://python.langchain.com/docs/integrations/llms/huggingface_endpoint/)
 

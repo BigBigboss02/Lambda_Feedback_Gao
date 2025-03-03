@@ -15,22 +15,26 @@ class Config:
     env_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/login_configs.env'
     load_dotenv(dotenv_path=env_path)
 
-    mode = 'llama3' #currently available option: gpt, llama3, llama3_local
-    llama_version = '3_1_8B' # only available for llama3 mode
+    mode = 'llama3_local' #currently available option: gpt, llama3, llama3_local
+    llama_version = '3_1_8B' # only available for llama3 (online) mode
 
     debug_mode = False #Set to True to test the connection 
     temperature = 0.01
-    max_new_token = 5
-    cycle_num = 10
+    max_new_token = 50
+    cycle_num = 1
     skip_prompt = False #some models have their defalt prompt structure
     save_results = True
     if_plot = True
+    parse = False
+    use_adaptor = False
     template_type = 'templates_2D'  #options: 'templates_2D', 'templates_3D'
     dimension = '05'#options: '01', '02', '03','04'
 
-    local_model_path = 'Llama-3.2-1B' # local llama not included in this repo
+
+    adapter_folder = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/23022025"
+    base_model_name = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/Llama-3.2-1B"
     example_path = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/semantic_comparisons_lower_pressure.csv'
-    result_saving_path = 'test_results/1to1/finetuned_model_test/llama321B_00100050205'
+    result_saving_path = 'test_results/1to1/finetuned_model_test/llama321Bfinetune_00100050205'
     os.makedirs(result_saving_path, exist_ok=True) # Create the directory if it doesn't exist
     def __init__(self):
         self.openai_url = os.getenv("OPENAI_URL")
@@ -190,32 +194,54 @@ config = Config()
 
 # Set default device
 if config.mode == 'llama3_local':
-    # local models currently not available for testing, but can same code can be used to deploy modesls on 
-    # universal gpu servers
-    from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
-    from langchain.output_parsers import RegexParser
+    from transformers import AutoTokenizer, LlamaForCausalLM, pipeline
     from langchain_huggingface.llms import HuggingFacePipeline
-    from langchain.schema.runnable import RunnableSequence
+    from peft import PeftModel
     import torch
-    torch.set_default_device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")  # Use MPS if available
 
-    # Check if GPU is available
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    print(f"Using device: {device}")
-
-    # Load the model and tokenizer
-    model_id = config.local_model_path 
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
-
-    # Handle missing padding token
+    # Load tokenizer and base model
+    tokenizer = AutoTokenizer.from_pretrained(config.base_model_name)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
-
-    model = AutoModelForCausalLM.from_pretrained(model_id)
-
-    # Create the pipeline
-    pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=10)
+        
+    base_model = LlamaForCausalLM.from_pretrained(
+        config.base_model_name, 
+        torch_dtype=torch.float32, 
+        device_map={"": "mps"}  # Use "cpu" if "mps" doesn't work
+    )
+    # Load adapter model
+    if config.use_adaptor:
+        model = PeftModel.from_pretrained(base_model, config.adapter_folder).to(device)
+    else:
+        model = base_model
+    pipe = pipeline("text-generation", model=model, tokenizer=tokenizer) #max_new_token can be added as a parameter here as
     llm = HuggingFacePipeline(pipeline=pipe)
+    # # local models currently not available for testing, but can same code can be used to deploy modesls on 
+    # # universal gpu servers
+    # from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+    # from langchain.output_parsers import RegexParser
+    # from langchain_huggingface.llms import HuggingFacePipeline
+    # from langchain.schema.runnable import RunnableSequence
+    # import torch
+    # torch.set_default_device('cuda' if torch.cuda.is_available() else 'cpu')
+
+    # # Check if GPU is available
+    # device = "cuda" if torch.cuda.is_available() else "cpu"
+    # print(f"Using device: {device}")
+
+    # # Load the model and tokenizer
+    # model_id = config.local_model_path 
+    # tokenizer = AutoTokenizer.from_pretrained(model_id)
+
+    # # Handle missing padding token
+    # if tokenizer.pad_token is None:
+    #     tokenizer.pad_token = tokenizer.eos_token
+
+    # model = AutoModelForCausalLM.from_pretrained(model_id)
+
+    # # Create the pipeline
+
 
 if config.mode == 'gpt':
     from langchain_openai import ChatOpenAI
@@ -269,8 +295,10 @@ parser = RunnableLambda(parse_last_boolean)
 if config.skip_prompt:
     chain = prompt_template | llm.bind(skip_prompt=True)
 else:
-    chain = prompt_template | llm | parser
-
+    if config.parse:
+        chain = prompt_template | llm | parser
+    else:
+        chain = prompt_template | llm 
 if config.save_results:
     import pandas as pd
     from datetime import datetime

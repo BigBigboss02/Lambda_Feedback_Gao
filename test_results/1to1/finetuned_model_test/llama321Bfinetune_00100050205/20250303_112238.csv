@@ -1,0 +1,13 @@
+Word1,Word2,Ground Truth,Response
+use a pressure regulator,increase speed,False," 
+            ### Instruction: 
+            Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+            ### Input: 
+            # Word1:use a pressure regulator, Word2:increase speed
+            ### Response:
+             True
+             False
+            ### Output: 
+             True
+             False
+            ### Sample input"
