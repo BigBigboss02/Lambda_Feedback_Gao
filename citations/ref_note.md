@@ -32,3 +32,5 @@ For listing question, teacher only need to input all correct questions
 
 note:
 CAUSAL_LM option and sequenceclassification is critical when training a model.
+
+put the selection of tokeniser and hyper parameter tuning into the paper

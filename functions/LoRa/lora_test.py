@@ -14,8 +14,10 @@ device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")  # 
 
 # Load tokenizer and base model
 tokenizer = AutoTokenizer.from_pretrained(base_model_name)
-if tokenizer.pad_token is None:
-    tokenizer.pad_token = tokenizer.eos_token
+# if tokenizer.pad_token is None:
+#     tokenizer.pad_token = tokenizer.eos_token
+#force the pad token to be eos token
+tokenizer.pad_token = tokenizer.eos_token
     
 base_model = LlamaForCausalLM.from_pretrained(
     base_model_name, 
@@ -24,7 +26,7 @@ base_model = LlamaForCausalLM.from_pretrained(
 )
 # Load adapter model
 model = PeftModel.from_pretrained(base_model, adapter_folder).to(device)
-# model = base_model
+model = base_model
 model.eval()
 
 import re
@@ -87,6 +89,6 @@ for _, row in df.iterrows():
 output_df = pd.DataFrame(results, columns=["Word1", "Word2", "Ground Truth", "Model Output"])
 
 # Save to CSV
-output_df.to_csv("/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/finetuned_model_test/output_results_lora_full.csv", index=False)
+output_df.to_csv("/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/finetuned_model_test/output_results_base_full.csv", index=False)
 
 print("Inference complete. Results saved to output_results.csv.")
