@@ -6,7 +6,7 @@ from langchain.prompts import PromptTemplate
 
 # Define paths
 
-adapter_folder = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/23022025"
+adapter_folder = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/trained_model_epochs_12_batch_1_lr_2.9e-05_wd_1.32e-02_warmup_0.03"
 base_model_name = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/Llama-3.2-1B"  # Change this to match the model the adapter was trained on
 csv_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/semantic_comparisons_lower_pressure.csv"
 # Set device
@@ -26,7 +26,7 @@ base_model = LlamaForCausalLM.from_pretrained(
 )
 # Load adapter model
 model = PeftModel.from_pretrained(base_model, adapter_folder).to(device)
-model = base_model
+# model = base_model
 model.eval()
 
 import re
@@ -47,6 +47,11 @@ prompt_template = prompt_template = PromptTemplate(
     Determine if the 2 words are semantically similar. Provide 'True' or 'False'. Word1:{target}, Word2:{word}
     [/INST]
     ''',
+    # template='''
+    # <s>[INST]
+    # Word1:{target}, Word2:{word}
+    # [/INST]
+    # ''',
     input_variables=["target", "word"]
 )
 
@@ -81,7 +86,7 @@ for _, row in df.iterrows():
     # Decode and print model output
     decoded_output = tokenizer.batch_decode(outputs, skip_special_tokens=True)
     cleaned_output = [text.strip() for text in decoded_output]
-    #cleaned_output = extract_last_boolean([text.strip() for text in decoded_output])  # Remove whitespace
+    cleaned_output = extract_last_boolean([text.strip() for text in decoded_output])  # Remove whitespace
     print(cleaned_output)
     results.append([row["Word1"], row["Word2"], row["Ground Truth"], cleaned_output])
 
@@ -89,6 +94,6 @@ for _, row in df.iterrows():
 output_df = pd.DataFrame(results, columns=["Word1", "Word2", "Ground Truth", "Model Output"])
 
 # Save to CSV
-output_df.to_csv("/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/finetuned_model_test/output_results_base_full.csv", index=False)
+output_df.to_csv("/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/finetuned_model_test/output_results_newparam_withinstruct.csv", index=False)
 
 print("Inference complete. Results saved to output_results.csv.")
