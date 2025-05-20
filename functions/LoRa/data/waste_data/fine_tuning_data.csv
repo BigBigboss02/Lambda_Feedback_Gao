@@ -1,0 +1,11 @@
+instruction,input,response
+Determine if the 2 words are semantically similar. Provide 'True' or 'False'.,"Word1: velocity, Word2: speed",True
+Determine if the 2 words are semantically similar. Provide 'True' or 'False'.,"Word1: Pressure, Word2: pressure",True
+Determine if the 2 words are semantically similar. Provide 'True' or 'False'.,"Word1: molecule, Word2: molecules",True
+Determine if the 2 words are semantically similar. Provide 'True' or 'False'.,"Word1: math function, Word2: math formulae",True
+Determine if the 2 words are semantically similar. Provide 'True' or 'False'.,"Word1: photosynthesis, Word2: plant energy conversion",True
+Determine if the 2 words are semantically similar. Provide 'True' or 'False'.,"Word1: neuron, Word2: planet",False
+Determine if the 2 words are semantically similar. Provide 'True' or 'False'.,"Word1: gravity, Word2: voltage",False
+Determine if the 2 words are semantically similar. Provide 'True' or 'False'.,"Word1: robotic, Word2: not robotic",False
+Determine if the 2 words are semantically similar. Provide 'True' or 'False'.,"Word1: molecular, Word2: atomic",False
+Determine if the 2 words are semantically similar. Provide 'True' or 'False'.,"Word1: dark blue, Word2: light blue",False
