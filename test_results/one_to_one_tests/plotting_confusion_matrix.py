@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix
 
+if_save = False
+
 # Load and prepare the dataset
 data = pd.read_csv('/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_001000503/20250125_120351.csv')
 label_mapping = {"True": 1, "False": 0, "Unsure": 2}
@@ -26,7 +28,8 @@ plt.xlabel('Predicted Labels')
 plt.ylabel('True Labels')
 plt.tight_layout()
 
-# Save the plot in the same base folder as the CSV file
-plot_saving_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_001000503/20250125_120351.jpg"
-plt.savefig(plot_saving_path, dpi=300)
-print(f"Plot saved at {plot_saving_path}")
+if if_save:
+    # Save the plot in the same base folder as the CSV file
+    plot_saving_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/cross_platform_experiments_1000trials/gpt4o_mini_001000503/20250125_120351.jpg"
+    plt.savefig(plot_saving_path, dpi=300)
+    print(f"Plot saved at {plot_saving_path}")

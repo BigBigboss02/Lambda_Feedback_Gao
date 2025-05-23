@@ -209,13 +209,13 @@ examples = [
 
 
 # Repeat dataset 5 times
-extended_examples = examples * 5
+extended_examples = examples * 1
 
 # Convert to DataFrame
 df = pd.DataFrame(extended_examples, columns=["text", "label"])
 
 
 # Save to CSV
-df.to_csv("/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/1to1/minimum_logic_dataset.csv", index=False)
+df.to_csv("/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/data/minimum_logic_testing_dataset.csv", index=False)
 
 print("Dataset generated and saved as semantic_comparison_dataset.csv")
