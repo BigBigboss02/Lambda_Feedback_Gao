@@ -1,0 +1,1195 @@
+Word1,Word2,Ground Truth,Model Output
+Happy,happy,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Happy, Word2:happy [/INST] True"
+Fast,quick,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Fast, Word2:quick [/INST] True"
+Car,car,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Car, Word2:car [/INST] False"
+Big,large,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Big, Word2:large [/INST] True"
+Small,tiny,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Small, Word2:tiny [/INST] True"
+colour,color,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:colour, Word2:color [/INST] True"
+Strong,powerful,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Strong, Word2:powerful [/INST] True"
+Weak,frail,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Weak, Word2:frail [/INST] False"
+Jump,leap,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Jump, Word2:leap [/INST] True"
+Smart,intelligent,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Smart, Word2:intelligent [/INST] True"
+Funny,humorous,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Funny, Word2:humorous [/INST] False"
+Sad,unhappy,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Sad, Word2:unhappy [/INST] False"
+Bright,luminous,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Bright, Word2:luminous [/INST] True"
+Dark,dim,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Dark, Word2:dim [/INST] True"
+Quick,rapid,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Quick, Word2:rapid [/INST] True"
+Silent,quiet,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Silent, Word2:quiet [/INST] True"
+Loud,noisy,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Loud, Word2:noisy [/INST] False"
+Easy,simple,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Easy, Word2:simple [/INST] True"
+Difficult,hard,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Difficult, Word2:hard [/INST] True"
+Thin,slim,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Thin, Word2:slim [/INST] True"
+Thick,dense,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Thick, Word2:dense [/INST] True"
+Near,close,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Near, Word2:close [/INST] True"
+Far,distant,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Far, Word2:distant [/INST] True"
+Soft,smooth,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Soft, Word2:smooth [/INST] True"
+Rough,coarse,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Rough, Word2:coarse [/INST] True"
+Rich,wealthy,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Rich, Word2:wealthy [/INST] True"
+Poor,destitute,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Poor, Word2:destitute [/INST] False"
+Love,adore,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Love, Word2:adore [/INST] False"
+Hate,detest,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Hate, Word2:detest [/INST] False"
+Begin,start,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Begin, Word2:start [/INST] True"
+End,finish,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:End, Word2:finish [/INST] True"
+Clean,tidy,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Clean, Word2:tidy [/INST] True"
+Dirty,messy,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Dirty, Word2:messy [/INST] True"
+Warm,hot,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Warm, Word2:hot [/INST] False"
+Cold,chilly,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Cold, Word2:chilly [/INST] True"
+Old,ancient,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Old, Word2:ancient [/INST] True"
+Young,youthful,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Young, Word2:youthful [/INST] True"
+Honest,truthful,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Honest, Word2:truthful [/INST] True"
+Dishonest,deceitful,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Dishonest, Word2:deceitful [/INST] True"
+Happy,sad,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Happy, Word2:sad [/INST] False"
+Light,dark,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Light, Word2:dark [/INST] True"
+Colour,purple,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Colour, Word2:purple [/INST] False"
+Car,van,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Car, Word2:van [/INST] False"
+Cold,hot,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Cold, Word2:hot [/INST] False"
+Big,tiny,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Big, Word2:tiny [/INST] False"
+Fast,slow,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Fast, Word2:slow [/INST] False"
+Strong,weak,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Strong, Word2:weak [/INST] False"
+Bright,dull,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Bright, Word2:dull [/INST] False"
+Thin,fat,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Thin, Word2:fat [/INST] False"
+Near,far,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Near, Word2:far [/INST] False"
+Loud,silent,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Loud, Word2:silent [/INST] False"
+Easy,difficult,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Easy, Word2:difficult [/INST] False"
+Smooth,rough,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Smooth, Word2:rough [/INST] False"
+Rich,poor,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Rich, Word2:poor [/INST] False"
+Love,hate,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Love, Word2:hate [/INST] False"
+Begin,end,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Begin, Word2:end [/INST] True"
+Clean,dirty,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Clean, Word2:dirty [/INST] False"
+Old,new,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Old, Word2:new [/INST] True"
+Honest,dishonest,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Honest, Word2:dishonest [/INST] False"
+Beautiful,ugly,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Beautiful, Word2:ugly [/INST] False"
+Success,failure,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Success, Word2:failure [/INST] False"
+High,low,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:High, Word2:low [/INST] False"
+Heavy,light,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Heavy, Word2:light [/INST] False"
+Full,empty,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Full, Word2:empty [/INST] True"
+Present,absent,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Present, Word2:absent [/INST] False"
+Day,night,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Day, Word2:night [/INST] True"
+Entrance,exit,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Entrance, Word2:exit [/INST] False"
+Accept,reject,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Accept, Word2:reject [/INST] False"
+Brave,cowardly,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Brave, Word2:cowardly [/INST] False"
+Buy,sell,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Buy, Word2:sell [/INST] False"
+Capture,release,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Capture, Word2:release [/INST] True"
+Common,rare,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Common, Word2:rare [/INST] False"
+Deep,shallow,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Deep, Word2:shallow [/INST] False"
+Expand,shrink,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Expand, Word2:shrink [/INST] True"
+Friendly,hostile,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Friendly, Word2:hostile [/INST] False"
+Gain,lose,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Gain, Word2:lose [/INST] False"
+Generous,stingy,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Generous, Word2:stingy [/INST] False"
+Include,exclude,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Include, Word2:exclude [/INST] True"
+Major,minor,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Major, Word2:minor [/INST] True"
+Narrow,wide,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Narrow, Word2:wide [/INST] False"
+Optimistic,pessimistic,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Optimistic, Word2:pessimistic [/INST] False"
+Permanent,temporary,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Permanent, Word2:temporary [/INST] False"
+Polite,rude,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Polite, Word2:rude [/INST] False"
+Private,public,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Private, Word2:public [/INST] True"
+Protect,attack,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Protect, Word2:attack [/INST] False"
+Raise,lower,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Raise, Word2:lower [/INST] False"
+Sharp,blunt,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Sharp, Word2:blunt [/INST] False"
+Strength,weakness,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Strength, Word2:weakness [/INST] False"
+Together,apart,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Together, Word2:apart [/INST] False"
+Trust,doubt,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Trust, Word2:doubt [/INST] False"
+Visible,invisible,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Visible, Word2:invisible [/INST] True"
+Victory,defeat,False,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Victory, Word2:defeat [/INST] False"
+Science,science,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Science, Word2:science [/INST] True"
+Hen,hen,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Hen, Word2:hen [/INST] True"
+Dog,dog,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Dog, Word2:dog [/INST] True"
+Cat,cat,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Cat, Word2:cat [/INST] True"
+Sun,sun,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Sun, Word2:sun [/INST] True"
+Moon,moon,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Moon, Word2:moon [/INST] True"
+Star,star,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Star, Word2:star [/INST] True"
+Tree,tree,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Tree, Word2:tree [/INST] True"
+Grass,grass,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Grass, Word2:grass [/INST] True"
+Cloud,cloud,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Cloud, Word2:cloud [/INST] True"
+River,river,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:River, Word2:river [/INST] True"
+Mountain,mountain,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Mountain, Word2:mountain [/INST] True"
+Ocean,ocean,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Ocean, Word2:ocean [/INST] True"
+Book,book,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Book, Word2:book [/INST] True"
+Chair,chair,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Chair, Word2:chair [/INST] True"
+Table,table,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Table, Word2:table [/INST] True"
+Computer,computer,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Computer, Word2:computer [/INST] True"
+Phone,phone,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Phone, Word2:phone [/INST] True"
+Keyboard,keyboard,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Keyboard, Word2:keyboard [/INST] True"
+Mouse,mouse,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Mouse, Word2:mouse [/INST] True"
+Door,door,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Door, Word2:door [/INST] True"
+Window,window,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Window, Word2:window [/INST] True"
+House,house,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:House, Word2:house [/INST] True"
+Car,car,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Car, Word2:car [/INST] False"
+Bus,bus,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Bus, Word2:bus [/INST] True"
+Train,train,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Train, Word2:train [/INST] True"
+Airplane,airplane,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Airplane, Word2:airplane [/INST] True"
+Bicycle,bicycle,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Bicycle, Word2:bicycle [/INST] True"
+Apple,apple,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Apple, Word2:apple [/INST] True"
+Banana,banana,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Banana, Word2:banana [/INST] True"
+Orange,orange,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Orange, Word2:orange [/INST] True"
+Mango,mango,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Mango, Word2:mango [/INST] True"
+Pineapple,pineapple,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Pineapple, Word2:pineapple [/INST] True"
+Strawberry,strawberry,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Strawberry, Word2:strawberry [/INST] True"
+Watermelon,watermelon,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Watermelon, Word2:watermelon [/INST] True"
+Cucumber,cucumber,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Cucumber, Word2:cucumber [/INST] False"
+Tomato,tomato,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Tomato, Word2:tomato [/INST] True"
+Potato,potato,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Potato, Word2:potato [/INST] True"
+Onion,onion,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Onion, Word2:onion [/INST] True"
+Pepper,pepper,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Pepper, Word2:pepper [/INST] True"
+Salt,salt,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Salt, Word2:salt [/INST] True"
+Sugar,sugar,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Sugar, Word2:sugar [/INST] True"
+Milk,milk,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Milk, Word2:milk [/INST] True"
+Coffee,coffee,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Coffee, Word2:coffee [/INST] True"
+Tea,tea,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Tea, Word2:tea [/INST] True"
+Juice,juice,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Juice, Word2:juice [/INST] True"
+Water,water,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Water, Word2:water [/INST] True"
+Fire,fire,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Fire, Word2:fire [/INST] True"
+Ice,ice,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Ice, Word2:ice [/INST] True"
+Snow,snow,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Snow, Word2:snow [/INST] True"
+Rain,rain,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Rain, Word2:rain [/INST] True"
+Thunder,thunder,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Thunder, Word2:thunder [/INST] True"
+Lightning,lightning,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Lightning, Word2:lightning [/INST] True"
+Wind,wind,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Wind, Word2:wind [/INST] True"
+Shadow,shadow,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Shadow, Word2:shadow [/INST] True"
+Echo,echo,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Echo, Word2:echo [/INST] True"
+Music,music,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Music, Word2:music [/INST] True"
+Song,song,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Song, Word2:song [/INST] True"
+Dance,dance,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Dance, Word2:dance [/INST] True"
+Painting,painting,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Painting, Word2:painting [/INST] True"
+Drawing,drawing,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Drawing, Word2:drawing [/INST] True"
+Sculpture,sculpture,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Sculpture, Word2:sculpture [/INST] True"
+Sport,sport,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Sport, Word2:sport [/INST] True"
+Game,game,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Game, Word2:game [/INST] True"
+Toy,toy,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Toy, Word2:toy [/INST] True"
+Puzzle,puzzle,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Puzzle, Word2:puzzle [/INST] True"
+Ball,ball,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Ball, Word2:ball [/INST] True"
+Run,running,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Run, Word2:running [/INST] True"
+Jump,jumping,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Jump, Word2:jumping [/INST] True"
+Walk,walking,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Walk, Word2:walking [/INST] True"
+Talk,talking,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Talk, Word2:talking [/INST] True"
+Read,reading,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Read, Word2:reading [/INST] True"
+Write,writing,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Write, Word2:writing [/INST] True"
+Eat,eating,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Eat, Word2:eating [/INST] True"
+Drink,drinking,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Drink, Word2:drinking [/INST] True"
+Sleep,sleeping,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Sleep, Word2:sleeping [/INST] True"
+Think,thinking,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Think, Word2:thinking [/INST] True"
+Play,playing,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Play, Word2:playing [/INST] True"
+Watch,watching,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Watch, Word2:watching [/INST] True"
+Listen,listening,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Listen, Word2:listening [/INST] True"
+Study,studying,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Study, Word2:studying [/INST] True"
+Drive,driving,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Drive, Word2:driving [/INST] True"
+Fly,flying,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Fly, Word2:flying [/INST] True"
+Swim,swimming,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Swim, Word2:swimming [/INST] True"
+Cook,cooking,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Cook, Word2:cooking [/INST] True"
+Work,working,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Work, Word2:working [/INST] True"
+Clean,cleaning,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Clean, Word2:cleaning [/INST] True"
+Build,building,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Build, Word2:building [/INST] True"
+Paint,painting,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Paint, Word2:painting [/INST] True"
+Draw,drawing,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Draw, Word2:drawing [/INST] True"
+Sing,singing,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Sing, Word2:singing [/INST] True"
+Dance,dancing,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Dance, Word2:dancing [/INST] True"
+Climb,climbing,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Climb, Word2:climbing [/INST] True"
+Fight,fighting,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Fight, Word2:fighting [/INST] True"
+Teach,teaching,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Teach, Word2:teaching [/INST] True"
+Learn,learning,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Learn, Word2:learning [/INST] True"
+Help,helping,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Help, Word2:helping [/INST] True"
+Labour,labor,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Labour, Word2:labor [/INST] True"
+Colour,color,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Colour, Word2:color [/INST] True"
+Honour,honor,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Honour, Word2:honor [/INST] True"
+Favourite,favorite,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Favourite, Word2:favorite [/INST] False"
+Neighbour,neighbor,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Neighbour, Word2:neighbor [/INST] True"
+Flavour,flavor,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Flavour, Word2:flavor [/INST] True"
+Analyse,analyze,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Analyse, Word2:analyze [/INST] True"
+Defence,defense,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Defence, Word2:defense [/INST] True"
+Practise,practice,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Practise, Word2:practice [/INST] True"
+Traveller,traveler,True,"<s>[INST] Determine if the 2 words are semantically similar. Provide 'True' or 'False'.
+Examples:
+Word1: color, Word2: colour [/INST] True
+Word1: happy, Word2: sad [/INST] False
+Word1: red, Word2: Red [/INST] True
+Word1:Traveller, Word2:traveler [/INST] True"
