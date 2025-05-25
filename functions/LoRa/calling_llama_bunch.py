@@ -26,7 +26,14 @@ base_model = LlamaForCausalLM.from_pretrained(
     device_map={"": "mps"}
 )
 
-
+# prompt_template = PromptTemplate(
+#     template='''
+#     <s>[INST]\n 
+#     Word1:{target}, Word2:{word}
+#     [/INST]
+#     ''',
+#     input_variables=["target", "word"]
+# )
 # # Prompt template
 # prompt_template = PromptTemplate(
 #     template='''
@@ -38,6 +45,7 @@ base_model = LlamaForCausalLM.from_pretrained(
 #     ''',
 #     input_variables=["target", "word"]
 # )
+
 prompt_template = PromptTemplate(
     template='''
     <s>[INST]

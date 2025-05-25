@@ -1,51 +1,54 @@
-# Re-import necessary modules after code execution state reset
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
-# Re-define paths
-parsed_folder = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/one_to_one_tests/LoRa_controlled_variable_tests/Llama3-1B/instructive_examples_prompt/parsed_results"
-conf_matrix_folder = os.path.join(parsed_folder, "confusion_matrices")
-os.makedirs(conf_matrix_folder, exist_ok=True)
+# Set up paths
+input_folder = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/one_to_one_tests/LoRa_controlled_variable_tests/Llama3-1B/instructive_prompt/parsed_results'
+output_folder = os.path.join(input_folder, 'confusion_matrices')
+os.makedirs(output_folder, exist_ok=True)
 
-# Normalize labels to 'true', 'false', or 'ambiguous'
-def normalize_label(val):
-    if isinstance(val, str):
-        val = val.strip().lower()
-        if val == "true":
-            return "true"
-        elif val == "false":
-            return "false"
-    return "ambiguous"
-
-# Process each CSV in the parsed folder
-for filename in os.listdir(parsed_folder):
-    if filename.endswith(".csv"):
-        file_path = os.path.join(parsed_folder, filename)
+# Function to process each CSV file
+def process_csv(file_path, save_path):
+    try:
         df = pd.read_csv(file_path)
 
-        if "Ground Truth" in df.columns and "parsed_truth_value" in df.columns:
-            y_true = df["Ground Truth"].apply(normalize_label)
-            y_pred = df["parsed_truth_value"].apply(normalize_label)
+        # Normalize and clean string values
+        df['Ground Truth'] = df['Ground Truth'].astype(str).str.strip().str.lower()
+        df['parsed_truth_value'] = df['parsed_truth_value'].astype(str).str.strip().str.lower()
 
-            labels = ["true", "false", "ambiguous"]
-            cm = confusion_matrix(y_true, y_pred, labels=labels)
+        # Filter out any rows with null or unexpected values
+        df = df[df['Ground Truth'].isin(['true', 'false']) & df['parsed_truth_value'].isin(['true', 'false'])]
 
-            # Plot confusion matrix
-            plt.figure(figsize=(6, 5))
-            sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
-                        xticklabels=labels, yticklabels=labels)
-            plt.title(f"Confusion Matrix: {filename}")
-            plt.xlabel("Predicted")
-            plt.ylabel("Ground Truth")
+        # Skip file if no valid rows remain
+        if df.empty:
+            print(f"Skipped {os.path.basename(file_path)} — no valid rows")
+            return
 
-            # Save the plot
-            plot_path = os.path.join(conf_matrix_folder, f"{os.path.splitext(filename)[0]}_confusion_matrix.png")
-            plt.tight_layout()
-            plt.savefig(plot_path)
-            plt.close()
+        # Convert to boolean
+        df['Ground Truth'] = df['Ground Truth'].map({'true': True, 'false': False})
+        df['parsed_truth_value'] = df['parsed_truth_value'].map({'true': True, 'false': False})
 
-# List saved confusion matrix files
-os.listdir(conf_matrix_folder)
+        # Compute and plot confusion matrix
+        y_true = df['Ground Truth']
+        y_pred = df['parsed_truth_value']
+        labels = [True, False]
+        cm = confusion_matrix(y_true, y_pred, labels=labels)
+        disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['True', 'False'])
+
+        disp.plot(cmap='Blues')
+        plt.title(f"Confusion Matrix: {os.path.basename(file_path)}")
+        plt.tight_layout()
+        plt.savefig(save_path)
+        plt.close()
+        print(f"Saved: {save_path}")
+    
+    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
+
+# Iterate over all CSV files
+for filename in os.listdir(input_folder):
+    if filename.endswith('.csv'):
+        csv_path = os.path.join(input_folder, filename)
+        output_path = os.path.join(output_folder, filename.replace('.csv', '.png'))
+        process_csv(csv_path, output_path)
