@@ -8,9 +8,9 @@ from langchain.prompts import PromptTemplate
 
 # Define paths
 base_model_name = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/base_models/Llama-3.2-1B"
-csv_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/data/minimum_logic_testing_dataset_vs3.csv"
-adapters_folder = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/adaptors/selected_Llama321B_adaptors"
-output_base_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/one_to_one_tests/LoRa_controlled_variable_tests/Llama3-1B/new_data/instructive_examples_prompt"
+csv_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/data/minimum_logic_testing_dataset_vs2.csv"
+adapters_folder = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/tuned_Llama321B_balanced_dataset"
+output_base_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/one_to_one_tests/LoRa_controlled_variable_tests/Llama3-1B_vs2/adaptervs2/instructive_examples_prompt"
 limit_rows = False  # Set to True to limit the number of rows for testing
 
 # Set device
@@ -20,12 +20,15 @@ device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 tokenizer = AutoTokenizer.from_pretrained(base_model_name)
 tokenizer.pad_token = tokenizer.eos_token  # Ensure pad token is eos token
 
+# base_model = LlamaForCausalLM.from_pretrained(
+#     base_model_name, 
+#     torch_dtype=torch.float16, 
+#     device_map={"": "mps"}
+# )
 base_model = LlamaForCausalLM.from_pretrained(
-    base_model_name, 
-    torch_dtype=torch.float16, 
-    #device_map={"": "mps"}
+    base_model_name,
+    torch_dtype=torch.float16
 ).to(device)
-
 # prompt_template = PromptTemplate(
 #     template='''
 #     <s>[INST]\n 
@@ -34,8 +37,7 @@ base_model = LlamaForCausalLM.from_pretrained(
 #     ''',
 #     input_variables=["target", "word"]
 # )
-
-# # Prompt template
+# Prompt template
 # prompt_template = PromptTemplate(
 #     template='''
 #     <s>[INST]
