@@ -5,7 +5,7 @@ import torch.nn.functional as F
 
 # --- Paths ---
 model_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/base_models/BeRT/bert-large-uncased"
-adapter_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/tuned_BeRT_adaptors/large_trained_adaptor/1805_example_logic_oldarg"
+adapter_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/adaptors/tuned_BeRT_adaptors/base_trained_adaptor/1805_example_logic_oldarg"
 
 # --- Load tokenizer and base model ---
 tokenizer = BertTokenizer.from_pretrained(model_path)

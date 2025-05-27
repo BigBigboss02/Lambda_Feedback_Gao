@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
 # Set up paths
-input_folder = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/one_to_one_tests/LoRa_controlled_variable_tests/Llama3-1B_vs2/adaptervs2/instructive_examples_prompt/parsed_results'
+input_folder = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/one_to_one_tests/LoRa_controlled_variable_tests/BeRT_large'
 output_folder = os.path.join(input_folder, 'confusion_matrices')
 os.makedirs(output_folder, exist_ok=True)
 
