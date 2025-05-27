@@ -9,7 +9,7 @@ from langchain.prompts import PromptTemplate
 # Define paths
 base_model_name = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/base_models/Llama-3.2-1B"
 csv_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/data/minimum_logic_testing_dataset_vs2.csv"
-adapters_folder = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/tuned_Llama321B_balanced_dataset"
+adapters_folder = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/functions/LoRa/adaptors/tuned_Llama321B_balanced_dataset"
 output_base_path = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/one_to_one_tests/LoRa_controlled_variable_tests/Llama3-1B_vs2/adaptervs2/instructive_examples_prompt"
 limit_rows = False  # Set to True to limit the number of rows for testing
 
