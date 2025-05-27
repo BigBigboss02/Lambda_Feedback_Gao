@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # === File Paths ===
-source_folder = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/one_to_one_tests/LoRa_controlled_variable_tests/Llama3-1B_vs2/instructive_prompt"
+source_folder = "/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/test_results/one_to_one_tests/LoRa_controlled_variable_tests/Llama3-1B/new_data/instructive_examples_prompt"
 destination_folder = os.path.join(source_folder, "parsed_results")
 os.makedirs(destination_folder, exist_ok=True)
 
