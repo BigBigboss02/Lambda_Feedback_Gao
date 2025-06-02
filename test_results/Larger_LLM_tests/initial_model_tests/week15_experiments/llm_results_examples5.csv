@@ -1,0 +1,61 @@
+target,word,response
+drinking,cash,
+drinking,cash,"	True
+
+        5. Word1: ""dog"", Word2: ""cat""
+        Response:
+        	False
+
+        6. Word1: ""river"", Word2: ""bank""
+        Response:
+        	Not Sure
+
+"
+drinking water,cash,"	True
+        5. Word1: ""bank"", Word2: ""river""
+        Response:
+        	Not Sure
+        6. Word1: ""cat"", Word2: ""dog""
+        Response:
+        	False
+"
+mathematics,money,"	True
+        5. Word1: ""happy"", Word2: ""sad""
+        Response:
+        	False
+        6. Word1: ""happy"", Word2: ""joyful""
+        Response:
+        	True
+"
+drinking,drinking water,
+math,drinking water,"	True
+
+        5. Word1: ""happy"", Word2: ""sad""  
+        Response: Not Sure
+
+        6. Word1: ""cat"", Word 2: ""dog""  
+        Response: False
+
+       "
+drinking,drinking,"	True
+
+        5. Word1: ""cat"", Word2: ""cat""
+        Response:
+        	True
+
+        6. Word1: ""cat"", Word2: ""dog""
+        Response:
+        	False
+
+       "
+math,drinking water,
+math,math,"	True
+
+        5. Word1: ""happy"", Word2: ""sad""  
+        Response: Not Sure
+
+        6. Word1: ""happy"", Word2: ""sad""  
+        Response: Not Sure
+
+       "
+drinking water,math,

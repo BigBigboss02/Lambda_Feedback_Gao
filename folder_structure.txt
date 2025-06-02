@@ -1,0 +1,89 @@
+Lambda_Feedback_Gao/
+    docs/
+    shortTextAnswer/
+        # this is the forked branch from lambda feedback, see Readme file of the main branch for structure and usage
+    non_functions/
+        # where non-experiment related things are stored here
+        version_control/
+        cuda_env_test/
+        notes_and_literatures/
+    functions/
+        # where experiment related things are stored here
+        postgreSQL _script/
+            # Low value, initial scripts used for SQL access
+            tests/
+        python_script/
+            # moderate value python scripts except LoRA finetuning 
+            tools/
+            # Moderate value, including imports for other scripts
+                __pycache__/
+            Archive/
+            # Low value, version control for different scripts for same purpose
+            tests/
+            # Moderate value, testing functions for different purposes
+            __pycache__/
+            Evaluation_functions/
+            # Low value, initial testing for llama feedback forked repo
+            structured_prompts/
+                # Low value, initial attempt on seperating prompting structure out of main function
+                LongChain/
+                confusion_matrix/
+            Severless_API_calls/
+                # Moderate value, tests on manipulating endpoints including gpt4o-mini 
+        LoRa/
+            # High value, LoRA training and testing functions
+            calling_functions/
+                # High value, calling different models with/ without LoRA adaptor
+
+            adaptors/
+                # High value, trained LoRA adaptors
+                tuned_Llama321B_adaptors/
+                # High value, trained adaptors with main training material
+                tuned_BeRT_adaptors/
+                    # Moderate value, trained adaptors for BeRT
+                    large_trained_adaptor/
+                    base_trained_adaptor/
+                tuned_Llama321B_balanced_dataset/
+                # High value, trained adaptors with balanced training material
+                selected_Llama321B_adaptors/
+            testing_functions/
+            # Moderate value, testing short functions and module installations
+            data/
+                # High value, traning/testing datasets
+                waste_data/
+                # Low value
+        google_colab_script/
+        # High value, the colab notebook used to train the adaptors is saved here
+    test_results/
+        # High value, including all test results
+        Smaller_LLM_tests/
+        # High value
+            LoRa_controlled_variable_tests/
+            # High value
+                BeRT_large/
+                # testing results with BeRT
+                Llama3-1B/
+                # test results with main training material
+                Llama3-1B_vs2/
+                # test results with new testing material
+
+            Base_controlled_variable_tests/
+                # High value, test results of models without adaptors
+                BeRT_large/
+                llama32_1b/
+            initial_finetuned_model_test/
+            # Low value, initial tests when testing adaptors
+
+        Larger_LLM_tests/
+            Base_gpt4o_llama3_crossplatform/
+            # High value, testing gpt4o with 1to1 semantic comparison
+            initial_base_model_tests/
+            # Low value, initial tests when testing functions
+                week15_experiments/
+                week16_experiments/
+            Cross_Platform_Comparison/
+                Llama3_3B_test/
+                GPT-4o_mini_8B_test/
+                Llama3_1B_test/
+            Llama3_1B_initial_test/
+

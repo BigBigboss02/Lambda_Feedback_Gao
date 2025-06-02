@@ -1,0 +1,11 @@
+Word1,Word2,Ground Truth,Response
+use a pressure regulator,increase speed,False,False
+change fluid properties,increase viscosity,False,True
+release gas,block airflow,False,False
+change fluid properties,increase viscosity,False,True
+reduce temperature,reduce temperature,True,True
+release gas,block airflow,False,False
+strengthen sealing,leak air,False,False
+reduce temperature,compress gas,False,False
+release gas,vent excess,True,True
+increase volume,increase volume,True,True

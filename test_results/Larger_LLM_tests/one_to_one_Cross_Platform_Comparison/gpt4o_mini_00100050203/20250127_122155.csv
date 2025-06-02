@@ -1,0 +1,6 @@
+Word1,Word2,Ground Truth,Response
+science,knowledge,True,True
+happy,sad,False,False
+technology,programming,Unsure,True
+science,physics,Unsure,True
+cat,dog,False,False
