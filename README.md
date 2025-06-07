@@ -3,7 +3,12 @@
 This is the repository of Gao Zhuangfei's Final Year Project.
 
 ## 📦 Setup
-1. Install all dependencies from `requirements.txt`.
+1. Install all dependencies from `requirements_vs3.txt`.
+2. Set up your login_configs.env following the format of pseudo_login_configs.env
+3. Download necessary base models from Huggingface (see External Resources)
+4. Set the folder paths in the funtion you are using to your local folder location 
+5. Local NVDIA GPU or Apple silican might be needed, situation depending on the function you are using
+
 
 ## 📁 Repository Overview
 
@@ -11,11 +16,13 @@ This is the repository of Gao Zhuangfei's Final Year Project.
 - `test_results/`: Outputs from evaluation runs on various large language models (LLMs), including both baseline and LoRA-augmented tests.
 - `non_functions/`: Supplementary resources such as notes, version control records, and environment setup scripts.
 - `shortTextAnswer/`: Forked branch from the Lambda Feedback repo — refer to its internal `README` for app-specific instructions.
-- `docs/`: Documentation files related to the project.
 
 ## 🔗 External Resources
-
-- HuggingFace datasets and models:  
+- Huggingface base models to download and use:  
+  👉 [LLaMA-3.2-1B](https://huggingface.co/meta-llama/Llama-3.2-1B)  
+  👉 [LLaMA-3.1-8B](https://huggingface.co/Bigbigboss02/llama3.1-8B)  
+  👉 [BERT Large Uncased](https://huggingface.co/Bigbigboss02/bert-large-uncased)  
+- HuggingFace datasets and models for Colab integration:  
   👉 [https://huggingface.co/Bigbigboss02](https://huggingface.co/Bigbigboss02)
 
 ---
