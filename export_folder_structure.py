@@ -39,6 +39,6 @@ def write_folder_structure(root_dir, output_file):
 # Example usage:
 
 root_directory = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao'
-output_txt_file = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/folder_structure2.txt'
+output_txt_file = '/Users/zhuangfeigao/Documents/GitHub/Lambda_Feedback_Gao/folder_structure3.txt'
 
 write_folder_structure(root_directory, output_txt_file)

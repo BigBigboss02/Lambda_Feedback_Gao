@@ -24,27 +24,17 @@ This is the repository of Gao Zhuangfei's Final Year Project.
 <pre lang="markdown">
 ```
 Lambda_Feedback_Gao/
-├── docs/
-├── shortTextAnswer/                  # Forked Lambda Feedback branch, see internal README
-│   ├── app/
-│   └── .github/
+
 ├── non_functions/                    # Non-experiment resources
 │   ├── version_control/
 │   ├── cuda_env_test/
 │   └── notes_and_literatures/
+
 ├── functions/                        # Experiment-related code and modules
-│   ├── postgreSQL_script/           # Low value — initial SQL scripts
+│   ├── google_colab_scripts/        # High value — LoRA training notebook
+│   ├── postgreSQL_scripts/          # Low value — initial SQL scripts
 │   │   └── tests/
-│   ├── python_script/               # Moderate value — core Python scripts
-│   │   ├── tools/
-│   │   ├── Archive/                 # Low value — archived versions
-│   │   ├── tests/                   # Moderate value — test functions
-│   │   ├── Evaluation_functions/    # Low value — early LLM evals
-│   │   ├── structured_prompts/      # Low value — prompt logic separation
-│   │   │   ├── LongChain/
-│   │   │   └── confusion_matrix/
-│   │   └── Severless_API_calls/     # Moderate value — GPT-4o-mini endpoint calls
-│   ├── LoRa/                        # High value — training/testing LoRA modules
+│   ├── LoRA_finetuning_scripts/     # High value — LoRA training/testing
 │   │   ├── calling_functions/       # High value — LoRA model interface
 │   │   ├── adaptors/                # High/Moderate value — trained LoRA weights
 │   │   │   ├── tuned_Llama321B_adaptors/
@@ -52,23 +42,81 @@ Lambda_Feedback_Gao/
 │   │   │   ├── tuned_Llama321B_balanced_dataset/
 │   │   │   └── selected_Llama321B_adaptors/
 │   │   ├── testing_functions/       # Moderate value
-│   │   └── data/                    # High value — training/testing sets
+│   │   └── data/
 │   │       └── waste_data/          # Low value
-│   └── google_colab_script/         # High value — LoRA training notebook
-├── test_results/                    # High value — model test results, includes everything in Paper Results
-│   ├── Smaller_LLM_tests/
-│   │   ├── LoRa_controlled_variable_tests/
-│   │   ├── Base_controlled_variable_tests/
-│   │   ├── Llama3_1B_initial_test/
-│   │   └── initial_finetuned_model_test/
+│   └── Prompt_Engineering_scripts/  # Moderate value — prompt logic + API
+│       ├── Archive/                 # Low value — archived code
+│       ├── __pycache__/
+│       ├── Initial_experiments/
+│       │   ├── tools/
+│       │   │   └── __pycache__/
+│       │   ├── tests/
+│       │   └── structured_prompts/
+│       │       ├── LongChain/
+│       │       └── confusion_matrix/
+│       └── Severless_API_calls/     # Moderate value — GPT-4o-mini endpoint calls
+
+├── test_results/                    # High value — model test results
 │   ├── Larger_LLM_tests/
-│   │   ├── Base_gpt4o_llama3_crossplatform/
-│   │   ├── initial_base_model_tests/
-│   │   │   ├── week15_experiments/
-│   │   │   └── week16_experiments/
-│   │   └── Cross_Platform_Comparison/
-│   │       ├── Llama3_3B_test/
-│   │       ├── GPT-4o_mini_8B_test/
-│   │       └── Llama3_1B_test/
+│   │   ├── one_to_many_Cross_Platform_Comparison/
+│   │   │   ├── Llama3_3B_test/
+│   │   │   ├── GPT-4o_mini_8B_test/
+│   │   │   └── Llama3_1B_test/
+│   │   ├── one_to_one_Cross_Platform_Comparison/
+│   │   │   └── [various GPT-4o-mini and Llama3.2-1B result folders]
+│   │   └── initial_model_tests/
+│   │       ├── week15_experiments/
+│   │       └── week16_experiments/
+│   ├── Wasted_Data/
+│   └── Smaller_LLM_tests/
+│       ├── LoRa_controlled_variable_tests/
+│       │   ├── BeRT_large/                             # BeRT testing results
+│       │   │   └── confusion_matrices/
+│       │   └── Llama3-1B_balanced/                     # Trained on Balanced training dataset
+│       │       ├── instructive_prompt/                 # Named by prompt type used at testing
+│       │       │   │                                   # Csv file named prompt/arg type used at fine-tuning
+│       │       │   └── parsed_results/                 # Parsed results
+│       │       │       └── confusion_matrices/         # Confusion matrices ploted
+│       │       └── instructive_examples_prompt/
+│       │           └── parsed_results/
+│       │               └── confusion_matrices/
+│       │   └── Llama3-1B_main/                         # Trained on Main training dataset
+│       │       ├── balanced_training_material_prompt/
+│       │       │   ├── instructive_prompt/
+│       │       │   │   └── parsed_results/
+│       │       │   │       └── confusion_matrices/
+│       │       │   └── instructive_examples_prompt/
+│       │       │       └── parsed_results/
+│       │       │           └── confusion_matrices/
+│       │       ├── main_training_material_prompt/
+│       │       │   ├── instructive_prompt/
+│       │       │   │   └── parsed_results/
+│       │       │   │       └── confusion_matrices/
+│       │       │   ├── examples_prompt/
+│       │       │   │   └── parsed_results/
+│       │       │   │       └── confusion_matrices/
+│       │       │   ├── instructive_examples_prompt/
+│       │       │   │   └── parsed_results/
+│       │       │   │       └── confusion_matrices/
+│       │       │   └── null_prompt/
+│       │       │       └── parsed_results/
+│       │       │           └── confusion_matrices/
+│       │       └── new_testing_material_prompt/
+│       │           ├── instructive_prompt/
+│       │           │   └── parsed_results/
+│       │           │       └── confusion_matrices/
+│       │           └── instructive_examples_prompt/
+│       │               └── parsed_results/
+│       │                   └── confusion_matrices/
+│       ├── Base_controlled_variable_tests/
+│       │   ├── BeRT_large/
+│       │   │   └── confusion_matrices/
+│       │   └── llama32_1b/
+│       │       └── parsed_results/
+│       │           └── confusion_matrices/
+│       ├── Llama3_1B_initial_test/
+│       └── initial_finetuned_model_test/ # Low value, initial attempts
+
 ```
 </pre>
+
