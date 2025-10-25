@@ -1,0 +1,123 @@
+# --- Core ML / data stack ---
+accelerate==1.3.0
+datasets==2.21.0
+transformers==4.47.1
+tokenizers==0.21.0
+huggingface-hub==0.27.1
+sentence-transformers==3.3.1
+peft==0.14.0
+safetensors==0.5.2
+tiktoken==0.8.0
+
+# PyTorch (these versions match each other)
+torch==2.2.2
+torchvision==0.17.2
+torchaudio==2.2.2
+
+# Numerics / data
+numpy==1.26.4
+scipy==1.15.0
+pandas==2.2.3
+scikit-learn==1.6.0
+pyarrow==19.0.1
+tqdm==4.67.1
+regex==2024.11.6
+filelock==3.16.1
+fsspec==2024.6.1
+xxhash==3.5.0
+dill==0.3.8
+multiprocess==0.70.16
+
+# Plotting / viz (safe on Windows)
+matplotlib==3.10.0
+seaborn==0.13.2
+pillow==10.4.0
+imageio==2.37.0
+
+# Optional audio utils (comment out if you don't need audio)
+librosa==0.10.2.post1
+soundfile==0.13.1
+soxr==0.5.0.post1
+audioread==3.0.1
+
+# General utilities
+requests==2.32.3
+urllib3==2.3.0
+python-dateutil==2.9.0.post0
+pytz==2024.2
+typing_extensions==4.12.2
+PyYAML==6.0.2
+packaging==24.2
+tenacity==9.0.0
+loguru==0.7.3
+validators==0.34.0
+
+# Pydantic + friends (used by many modern libs)
+pydantic==2.10.4
+pydantic_core==2.27.2
+pydantic-settings==2.7.1
+typing-inspect==0.9.0
+mypy-extensions==1.0.0
+
+# Jupyter (if you use notebooks)
+ipython==8.32.0
+ipywidgets==8.1.5
+jupyterlab_widgets==3.0.13
+traitlets==5.14.3
+prompt_toolkit==3.0.50
+Pygments==2.19.1
+matplotlib-inline==0.1.7
+wcwidth==0.2.13
+stack-data==0.6.3
+decorator==5.2.1
+comm==0.2.2
+widgetsnbextension==4.0.13
+
+# UMAP (for embeddings viz etc.)
+umap-learn==0.5.7
+pynndescent==0.5.13
+
+# langchain (if you use it)
+langchain==0.3.14
+langchain-core==0.3.29
+langchain-community==0.3.14
+langchain-openai==0.2.14
+langchain-huggingface==0.1.2
+langchain-text-splitters==0.3.5
+langsmith==0.2.10
+
+# --- Cross-platform fixes / platform-specifics ---
+
+# uvloop is Linux/macOS-only; skip on Windows
+uvloop==0.21.0 ; sys_platform != "win32"
+
+# pexpect is not useful on Windows terminals
+pexpect==4.9.0 ; sys_platform != "win32"
+
+# psycopg2 tends to fail to build on Windows – use binary wheel on Windows
+psycopg2==2.9.10 ; sys_platform != "win32"
+psycopg2-binary==2.9.10 ; sys_platform == "win32"
+
+# PyAV + imagecodecs can be troublesome on Windows. Install only off Windows.
+av==14.2.0 ; sys_platform != "win32"
+imagecodecs==2024.12.30 ; sys_platform != "win32"
+
+# --- Optional: web API/server stack (commented out by default) ---
+# If you are not serving an API, leave these commented.
+# fastapi==0.115.8
+# starlette==0.45.3
+# uvicorn==0.34.0
+# httptools==0.6.4        # optional speedup; can be sensitive on Windows
+# websockets==15.0
+# h11==0.14.0
+# httpx==0.23.3
+# httpcore==0.16.3
+# httpx-sse==0.4.0
+
+# --- Everything below here looked non-essential for training/coding; omitted ---
+# aiosqlite, databases (only needed if you really use SQLite/SQLAlchemy async)
+# renumics-spotlight (brings heavy/fragile image codecs)
+# imagecodecs (see above), tifffile pin is fine via scikit-image anyway
+# lfs (unclear), propcache, pygltflib, trimesh (keep only if you use 3D/GLTF)
+# starlette/fastapi/uvicorn stack (commented above)
+# Others retained only if they aid your workflow and are pure-Python/cross-platform
